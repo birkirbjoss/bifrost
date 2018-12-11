@@ -1,0 +1,72 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-color: #e6e6e6;
+    font-family: 'Roboto', sans-serif;
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/******************** fonts *********************/
+h1
+{
+    font-size: 4em;
+    font-weight: 900;
+    color: #293a4b;
+}
+h2
+{
+    font-size: 3.5em;
+    font-weight: 700;
+    color: #000000;
+}
+h3
+{
+    font-size: 3em;
+    font-weight: 300;
+    color: #000000;
+}
+h4
+{
+    font-size: 2.5em;
+    font-weight: 400; 
+    color: #293a4b;
+}
+h5
+{
+    font-size: 2em;
+    font-weight: 300;
+    color: #293a4b;
+}
+h6
+{
+    font-size: 1em;
+    font-weight: 300;
+    color: #293a4b;
+}
+p
+{
+    font-size: 1em;
+    font-weight: 400;
+    color: #293a4b;
+}
+a
+{
+    font-weight: 500;
+    color: #293a4b;
+    text-decoration: none;
+}
+
+/******************** nav *********************/
+nav
+{
+    grid-column: 3/-2;
+}
+/*span {
+    content: "\007C";
+  } */
