@@ -12,6 +12,12 @@ body
     grid-template-columns: repeat(5, 1fr);
 }
 
+main{
+    grid-column: 1/-1;
+}
+
+
+
 /******************** fonts *********************/
 h1
 {
@@ -63,10 +69,28 @@ a
 }
 
 /******************** nav *********************/
-nav
-{
-    grid-column: 3/-2;
+header{
+    grid-column: 1/-1;
+
 }
+li
+{
+    grid-column: -2/-1;
+}
+
+/******************** footer *********************/
+footer{
+    grid-column: 1/-1;
+    text-align: center;
+}
+
 /*span {
     content: "\007C";
   } */
+
+ 
+/******************** sign up form *********************/ 
+#signup{
+    grid-column: -3/-2;
+}
+
