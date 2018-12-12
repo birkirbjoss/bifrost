@@ -28,9 +28,10 @@ header{
     position: fixed;
     display: inline;
     background-color:#e6e6e6;
-    width: 100%;
-    height: 17%;
+    min-width: 100%;
+    min-height: 17%;
     border: #293a4b solid 1px;
+    z-index: 999;
 }
 
 
@@ -221,7 +222,7 @@ p {
     background-color: gainsboro;
     border-radius: 10px;
     text-align: center;
-    
+    padding: 3em;
 }
 
 .signUpButton {

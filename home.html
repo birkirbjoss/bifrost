@@ -28,13 +28,10 @@
 </header>
 
     <div class="main" id="section1">
-
-<img id="backgroundImage" src="images/background_image.png" alt="imagenotfound" srcset="">
-
-
+        <img id="backgroundImage" src="images/background_image.png" alt="imagenotfound" srcset="">
+    
         <!-- The Modal -->
-        <div id="myModal" class="modal">
-
+        <div id="myModal" class="modal">    
             <!-- Modal content -->
             <div class="modal-content">
                 <span class="close">&times;</span>
@@ -54,7 +51,7 @@
 
         </div>
 
-
+    
     <main>
        
             
@@ -62,39 +59,35 @@
    
         <div id="signup">
             <form class="mui-form" action="http://tabithabjorkman.com/bifrost_t/php_inserts/sign_up.php" role="form" method="POST">
-                <h2>Sign up!</h2>
                 <div class="mui-textfield mui-textfield--float-label">
                     <input type="text" name="name" value="">
                     <label>Full Name</label>
                 </div>
-                <h6>E-mail</h6>
                 <div class="mui-textfield mui-textfield--float-label">
                     <input type="email" name="email" value="" placeholder="">
                     <label>E-mail</label>
                 </div> 
-                <h6>Password</h6>
                 <div class="mui-textfield mui-textfield--float-label">
                     <input type="password" name="password" value="">
                     <label>Password</label>
                 </div>
-                <h6>Password confirm</h6>
                 <div class="mui-textfield mui-textfield--float-label">
                     <input type="password" name="confirm" value="">
                     <label>Password Confirm</label>
                 </div>
-                <div class="mui-select">
-                <h6>Company or Student?</h6><!--Look up old files on getting pages to communicate with the server without php on page. -->
+                <div class="mui-select mui-select--float-label">
+                <!--Look up old files on getting pages to communicate with the server without php on page. -->
                     <select name="role">
-                      <option value="Company">Company</option>
-                      <option value="Student">Student</option>
-                      
+                        <option value=""></option>
+                        <option value="Company">Company</option>
+                        <option value="Student">Student</option>
                     </select>
-                    
+                    <label for="">Choose</label>
                   </div>
                 <button type="submit" class="mui-btn mui-btn--small" name="submit">Sign Up</button>
             </form>
         </div>
-
+    </div>
     <div class="main" id="section2">
        
         <h1 id="aboutTitle">Who are we?</h1>
