@@ -1,96 +1,248 @@
-*
-{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-body
-{
-    background-color: #e6e6e6;
-    font-family: 'Roboto', sans-serif;
-    display:grid;
-    grid-template-columns: repeat(5, 1fr);
+
 }
 
-main{
-    grid-column: 1/-1;
+body {
+    background-color: #e6e6e6;
+    font-family: 'Roboto', sans-serif;
+
+
+
+
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+#section1 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column: 1/-1;
+    height: 100vh;
+    background-color: pink;
+}
+
+#section2 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    height: 100vh;
+    grid-column: 1/-1;
+    background-color: yellow;
+}
+
+
+
+
+
 
 
 
 /******************** fonts *********************/
-h1
-{
+h1 {
     font-size: 4em;
     font-weight: 900;
     color: #293a4b;
 }
-h2
-{
+
+h2 {
     font-size: 3.5em;
     font-weight: 700;
     color: #000000;
 }
-h3
-{
+
+h3 {
     font-size: 3em;
     font-weight: 300;
     color: #000000;
 }
-h4
-{
+
+h4 {
     font-size: 2.5em;
-    font-weight: 400; 
+    font-weight: 400;
     color: #293a4b;
 }
-h5
-{
+
+h5 {
     font-size: 2em;
     font-weight: 300;
     color: #293a4b;
 }
-h6
-{
+
+h6 {
     font-size: 1em;
     font-weight: 300;
     color: #293a4b;
 }
-p
-{
+
+p {
     font-size: 1em;
     font-weight: 400;
     color: #293a4b;
 }
-a
-{
+
+a {
+    font-size: 1.5em;
     font-weight: 500;
     color: #293a4b;
     text-decoration: none;
 }
 
 /******************** nav *********************/
-header{
-    grid-column: 1/-1;
+nav {
+    margin-top: 10%;
+    grid-column: 5/-1;
 
 }
-li
-{
-    grid-column: -2/-1;
+
+#loginButton {
+    width: 4em;
+    height: 2.5em;
+    border-radius: .5em;
+    background-color: gainsboro;
+    font-size: 1.5em;
+    margin-left: 1em;
 }
+
+#name {
+    grid-column: 3/4;
+    margin-top: 40%;
+    grid-row: 2;
+}
+
+#logo {
+
+    grid-column: 1/3;
+    margin-left: 20%;
+    width: 50%;
+}
+
+/******************** Log in Modal *********************/
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 
 /******************** footer *********************/
-footer{
+footer {
     grid-column: 1/-1;
     text-align: center;
+    border: solid 1px black
 }
 
-/*span {
-    content: "\007C";
-  } */
+footer,
+p {
+    display: inline;
+}
 
+/******************** sign up form *********************/
+
+#signup {
+    grid-column: 5/-1;
+    align-content: center;
+    background-color: gainsboro;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 10%;
+    margin-right: 10%;
+}
+
+.signUpBotton {
+    border-radius: 10px;
+    width: 5em;
+    height: 3em;
+}
+
+
+
+/******************** About page *********************/
+
+#aboutTitle {
+    grid-column: 1/-1;
+    text-align: center;
+    display: inline;
+}
+
+.staffImages {
+    grid-column: 1/-1;
+    text-align: center;
+
+}
+
+#staff1 {
+    width: 18.8%;
+}
+
+#staff2 {
+    width: 20%;
+}
+
+#staff3 {
+    width: 20%;
+}
+
+#staffTitle {
+    grid-column: 1/-1;
+    display: inline-block;
+}
+
+#sponsors
+{
+    grid-column: 1/-1;
  
-/******************** sign up form *********************/ 
-#signup{
-    grid-column: -3/-2;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    text-align: center;
+   
 }
 
+#sponsorImage{
+    width: 20%;
+    
+}
