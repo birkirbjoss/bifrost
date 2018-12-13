@@ -56,12 +56,16 @@
        
             
     </main>
-   
+    
         <div id="signup">
+
+                <h2 class="white">Sign Up</h2>
             <form class="mui-form" action="http://tabithabjorkman.com/bifrost_t/php_inserts/sign_up.php" role="form" method="POST">
+                
                 <div class="mui-textfield mui-textfield--float-label">
-                    <input type="text" name="name" value="">
-                    <label>Full Name</label>
+                    
+                    <input class="fullname" type="text" name="name" value="">
+                    <label class="fullname">Full Name</label>
                 </div>
                 <div class="mui-textfield mui-textfield--float-label">
                     <input type="email" name="email" value="" placeholder="">
@@ -77,7 +81,7 @@
                 </div>
                 <div class="mui-select mui-select--float-label">
                 <!--Look up old files on getting pages to communicate with the server without php on page. -->
-                    <select name="role">
+                    <select  name="role">
                         <option value=""></option>
                         <option value="Company">Company</option>
                         <option value="Student">Student</option>

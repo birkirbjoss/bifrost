@@ -13,7 +13,7 @@ function getData(){
 }
 
 let list = document.querySelector("#list");
-const catTemp = document.querySelector (".categoryTemplate").content; 
+//const catTemp = document.querySelector (".categoryTemplate").content; 
 function showCategories(data){
     // console.log(data);
 
@@ -22,7 +22,6 @@ function showCategories(data){
         const clone = catTemp.cloneNode(true);
         console.log('hi clone');
         const name = clone.querySelector(".name");
-        name.textContent = " kr.";
         clone.querySelector(".name").textContent = theCat.category_name;
         console.log('this is a loop');
       
