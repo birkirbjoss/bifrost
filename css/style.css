@@ -588,7 +588,6 @@ a.active {
     grid-column: 1/-1;
     height: 100vh;
     background-color:#e6e6e6;
-    border-bottom: #293a4b solid 1px;
 }
 #studentForm form
 {
@@ -604,13 +603,20 @@ a.active {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-column: 1/-1;
-    height: 70vh;
     background-color:#e6e6e6;
-    border-bottom: #293a4b solid 1px;
 }
 #companyForm form
 {
     grid-column: 3/5;
+    grid-row: 1/-1;
     margin:35% 0 0 0;
     width: 100%;
+}
+#colorDkGrey
+{
+    color: rgba(0,0,0,.54);
+}
+#colorGrey
+{
+    color: rgba(0,0,0,.54);
 }
