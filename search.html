@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="//cdn.muicss.com/mui-0.9.41/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.muicss.com/mui-0.9.41/js/mui.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Home</title>
+</head>
+
+<body>
+    
+    <header>
+        <nav>
+            <a href="#">Home <span>&#124;</span></a>
+            <a href="#">About <span>&#124;</span></a>
+            <a href="#">Contact</a>
+            <button id="loginButton">Login</button>
+        </nav>
+        <div id="header">
+            <a href="home.html">
+            <img id="logo" src="images/Logo.png" alt="Logo for KASSIA">
+            <h1 id="name"> KASSIA</h1></a>
+        </div>
+    </header>
+    <main>
+        <section id="searchSkills">
+            <div id="skillTabs">
+                    <div id="tab-navigation">
+                        <a id="defaultOpen" class="tablinks" onclick="openTab(event, 'SoftSkills')" href="#">Soft Skills</a>
+                        <a class="tablinks" onclick="openTab(event, 'TechSkills')" href="#">Technical Skills</a>
+                        <a class="tablinks" onclick="openTab(event, 'CTSkills')" href="#">Critical Thinking Skills</a>
+                    </div>
+                    <div id="SoftSkills" class="tabcontent skillsContainers">
+                        <h5>Soft Skills</h5>
+                    </div>
+                    <div id="TechSkills" class="tabcontent skillsContainers">
+                        <h5>Technical Skills</h5>
+                    </div>
+                    <div id="CTSkills" class="tabcontent skillsContainers">
+                        <h5>Critical Thinking Skills</h5>
+                    </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <p>Webmasters Birkir, Rosa and Tabitha</p>
+        <p>XXXXXXXX</p>
+    </footer>
+
+    <script src="js/script.js" type="text/javascript"></script>
+</body>
+
+</html>

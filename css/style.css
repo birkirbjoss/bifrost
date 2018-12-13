@@ -143,14 +143,17 @@ p {
 }
 
 a {
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 500;
     color: #293a4b;
     text-decoration: none;
 }
 
 /****************** classes ********************/
-
+.white
+{
+    color: #ffffff;
+}
 
 
 
@@ -255,17 +258,11 @@ p {
     text-align: center;
     display: inline;
 }
-
-
-
 #staff1
 {
     grid-column: 1/2;
     width: 10%;
 }
-
-
-
 
 #sponsors
 {
@@ -276,9 +273,9 @@ p {
     text-align: center; 
 }
 
-#sponsorImage{
+#sponsorImage
+{
     width: 20%;
-    
 }
 
 .staffTemplate
@@ -300,7 +297,47 @@ grid-column: 1/-1;
 text-align: center;
 
 }
-/************** TEST ****************/
+/******************* Profile Page **************************/
+#profileInfo
+{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column: 1/-1;
+    height: 70vh;
+    background-color:#e6e6e6;
+    border-bottom: #293a4b solid 1px;
+}
+#portfolioBox
+{
+    margin-top: 3%;
+    grid-column: 1/-1;
+    padding: 7%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* justify-content: space-evenly; */
+}
+#profileImg 
+{
+    grid-column: 1/3;
+    width: 60%;
+    border: 1px solid #ffffff;
+    justify-content: space-evenly;
+}
+#profileText  
+{
+    grid-column: 3/5;
+    color: #ffffff;
+}
+#profileText h5 
+{
+    width: 100%;
+    padding: 2%;
+}
+
+
+
+/************** TIMELINE on profile page****************/
 #timeline
 {
     max-height: 12.5em;
@@ -309,6 +346,7 @@ text-align: center;
     white-space: nowrap;
     position: relative;
     padding: 1em;
+    background-color: #ffffff;
 }
 .hex_pair/** hex_pair was made, because the only way for this to work was to have "display:inline-block" **/
 {
@@ -324,7 +362,7 @@ text-align: center;
 .hex .left {
     float: left;
     width: 0;
-    border-right: 30px solid #6C6;
+    border-right: 30px solid #ceac41;
     border-top: 52px solid transparent;
     border-bottom: 52px solid transparent;
 }
@@ -332,12 +370,12 @@ text-align: center;
     float: left;
     width: 60px;
     height: 104px;
-    background: #6C6;
+    background: #ceac41;
 }
 .hex .right {
     float: left;
     width: 0;
-    border-left: 30px solid #6C6;
+    border-left: 30px solid #ceac41;
     border-top: 52px solid transparent;
     border-bottom: 52px solid transparent;
 }
@@ -348,4 +386,117 @@ text-align: center;
     margin-top: 53px;
 }
 
+
 /* hexagon template , for each template 1 project info , alternate classes, using odd and even in the js spaced on a css grid, margin top -50% height and - 25% left - limit text content for name of project make classes with 9 gradients */
+
+/****************** SEARCH PAGE ******************/
+#searchSkills
+{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column: 1/-1;
+    height: 80vh;
+    background-color:#e6e6e6;
+    border-bottom: #293a4b solid 1px;
+}
+#skillTabs
+{
+    grid-column: 1/5;
+    padding: 35% 5% 5% 8%;
+}
+#tab-navigation { 
+  padding-top: 2rem;
+  padding-left: 2rem; 
+  overflow: hidden; 
+  height: 4rem;
+  width: max-content;
+  margin: 0 auto;
+}
+#tab-navigation a { 
+  font-weight: 500;
+  text-decoration: none;
+  color: #293a4b;
+  padding: 0.8rem 2rem 1rem 1rem;
+  border: 1px solid #777;
+  border-radius: 5px 5px 0 0;
+  background: linear-gradient(#dfc891, #ceac41);
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  letter-spacing: 0.15rem; 
+  text-shadow: 0 1px 0 #000;
+  font-size: 1rem;
+  transition: 0.2s transform linear;
+}
+#tab-navigation a:nth-child(n+1) {
+  margin-left: -1.2rem;
+  position: relative;
+  z-index: 2;
+}
+a.active { 
+  position: relative;
+  top: -0.2rem;
+  z-index: 2; 
+}
+#tab-navigation a:hover, nav#tab-navigation a:focus {    
+  transform: translateY(-.4rem); 
+}
+.skillsContainers
+{
+    width: 112%;
+    max-height: 70%; 
+    background-color: #ffffff;
+    overflow: hidden;
+    overflow: scroll;
+    margin: 0 0 0 2.5%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    padding: 2%;
+}
+@media screen and (max-width: 800px) {
+  nav#tab-navigation { height: 3rem;
+  }
+  nav#tab-navigation a { 
+  font-size: 1.1rem;
+    padding: 0.8rem 1.4rem 2rem;
+  }
+}
+@media screen and (max-width: 500px) { #tab-navigation { height: auto; }
+#tab-navigation a { 
+  display: block;
+  margin-top: -1rem; 
+}
+}
+
+
+.tabs-animate-bottom
+{
+    position:relative;
+    animation:animateBottom 0.4s;
+}
+@keyframes animateBottom
+{
+    from
+    {
+        bottom:-300px;opacity:0;
+    } 
+    to
+    {
+        bottom:0;opacity:1
+    }
+}
+
+/******************** Registration page ***********************/
+#studentForm
+{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column: 1/-1;
+    height: 70vh;
+    background-color:#e6e6e6;
+    border-bottom: #293a4b solid 1px;
+}
+form
+{
+    grid-column: 2/5;
+    margin:35% 0 0 0;
+}

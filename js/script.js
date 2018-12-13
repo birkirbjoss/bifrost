@@ -1,7 +1,7 @@
 
 /******************** Fetching *********************/
 
-"use strict"
+ /* "use strict"
 
 function getData(){
     fetch("http://tabithabjorkman.com/bifrost_t/json/categories.php")
@@ -13,33 +13,56 @@ function getData(){
 }
 
 let list = document.querySelector("#list");
-const catTemp = document.querySelector (".categoryTemplate").content; 
-function showCategories(data){
+//const catTemp = document.querySelector (".categoryTemplate").content; 
+let 
+
+function showCategories(data)
+{
     // console.log(data);
 
     data.forEach(function (theCat) {    
-             console.log('hi there');
+             //console.log('hi there');
         const clone = catTemp.cloneNode(true);
-        console.log('hi clone');
+        //console.log('hi clone');
         const name = clone.querySelector(".name");
         name.textContent = " kr.";
         clone.querySelector(".name").textContent = theCat.category_name;
-        console.log('this is a loop');
+        //console.log('this is a loop');
       
         list.appendChild(clone);
         
     });
 }
 
-getData();
+getData();  */
+/********************** Tabs on search page ********************/
 
 
+//THIS IS FOR THE TABS ON THE PAGES WITH LOTS OF TEXT
 
+function openTab(evt, tabInfo) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
 
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+  }
 
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
 
-
-
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(tabInfo).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+if(document.getElementById("defaultOpen")){
+  document.getElementById("defaultOpen").click();
+}
 
 /******************** Scrolling to About page *********************/
 
