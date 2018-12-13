@@ -21,37 +21,39 @@ html {
     grid-template-rows: repeat(6, 1fr);
     grid-column: 1/-1;
     height: 100vh;
-    background-color:#293a4b;
+    background-color:#e6e6e6;
+    border-bottom: #293a4b solid 1px;
 }
 
 header{
     position: fixed;
     display: inline;
-    background-color:#e6e6e6;
+    background-color:white;
     min-width: 100%;
     min-height: 17%;
-    border: #293a4b solid 1px;
+    
     z-index: 999;
 }
 
 
 #logo {
-    margin-left: 20%;
+    margin-left: 5%;
     width: 6%;
     margin-top: 1%;
     
 }
 #name {
     margin-top: -4.7%;
-   margin-left: 27%;
+   margin-left: 12%;
     
 }
 
 #backgroundImage
 {
-    grid-column: 1/6;
+    grid-column: 1/-1;
     grid-row: 2/7;
-    width: 90%;  
+    width: 71.3%;  
+    margin-left: 30%;
 }
 
 /******************** nav *********************/
@@ -216,11 +218,15 @@ p {
 /******************** sign up form *********************/
 
 #signup {
-    grid-column: 5/-1;
+    margin-top: 40%;
+    grid-column: 1/2;
+    width: 130%;
+    height: 75%;
+    margin-left: 20%;
     grid-row: 2/7;
     align-content: center;
-    background-color: gainsboro;
-    border-radius: 10px;
+    background-color: #293a4b;
+
     text-align: center;
     padding: 3em;
 }
@@ -231,7 +237,14 @@ p {
     height: 3em;
     padding: 0.5em;
 }
-
+.mui-textfield>input, .mui-textfield>textarea
+{
+    background-color: white;
+}
+.mui-select>select
+{
+    background-color: white;
+}
 
 
 /******************** About page *********************/

@@ -1,4 +1,37 @@
 
+/******************** Fetching *********************/
+
+"use strict"
+
+function getData(){
+    fetch("http://tabithabjorkman.com/bifrost_t/json/categories.php")
+    //fetch("http://tabithabjorkman.com/bifrost_t/json/skills.php")
+    .then(res => res.json())
+    .then(showCategories);
+    //.then(showSkills);
+   
+}
+
+let list = document.querySelector("#list");
+const catTemp = document.querySelector (".categoryTemplate").content; 
+function showCategories(data){
+    // console.log(data);
+
+    data.forEach(function (theCat) {    
+             console.log('hi there');
+        const clone = catTemp.cloneNode(true);
+        console.log('hi clone');
+        const name = clone.querySelector(".name");
+        name.textContent = " kr.";
+        clone.querySelector(".name").textContent = theCat.category_name;
+        console.log('this is a loop');
+      
+        list.appendChild(clone);
+        
+    });
+}
+
+getData();
 
 
 
