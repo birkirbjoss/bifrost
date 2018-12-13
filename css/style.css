@@ -343,24 +343,39 @@ text-align: center;
 {
     margin-top: 3%;
     grid-column: 1/-1;
-    padding: 7%;
+    padding: 10%;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    /* justify-content: space-evenly; */
+    grid-template-columns: repeat(3, 1fr);
 }
 #profileImg 
 {
-    grid-column: 1/3;
-    width: 60%;
+    grid-column: 1;
+    width: 55%;
     border: 1px solid #ffffff;
-    justify-content: space-evenly;
 }
 #profileText  
 {
-    grid-column: 3/5;
+    grid-column: 2;
     color: #ffffff;
+    text-align: right;
 }
 #profileText h5 
+{
+    width: 100%;
+    padding: 2%;
+    font-weight: 500;
+}
+/* #profileText h5:nth-child(odd)
+{
+    width: 100%;
+    padding: 2%;
+    font-weight: 800;
+} */
+#profileText2
+{
+    grid-column: 3;
+}
+#profileText2 h5 
 {
     width: 100%;
     padding: 2%;
@@ -419,6 +434,43 @@ text-align: center;
 
 
 /* hexagon template , for each template 1 project info , alternate classes, using odd and even in the js spaced on a css grid, margin top -50% height and - 25% left - limit text content for name of project make classes with 9 gradients */
+
+/******************** Skill section of portfolio page **********************/
+#skillsDisplay
+{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column: 1/-1;
+    height: 70vh;
+    background-color:#e6e6e6;
+    border-bottom: #293a4b solid 1px;
+    padding-top: 2%
+}
+#threeCatSkills
+{
+    grid-column: 2/-2;
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    grid-gap: 1em;
+}
+.threeCatSkillsTitle
+{
+    height: auto;
+    text-align: center;
+}
+.threeCatSkills
+{
+    grid-row: 2;
+    width: 100%;
+    height: 37vh; /********* Height here is set for the purpose of only showing 6- 7 skills at one time and the rest visible via scroll ***************/
+    border: 1px solid #000;
+    overflow: hidden;
+    overflow:scroll;
+    margin: 2%;
+    text-align: center;
+    background-color: #ffffff;
+}
 
 /****************** SEARCH PAGE ******************/
 #searchSkills
@@ -515,8 +567,26 @@ a.active {
     }
 }
 
-/******************** Registration page ***********************/
+/******************** Registration page students ***********************/
 #studentForm
+{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column: 1/-1;
+    height: 100vh;
+    background-color:#e6e6e6;
+    border-bottom: #293a4b solid 1px;
+}
+#studentForm form
+{
+    grid-column: 3/5;
+    margin:35% 0 0 0;
+    width: 100%;
+}
+
+/******************** Registration page companies ***********************/
+#companyForm
 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -526,8 +596,9 @@ a.active {
     background-color:#e6e6e6;
     border-bottom: #293a4b solid 1px;
 }
-form
+#companyForm form
 {
-    grid-column: 2/5;
+    grid-column: 3/5;
     margin:35% 0 0 0;
+    width: 100%;
 }
