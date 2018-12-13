@@ -60,7 +60,7 @@ header{
 nav {
     display: inline;
     float: right;
-    margin-top: 2.5%;
+    margin-top: 2%;
     margin-right: 5%;
     
 
@@ -150,11 +150,11 @@ a {
 }
 
 /****************** classes ********************/
+
 .white
 {
-    color: #ffffff;
+    color: white;
 }
-
 
 
 
@@ -167,11 +167,11 @@ a {
     /* Stay in place */
     z-index: 1;
     /* Sit on top */
-    padding-top: 100px;
+    padding-top: 8.2%;
     /* Location of the box */
-    left: 0;
+    right: 0;
     top: 0;
-    width: 100%;
+    width: 30%;
     /* Full width */
     height: 100%;
     /* Full height */
@@ -182,11 +182,14 @@ a {
 
 /* Modal Content */
 .modal-content {
-    background-color: #fefefe;
+    background-color: #293a4b;
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid #ceac41;
     width: 80%;
+    text-align: center;
+    
+    
 }
 
 /* The Close Button */
@@ -219,19 +222,28 @@ p {
 }
 
 /******************** sign up form *********************/
+#signupTitle
+{
+    grid-column: 1/2;
+    grid-row: 2/2;
+    margin-top: 90%;
+    margin-left: -50%;
+    
+}
 
 #signup {
-    margin-top: 40%;
+    
     grid-column: 1/2;
+    margin-top: 30%;
     width: 130%;
-    height: 75%;
+    height: 80%;
     margin-left: 20%;
     grid-row: 2/7;
     align-content: center;
     background-color: #293a4b;
-
     text-align: center;
-    padding: 3em;
+    
+    
 }
 
 .signUpButton {
@@ -242,11 +254,30 @@ p {
 }
 .mui-textfield>input, .mui-textfield>textarea
 {
+    width: 75%;
+    margin-left: 12.5%;
     background-color: white;
+    
 }
 .mui-select>select
 {
+    width: 75%;   
+    margin-left: 12.5%;
     background-color: white;
+}
+.mui-select>label
+{
+    color: white;
+}
+.fullname
+{
+    margin-top: 5%;
+}
+
+#formSignup{
+    color: white;
+    margin-top: -16%;
+    
 }
 
 
