@@ -1,7 +1,6 @@
 
 /******************** Fetching *********************/
 
-<<<<<<< HEAD
 //  "use strict"
 
 // function getData(){
@@ -36,7 +35,6 @@
 // }
 
 // getData(); 
-=======
  "use strict"
 
 function getDataSoft(){
@@ -125,7 +123,6 @@ function showSkillsCT(dataCT){
 getDataCT();
 getDataTech();
 getDataSoft(); 
->>>>>>> 4283ee6112398898254477fa9983121613f5ed96
 /********************** Tabs on search page ********************/
 
 
