@@ -1,37 +1,40 @@
 
 /******************** Fetching *********************/
 
- /* "use strict"
+ "use strict"
 
 function getData(){
     fetch("http://tabithabjorkman.com/bifrost_t/json/categories.php")
-    //fetch("http://tabithabjorkman.com/bifrost_t/json/skills.php")
+    fetch("http://tabithabjorkman.com/bifrost_t/json/skills.php")
     .then(res => res.json())
-    .then(showCategories);
-    //.then(showSkills);
+    //.then(showCategories);
+    .then(showSkills);
    
 }
 
-let list = document.querySelector("#list");
+let SSList = document.querySelector("#SoftSkills");
+let SSTemplate = document.querySelector("#SSTemplate").content;
 //const catTemp = document.querySelector (".categoryTemplate").content; 
-let 
-function showCategories(data){
-    // console.log(data);
 
-    data.forEach(function (theCat) {    
+function showSkills(data){
+    console.log(data);
+    data.forEach(function (theSkill) {    
              //console.log('hi there');
-        const clone = catTemp.cloneNode(true);
+             console.log(theSkill.categories_category_id);
+        const clone = SSTemplate.cloneNode(true);
+        let cat_id_skill = 
         //console.log('hi clone');
-        const name = clone.querySelector(".name");
-        clone.querySelector(".name").textContent = theCat.category_name;
+        const name = clone.querySelector(".ItemSoftSkill");
+        clone.querySelector(".ItemSoftSkill").textContent = theSkill.categories_category_id[1];
+
         //console.log('this is a loop');
       
-        list.appendChild(clone);
+        SSList.appendChild(clone);
         
     });
 }
 
-getData();  */
+getData(); 
 /********************** Tabs on search page ********************/
 
 

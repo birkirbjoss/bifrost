@@ -491,14 +491,16 @@ text-align: center;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-column: 1/-1;
+    grid-gap: 5%;
     height: 80vh;
     background-color:#e6e6e6;
     border-bottom: #293a4b solid 1px;
 }
 #skillTabs
 {
-    grid-column: 1/5;
-    padding: 35% 5% 5% 8%;
+    grid-column: 1/4;
+    margin: 12% 0 5% 5%;
+    padding: 5% 5% 5% 8%;
 }
 #tab-navigation { 
   padding-top: 2rem;
@@ -511,14 +513,15 @@ text-align: center;
 #tab-navigation a { 
   font-weight: 500;
   text-decoration: none;
-  color: #293a4b;
+  color: #ffffff;
   padding: 0.8rem 2rem 1rem 1rem;
-  border: 1px solid #777;
+  border: 1px solid #293A4B;
   border-radius: 5px 5px 0 0;
-  background: linear-gradient(#dfc891, #ceac41);
+  /* background: linear-gradient(#dfc891, #ceac41); */
+  background-color:#293a4b;
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
-  letter-spacing: 0.15rem; 
-  text-shadow: 0 1px 0 #000;
+  /*letter-spacing: 0.15rem; 
+   text-shadow: 0 1px 0 #000; */
   font-size: 1rem;
   transition: 0.2s transform linear;
 }
@@ -531,9 +534,11 @@ a.active {
   position: relative;
   top: -0.2rem;
   z-index: 2; 
+  background: linear-gradient(#dfc891, #ceac41);
 }
-#tab-navigation a:hover, nav#tab-navigation a:focus {    
+#tab-navigation a:hover, #tab-navigation a:focus {    
   transform: translateY(-.4rem); 
+  background: linear-gradient(#dfc891, #ceac41);
 }
 .skillsContainers
 {
@@ -547,10 +552,10 @@ a.active {
     padding: 2%;
 }
 @media screen and (max-width: 800px) {
-  nav#tab-navigation { height: 3rem;
+  #tab-navigation { height: 3rem;
   }
-  nav#tab-navigation a { 
-  font-size: 1.1rem;
+  #tab-navigation a { 
+  font-size: 1rem;
     padding: 0.8rem 1.4rem 2rem;
   }
 }
@@ -561,6 +566,20 @@ a.active {
 }
 }
 
+#selectedSkills
+{
+    grid-column: 4/-1;
+    margin-top: 12.6%;
+    padding: 5% 5% 5% 8%;
+    text-align: center;
+}
+
+.selectedList
+{
+    border: 1px solid rgba(41, 58, 75, 0.5);
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
 
 .tabs-animate-bottom
 {
@@ -578,7 +597,6 @@ a.active {
         bottom:0;opacity:1
     }
 }
-
 /******************** Registration page students ***********************/
 #studentForm
 {
