@@ -2,6 +2,8 @@
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
 
+/******************** Home ***********************/
+
     #section1 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -458,3 +460,13 @@ a.active {
     grid-column: 1/-1;
 }
 
+
+
+#companyForm form {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    margin: 35% 0 0 0;
+    width: 100%;
+   
+    text-align: center;
+}

@@ -1,5 +1,5 @@
 /******************** Tablet ***********************/
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+@media only screen and (min-device-width : 769px) and (max-device-width : 1080px) {
     #logo {
         width: 20%;
     }
@@ -39,11 +39,6 @@
         background-color: #293A4B;
 
     }
-
-
-
-
-
 
 
     /******************** Student profile ***********************/
@@ -116,11 +111,11 @@
     }
 
     #companyForm form {
-        grid-column: 3/5;
+        grid-column: 1/-1;
         grid-row: 1/-1;
         margin: 35% 0 0 0;
         width: 100%;
-        margin-top: 90%;
+       
         text-align: center;
     }
     
