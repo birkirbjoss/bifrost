@@ -1,40 +1,40 @@
 
 /******************** Fetching *********************/
 
- "use strict"
+//  "use strict"
 
-function getData(){
-    fetch("http://tabithabjorkman.com/bifrost_t/json/categories.php")
-    fetch("http://tabithabjorkman.com/bifrost_t/json/skills.php")
-    .then(res => res.json())
-    //.then(showCategories);
-    .then(showSkills);
+// function getData(){
+//     fetch("http://tabithabjorkman.com/bifrost_t/json/categories.php")
+//     fetch("http://tabithabjorkman.com/bifrost_t/json/skills.php")
+//     .then(res => res.json())
+//     //.then(showCategories);
+//     .then(showSkills);
    
-}
+// }
 
-let SSList = document.querySelector("#SoftSkills");
-let SSTemplate = document.querySelector("#SSTemplate").content;
-//const catTemp = document.querySelector (".categoryTemplate").content; 
+// let SSList = document.querySelector("#SoftSkills");
+// let SSTemplate = document.querySelector("#SSTemplate").content;
+// //const catTemp = document.querySelector (".categoryTemplate").content; 
 
-function showSkills(data){
-    console.log(data);
-    data.forEach(function (theSkill) {    
-             //console.log('hi there');
-             console.log(theSkill.categories_category_id);
-        const clone = SSTemplate.cloneNode(true);
-        let cat_id_skill = 
-        //console.log('hi clone');
-        const name = clone.querySelector(".ItemSoftSkill");
-        clone.querySelector(".ItemSoftSkill").textContent = theSkill.categories_category_id[1];
+// function showSkills(data){
+//     console.log(data);
+//     data.forEach(function (theSkill) {    
+//              //console.log('hi there');
+//              console.log(theSkill.categories_category_id);
+//         const clone = SSTemplate.cloneNode(true);
+//         let cat_id_skill = 
+//         //console.log('hi clone');
+//         const name = clone.querySelector(".ItemSoftSkill");
+//         clone.querySelector(".ItemSoftSkill").textContent = theSkill.categories_category_id[1];
 
-        //console.log('this is a loop');
+//         //console.log('this is a loop');
       
-        SSList.appendChild(clone);
+//         SSList.appendChild(clone);
         
-    });
-}
+//     });
+// }
 
-getData(); 
+// getData(); 
 /********************** Tabs on search page ********************/
 
 
@@ -102,6 +102,7 @@ let modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
 let btn = document.getElementById("loginButton");
+let Mobilebtn = document.getElementById("MobileloginButton")
 
 // Get the <span> element that closes the modal
 let span = document.getElementsByClassName("close")[0];
