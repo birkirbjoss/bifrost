@@ -580,6 +580,10 @@ a.active {
   margin-top: -1rem; 
 }
 }
+.ItemSoftSkill
+{
+    z-index: 9999;
+}
 
 #selectedSkills
 {
@@ -594,23 +598,8 @@ a.active {
     border: 1px solid rgba(41, 58, 75, 0.5);
     background-color: #ffffff;
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
-}
-
-.tabs-animate-bottom
-{
-    position:relative;
-    animation:animateBottom 0.4s;
-}
-@keyframes animateBottom
-{
-    from
-    {
-        bottom:-300px;opacity:0;
-    } 
-    to
-    {
-        bottom:0;opacity:1
-    }
+    min-height: 50vh;
+    z-index: 0;
 }
 /******************** Registration page students ***********************/
 #studentForm
