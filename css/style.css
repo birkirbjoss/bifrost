@@ -685,7 +685,7 @@ a.active {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-column: 1/-1;
-    background-color: #e6e6e6;
+    background-color: #293A4B;
 }
 
 #companyForm form {
@@ -1293,4 +1293,14 @@ a.active {
         width: 100%;
         grid-column: 1/-1;
     }
+
+    #companyForm form {
+        grid-column: 3/5;
+        grid-row: 1/-1;
+        margin: 35% 0 0 0;
+        width: 100%;
+        margin-top: 90%;
+        text-align: center;
+    }
+    
 }

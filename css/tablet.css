@@ -1,0 +1,127 @@
+/******************** Tablet ***********************/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    #logo {
+        width: 20%;
+    }
+
+    #name {
+        margin-top: -12%;
+        margin-left: 32%;
+    }
+
+    #slogan {
+        grid-row: 5;
+        margin-top: 10%;
+
+    }
+
+    nav {
+        font-size: 1em;
+        margin-top: 13%;
+        margin-right: 5%;
+    }
+
+    header {
+        min-height: 20%;
+    }
+
+    #staffTitles {
+        margin-top: 2%;
+    }
+
+    /*******************************************/
+
+    #studentForm form {
+
+        grid-column: 1/7;
+        height: 90vh;
+        width: 100%;
+        background-color: #293A4B;
+
+    }
+
+
+
+
+
+
+
+    /******************** Student profile ***********************/
+
+    #profileInfo {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column: 1/-1;
+        height: 70vh;
+        background-color: #e6e6e6;
+        border-bottom: #293a4b solid 1px;
+    }
+
+    #portfolioBox {
+        margin-top: 3%;
+        grid-column: 1/-1;
+        padding: 10%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #profileImg {
+        grid-column: 1/2;
+        width: 70%;
+        margin-top: 60%;
+        border: 1px solid #ffffff;
+    }
+
+    #profileText {
+        grid-column: 2/6;
+        grid-row: 1;
+        color: #ffffff;
+        margin-top: 27%;
+        margin-right: 200%;
+        font-size: .7em;
+        width: 50%;
+        text-align: left;
+    }
+
+    #profileText h5 {
+        width: 100%;
+        padding: 2%;
+        font-weight: 500;
+        grid-column: 2/6;
+    }
+
+    /* #profileText h5:nth-child(odd)
+{
+    width: 100%;
+    padding: 2%;
+    font-weight: 800;
+} */
+    #profileText2 {
+        grid-column: 3/6;
+        grid-row: 1;
+        margin-top: 54%;
+        font-size: .7em;
+
+    }
+
+    #profileText2 h5 {
+        width: 100%;
+        padding: 2%;
+    }
+
+    #timeline {
+        width: 100%;
+        grid-column: 1/-1;
+    }
+
+    #companyForm form {
+        grid-column: 3/5;
+        grid-row: 1/-1;
+        margin: 35% 0 0 0;
+        width: 100%;
+        margin-top: 90%;
+        text-align: center;
+    }
+    
+}
