@@ -1,4 +1,41 @@
 
+/******************** Fetching *********************/
+
+//  "use strict"
+
+// function getData(){
+//     fetch("http://tabithabjorkman.com/bifrost_t/json/categories.php")
+//     fetch("http://tabithabjorkman.com/bifrost_t/json/skills.php")
+//     .then(res => res.json())
+//     //.then(showCategories);
+//     .then(showSkills);
+   
+// }
+
+// let SSList = document.querySelector("#SoftSkills");
+// let SSTemplate = document.querySelector("#SSTemplate").content;
+// //const catTemp = document.querySelector (".categoryTemplate").content; 
+
+// function showSkills(data){
+//     console.log(data);
+//     data.forEach(function (theSkill) {    
+//              //console.log('hi there');
+//              console.log(theSkill.categories_category_id);
+//         const clone = SSTemplate.cloneNode(true);
+//         let cat_id_skill = 
+//         //console.log('hi clone');
+//         const name = clone.querySelector(".ItemSoftSkill");
+//         clone.querySelector(".ItemSoftSkill").textContent = theSkill.categories_category_id[1];
+
+//         //console.log('this is a loop');
+      
+//         SSList.appendChild(clone);
+        
+//     });
+// }
+
+// getData(); 
+
 /******************** Fetching Skills & Cloning it to tabs *********************/
  "use strict"
 
