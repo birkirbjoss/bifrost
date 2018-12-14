@@ -75,6 +75,11 @@ a {
 .display_none {
     display: none;
 }
+.Zindex
+{
+    z-index: 999;
+}
+/************ Home ****************/
 
 #section1 {
     display: grid;

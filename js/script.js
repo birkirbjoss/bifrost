@@ -154,32 +154,6 @@ if(document.getElementById("defaultOpen")){
 }
 
 /************************* Clicking to get skill list items to search window *************************/
-/* function selectSearchItems() {
-  
-  console.log(SSItems);
-}
-let SSItems = document.querySelector("#SoftSkills, h6, .ItemSoftSkill");
-function MoveSearchItems() {
-	var ListH6Item = document.createDocumentFragment();
-	ListH6Item.appendChild(document.querySelector('#SoftSkills, h6, .ItemSoftSkill'));
-	document.getElementById('selectedList').appendChild(ListH6Item);
-}
-onclick.MoveSearchItems(); */
-//selectSearchItems();
-/* function allowDrop(ev) {
-  ev.preventDefault();
-}
-
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-} */
-
 document.addEventListener("q", function(event) {
   // The dataTransfer.setData() method sets the data type and the value of the dragged data
   event.dataTransfer.setData("Text", event.target.id);
@@ -188,21 +162,19 @@ document.addEventListener("q", function(event) {
   //document.getElementById("demo").innerHTML = "Started to drag the p element.";
   
   // Change the opacity of the draggable element
-  event.target.style.opacity = "0.4";
+  event.target.style.opacity = "0.5";
 });
 
 // While dragging the p element, change the color of the output text
 document.addEventListener("drag", function(event) {
-  document.getElementById("demo").style.color = "red";
+  document.getElementById("demo").style.color = "#f83d08";
 });
 
 // Output some text when finished dragging the p element and reset the opacity
 document.addEventListener("dragend", function(event) {
-  document.getElementById("demo").innerHTML = "Finished dragging the p element.";
+  document.getElementById("demo").innerHTML = "When you have selected your skills click -";
   event.target.style.opacity = "1";
 });
-
-
 /* Events fired on the drop target */
 
 // When the draggable p element enters the droptarget, change the DIVS's border style

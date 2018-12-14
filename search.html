@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" media="screen and (min-device-width : 769px) and (max-device-width : 1080px)" href="css/tablet.css" type="text/css">
     <link rel="stylesheet" media="screen and (min-device-width : 320px) and (max-device-width : 768px)" href="css/mobile.css" type="text/css">
-    <title>Home</title>
+    <title>Search</title>
 </head>
 
 <body>
@@ -37,19 +37,19 @@
                     <div id="SoftSkills" class="tabcontent skillsContainers droptarget" >
 
                         <template id="SSTemplate">
-                            <h6 class="ItemSoftSkill" draggable="true"></h6>
+                            <h6 class="ItemSoftSkill Zindex" draggable="true"></h6>
                         </template>
                     </div>
-                    <div id="TechSkills" class="tabcontent skillsContainers">
+                    <div id="TechSkills" class="tabcontent skillsContainers droptarget">
 
                         <template id="TSTemplate">
-                            <h6 class="ItemTechSkill" id="ItemTechSkill"></h6>
+                            <h6 class="ItemTechSkill Zindex" draggable="true"></h6>
                         </template>
                     </div>
-                    <div id="CTSkills" class="tabcontent skillsContainers">
+                    <div id="CTSkills" class="tabcontent skillsContainers droptarget">
 
                         <template id="CTTemplate">
-                            <h6 class="ItemCTSkill" id="ItemCTSkill"></h6>
+                            <h6 class="ItemCTSkill Zindex" draggable="true"></h6>
                         </template>
                     </div>
             </div>
@@ -58,6 +58,7 @@
                 <div class="selectedList droptarget" id="selectedList" >
                 </div>
                 <p id="demo"></p>
+                <a href="search_results.html"><button class="mui-btn mui-btn--small">SEARCH</button></a> 
             </div>
         </section>
 
