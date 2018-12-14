@@ -1,5 +1,5 @@
 
-/******************** Fetching *********************/
+/******************** Fetching Skills & Cloning it to tabs *********************/
 
  "use strict"
 
@@ -117,6 +117,9 @@ function openTab(evt, tabInfo) {
 if(document.getElementById("defaultOpen")){
   document.getElementById("defaultOpen").click();
 }
+
+/************************* Clicking to get skill list items to search window *************************/
+
 
 /******************** Scrolling to About page *********************/
 
