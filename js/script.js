@@ -3,38 +3,92 @@
 
  "use strict"
 
-function getData(){
-    fetch("http://tabithabjorkman.com/bifrost_t/json/categories.php")
+function getDataSoft(){
+    //fetch("http://tabithabjorkman.com/bifrost_t/json/categories.php")
     fetch("http://tabithabjorkman.com/bifrost_t/json/skills.php")
     .then(res => res.json())
     //.then(showCategories);
-    .then(showSkills);
-   
+    .then(showSkillsSoft);
+}
+function getDataTech(){
+    //fetch("http://tabithabjorkman.com/bifrost_t/json/categories.php")
+    fetch("http://tabithabjorkman.com/bifrost_t/json/skills.php")
+    .then(res => res.json())
+    //.then(showCategories);
+    .then(showSkillsTech);
+}
+function getDataCT(){
+    //fetch("http://tabithabjorkman.com/bifrost_t/json/categories.php")
+    fetch("http://tabithabjorkman.com/bifrost_t/json/skills.php")
+    .then(res => res.json())
+    //.then(showCategories);
+    .then(showSkillsCT);
 }
 
 let SSList = document.querySelector("#SoftSkills");
+let TSList = document.querySelector("#TechSkills");
+let CTSList = document.querySelector("#CTSkills");
 let SSTemplate = document.querySelector("#SSTemplate").content;
+let TSTemplate = document.querySelector("#TSTemplate").content;
+let CTTemplate = document.querySelector("#CTTemplate").content;
 //const catTemp = document.querySelector (".categoryTemplate").content; 
 
-function showSkills(data){
+function showSkillsSoft(data){
     console.log(data);
     data.forEach(function (theSkill) {    
              //console.log('hi there');
-             console.log(theSkill.categories_category_id);
-        const clone = SSTemplate.cloneNode(true);
-        let cat_id_skill = 
-        //console.log('hi clone');
-        const name = clone.querySelector(".ItemSoftSkill");
-        clone.querySelector(".ItemSoftSkill").textContent = theSkill.categories_category_id[1];
+             //console.log(theSkill.categories_category_id);
 
-        //console.log('this is a loop');
-      
+        const clone = SSTemplate.cloneNode(true);
+        //const clone = TSTemplate.cloneNode(true);
+
+        let cat_id_skill = theSkill.categories_category_id;
+
+        if(cat_id_skill == 1)
+        {
+          clone.querySelector(".ItemSoftSkill").textContent = theSkill.skills;
+          
+        }
         SSList.appendChild(clone);
-        
     });
 }
+function showSkillsTech(dataTech){
+  console.log(dataTech);
+  dataTech.forEach(function (theSkillT) {    
+           //console.log('hi there');
+           //console.log(theSkill.categories_category_id);
 
-getData(); 
+        const clone = TSTemplate.cloneNode(true);
+
+        let cat_id_skill = theSkillT.categories_category_id;
+
+        if(cat_id_skill == 2)
+        {
+          clone.querySelector(".ItemTechSkill").textContent = theSkillT.skills;
+        }
+        TSList.appendChild(clone);
+  });
+}
+function showSkillsCT(dataCT){
+  //console.log(dataTech);
+  dataCT.forEach(function (theSkillCT) {    
+           //console.log('hi there');
+           //console.log(theSkill.categories_category_id);
+
+        const clone = CTTemplate.cloneNode(true);
+
+        let cat_id_skill = theSkillCT.categories_category_id;
+
+        if(cat_id_skill == 3)
+        {
+          clone.querySelector(".ItemCTSkill").textContent = theSkillCT.skills;
+        }
+        CTSList.appendChild(clone);
+  });
+}
+getDataCT();
+getDataTech();
+getDataSoft(); 
 /********************** Tabs on search page ********************/
 
 
