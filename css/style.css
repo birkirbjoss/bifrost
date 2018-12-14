@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -334,13 +333,13 @@ p {
     grid-column: 1/-1;
     text-align: center;
 
-    
+
 }
 
 #staffImage {
-   
-width: 15%;
-  
+
+    width: 15%;
+
 
 }
 
@@ -388,7 +387,9 @@ width: 15%;
 
 #profileImg {
     grid-column: 1;
+    grid-row: 1;
     width: 55%;
+
     border: 1px solid #ffffff;
 }
 
@@ -525,7 +526,7 @@ width: 15%;
     grid-template-rows: repeat(6, 1fr);
     grid-column: 1/-1;
     grid-gap: 5%;
-    height: 80vh;
+    height: 100vh;
     background-color: #e6e6e6;
     border-bottom: #293a4b solid 1px;
 }
@@ -540,12 +541,13 @@ width: 15%;
 }
 
 #tab-navigation {
+    margin-top: 5%;
     padding-top: 2rem;
     padding-left: 2rem;
     overflow: hidden;
     height: 4rem;
     width: max-content;
-    margin: 0 auto;
+
 }
 
 #tab-navigation a {
@@ -622,7 +624,7 @@ a.active {
 
 #selectedSkills {
     grid-column: 4/-1;
-    margin-top: 12.6%;
+    margin-top: 17%;
     padding: 5% 5% 5% 8%;
     text-align: center;
 }
@@ -660,12 +662,28 @@ a.active {
     grid-column: 1/-1;
     height: 100vh;
     background-color: #e6e6e6;
+    text-align: center;
+
+
 }
 
 #studentForm form {
     grid-column: 3/5;
     margin: 35% 0 0 0;
     width: 100%;
+    background-color: #293A4B;
+
+
+
+}
+
+.mui-textfield>label {
+    color: white;
+}
+
+.mui-form legend {
+    color: white;
+    ;
 }
 
 /******************** Registration page companies ***********************/
@@ -674,14 +692,14 @@ a.active {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-column: 1/-1;
-    background-color: #e6e6e6;
+    background-color:#e6e6e6;
 }
 
 #companyForm form {
     grid-column: 3/5;
     grid-row: 1/-1;
-    margin: 35% 0 0 0;
-    width: 100%;
+    background-color: #293A4B;
+    
 }
 
 #colorDkGrey {
@@ -693,218 +711,16 @@ a.active {
 }
 
 
+/******************** Skill selecting ***********************/
 
 
 
 
 
 
-/******************** Mobile ***********************/
-
-@media only screen and (min-device-width : 320px) and (max-device-width :  768px) {
-
-    #section1 {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        height: 100vh;
-    }
-
-    #section2 {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        height: 100vh;
-    }
-
-    header {
-        position: fixed;
-        display: inline;
-        background-color: #e6e6e6;
-        min-width: 100%;
-        min-height: 25%;
-        z-index: 999;
-    }
-
-    nav {
-        margin-right: 18%;
-        font-size: .8em;
-    }
-
-    #backgroundImage {
-        grid-column: 1/-1;
-        grid-row: 3;
-        margin-top: 15%;
-        margin-left: 0%;
-        margin-bottom: 10%;
-        width: 100%;
-
-    }
-
-    #logo {
-        grid-column: 1/2;
-        grid-row: 3;
-        width: 25%;
-        margin-left: 10%;
-        margin-top: 5%;
-    }
-
-    #name {
-        grid-column: 3/-2;
-        grid-row: 3;
-        margin-top: -20%;
-        margin-left: 40%;
-        font-size: 2.5em;
-    }
 
 
 
-    #slogan {
-        grid-row: 5;
-        grid-column: 1/-1;
-        width: 95%;
-        font-size: .6em;
-        margin-top: 20%;
-        margin-left: 2.5%;
-        background-color: #e6e6e6;
 
 
 
-    }
-
-    #loginButton {
-        display: none;
-    }
-
-    #signup {
-        display: none;
-    }
-
-    #MobileloginButton {
-        display: grid;
-        grid-column: 1/-1;
-        grid-row: 4;
-        width: 95%;
-        margin-left: 2.5%;
-        height: 50%;
-        border-radius: .5em;
-        border-color: #ceac41;
-        border-width: .1em;
-        background-color: #293a4b;
-        font-size: 1.5em;
-
-        color: white;
-    }
-
-    #MobileSignup {
-        display: grid;
-        grid-column: 1/-1;
-        grid-row: 4;
-        width: 95%;
-        margin-left: 2.5%;
-        margin-top: 17%;
-        height: 50%;
-        ;
-        border-radius: .5em;
-        border-color: #ceac41;
-        border-width: .1em;
-        background-color: #293a4b;
-        font-size: 1.5em;
-
-        color: white;
-    }
-
-    /******************** About page *********************/
-
-    #aboutTitle {
-        grid-column: 1/-1;
-        grid-row: 3;
-        text-align: center;
-        display: inline;
-        font-size: 3em;
-    }
-
-
-    #sponsors {
-        grid-column: 1/-1;
-        grid-row: 6;
-        border-right: 1px solid black;
-        border-top: 1px solid black;
-        border-left: 1px solid black;
-        text-align: center;
-    }
-
-    #staffTemplate {
-        grid-column: 1/-1;
-        grid-row: 4;
-        margin-left: 2%;
-
-
-    }
-
-    #staffImage {
-        width: 32%;
-    }
-
-    #staffTitles {
-        grid-column: 1/-1;
-        grid-row: 5;
-
-
-    }
-
-    #staff1 {
-        margin-left: 2.5%;
-
-    }
-
-    #staff2 {
-        margin-left: 8%;
-        margin-right: 10%;
-
-    }
-
-
-    #sponsorImage {
-        grid-column: 1/-1;
-
-        width: 30%;
-    }
-
-    footer {
-        grid-row: 7;
-        font-size: .8em;
-    }
-
-}
-
-/******************** Tablet ***********************/
-@media only screen and (min-device-width : 768px) and (max-device-width :  1024px)
-{
-    #logo
-    {
-        width: 20%;
-    }
-    #name
-    {
-        margin-top: -12%;
-        margin-left: 32%;
-    }
-
-    nav
-    {
-        font-size: 1em;
-        margin-top: 13%;
-        margin-right: 5%;
-    }
-
-    header
-    {
-        min-height: 20%;
-    }
-
-    #staffTitles
-    {
-        margin-top: 2%;
-    }
-}
