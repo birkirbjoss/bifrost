@@ -177,7 +177,10 @@ a {
     color: white;
 }
 
-
+.display_none
+{
+    display: none;
+}
 
 /******************** Log in Modal *********************/
 /* The Modal (background) */
@@ -510,6 +513,9 @@ grid-column: 1/-1;
     grid-column: 1/4;
     margin: 12% 0 5% 5%;
     padding: 5% 5% 5% 8%;
+    height: 100vh;
+    overflow: hidden;
+    overflow:scroll;
 }
 #tab-navigation { 
   padding-top: 2rem;
