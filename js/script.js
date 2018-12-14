@@ -76,7 +76,6 @@ function showSkillsSoft(data){
              //console.log(theSkill.categories_category_id);
 
         const clone = SSTemplate.cloneNode(true);
-        //const clone = TSTemplate.cloneNode(true);
 
         let cat_id_skill = theSkill.categories_category_id;
 

@@ -158,8 +158,6 @@
     #staffTitles {
         grid-column: 1/-1;
         grid-row: 5;
-
-
     }
 
     #staff1 {
@@ -282,16 +280,14 @@
     padding-top: 2rem;
     padding-left: 2rem;
     overflow: hidden;
-    height: 4rem;
+    height: 3rem;
     width: 50%;
-
 }
-
 #tab-navigation a {
     font-weight: 500;
     text-decoration: none;
     color: #ffffff;
-    padding: 0.8rem 2rem 1rem 1rem;
+    padding: 0.8rem 1.4rem 2rem;
     border: 1px solid #293A4B;
     border-radius: 5px 5px 0 0;
     /* background: linear-gradient(#dfc891, #ceac41); */
@@ -322,8 +318,9 @@ a.active {
     background: linear-gradient(#dfc891, #ceac41);
 }
 
+
 .skillsContainers {
-    width: 112%;
+    width: 50%;
     max-height: 70%;
     background-color: #ffffff;
     overflow: hidden;
@@ -331,28 +328,6 @@ a.active {
     margin: 0 0 0 2.5%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     padding: 2%;
-}
-
-@media screen and (max-width: 800px) {
-    #tab-navigation {
-        height: 3rem;
-    }
-
-    #tab-navigation a {
-        font-size: 1rem;
-        padding: 0.8rem 1.4rem 2rem;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    #tab-navigation {
-        height: auto;
-    }
-
-    #tab-navigation a {
-        display: block;
-        margin-top: -1rem;
-    }
 }
 
 #selectedSkills {

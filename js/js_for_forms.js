@@ -13,7 +13,8 @@ function getData() //CONNECTS THE DATABASE TO THE SITE
 function PopulateDropDownList(roles) {
      //Add the Options to the DropDownList.
      roles.forEach(function(user_role)
-     {console.log("fun, fun, fun");
+     {
+         //console.log("fun, fun, fun");
         for (let i = 0; i < user_role.length; i++) {
             
                 let option = document.createElement("OPTION");
