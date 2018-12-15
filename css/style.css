@@ -639,6 +639,13 @@ a.active {
     }
 }
 
+
+
+
+
+
+
+
 /******************** Registration page students ***********************/
 #studentForm {
     display: grid;
@@ -646,7 +653,7 @@ a.active {
     grid-template-rows: repeat(6, 1fr);
     grid-column: 1/-1;
     height: 100vh;
-    background-color: #e6e6e6;
+    background-color: #293A4B;
     text-align: center;
 
 
@@ -681,9 +688,11 @@ a.active {
 }
 
 #companyForm form {
-    grid-column: 3/5;
+    grid-column: 2/6;
     grid-row: 1/-1;
     background-color: #293A4B;
+    text-align: center;
+    margin-top: 15%;
     
 }
 
