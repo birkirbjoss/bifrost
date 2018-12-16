@@ -105,15 +105,16 @@
         margin-left: 2.5%;
         margin-top: 17%;
         height: 50%;
-
         border-radius: .5em;
         border-color: #ceac41;
         border-width: .1em;
         background-color: #293a4b;
         font-size: 1.5em;
-
-        color: white;
+        
     }
+
+   
+    
 
     button {
         color: white;
@@ -158,6 +159,7 @@
     #staffTitles {
         grid-column: 1/-1;
         grid-row: 5;
+        font-size: .7em;
     }
 
     #staff1 {
@@ -256,19 +258,19 @@
 
 #searchSkills {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-column: 1/-1;
-    grid-gap: 5%;
+    grid-gap: 20%;
     height: 100vh;
     background-color: #e6e6e6;
     border-bottom: #293a4b solid 1px;
 }
 
 #skillTabs {
-    grid-column: 1/6;
-
-    margin: 12% 0 5% 5%;
+    grid-column: 1/-1;
+    grid-row: 2;
+    margin: 0% 0 5% 5%;
     padding: 5% 5% 5% 8%;
     height: 100vh;
     overflow: hidden;
@@ -331,8 +333,8 @@ a.active {
 }
 
 #selectedSkills {
-    grid-column: 4/-1;
-    margin-top: 17%;
+    grid-column: 1/-1;
+    grid-row: 2;
     padding: 5% 5% 5% 8%;
     text-align: center;
 }
@@ -359,6 +361,20 @@ a.active {
         opacity: 1
     }
 }
+
+/******************** Search Results ***********************/
+
+#SearchResultTemplate
+{
+    grid-column: 1/-1;
+}
+
+.persIconImg
+{
+    margin-left: 25%;
+    width: 50%;
+}
+
 
 
 /******************** Student registration ***********************/

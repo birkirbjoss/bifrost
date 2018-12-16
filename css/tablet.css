@@ -30,7 +30,8 @@
     }
 
     #staffTitles {
-        margin-top: 2%;
+        
+        font-size: .7em;
     }
 
     /*******************************************/
@@ -123,4 +124,20 @@
         text-align: center;
     }
     
+}/******************** Search Results ***********************/
+
+#SearchResultTemplate
+{
+    grid-column: 1/-1;
+    margin-top: 20%;
 }
+
+.persIconImg
+{
+    grid-row: 3;
+    margin-top: 20%;
+    margin-left: 6%;
+    width: 25%;
+}
+
+
