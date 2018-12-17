@@ -53,6 +53,9 @@ h6 {
     color: #293a4b;
 }
 
+
+
+
 p {
     font-size: 1em;
     font-weight: 400;
@@ -75,10 +78,11 @@ a {
 .display_none {
     display: none;
 }
-.Zindex
-{
+
+.Zindex {
     z-index: 999;
 }
+
 /************ Home ****************/
 
 #section1 {
@@ -89,7 +93,7 @@ a {
     height: 100vh;
     width: auto;
     background-color: #e6e6e6;
-    
+
 }
 
 #section3 {
@@ -100,7 +104,7 @@ a {
     height: 100vh;
     width: auto;
     background-color: #e6e6e6;
-    
+
 }
 
 header {
@@ -140,19 +144,19 @@ header {
     grid-row: 3;
     margin-top: 2%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.8);;
+    background-color: rgba(255, 255, 255, 0.8);
+    ;
     text-align: left;
-    
+
 }
 
-#sloganText
-{
+#sloganText {
     line-height: 1.4;
     font-weight: bold;
     font-size: 2em;
     margin-left: 1em;
-    margin-top:1em;
-    
+    margin-top: 1em;
+
 }
 
 #MobileLogin {
@@ -169,9 +173,14 @@ nav {
     margin-top: 2%;
     margin-right: 5%;
 
-
-
 }
+nav :hover{ 
+    border-bottom: 3px solid #ceac41;
+    text-decoration: none;
+    }
+
+    
+
 
 #loginButton {
     width: 4em;
@@ -204,6 +213,50 @@ nav {
 }
 
 
+#section3 {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    height: 100vh;
+    width: auto;
+    grid-column: 1/-1;
+    background-color: #e6e6e6;
+}
+
+
+
+#subscription1 {
+    grid-column: 2/3;
+    grid-row: 4;
+    text-align: center;
+    border: 3px solid ;
+    background-color:white;
+    height:120%;
+    width: 150%; 
+    margin-top: 10%;
+}
+
+#subscription2 {
+    grid-row: 4;
+    grid-column: 5/6;
+    text-align: center;
+    border: 3px solid ;
+    background-color:white;
+    height:120%;
+    width: 150%; 
+    margin-top: 10%;
+}
+
+#requestButton
+{
+    background-color: #293A4B;
+    color: white;
+    width: 40%;
+    height: 20%;
+    border-radius: 10px;
+    border: 2px solid #ceac41;
+    font-size: .6em;
+}
 
 
 
@@ -283,14 +336,13 @@ p {
     margin-left: -50%;
 }
 
-#signUptitle
-{
+#signUptitle {
     margin-top: 10%;
-    
+
 }
-#freeStudents
-{
-    color:white;
+
+#freeStudents {
+    color: white;
 }
 
 
@@ -299,7 +351,7 @@ p {
     grid-column: 1/2;
     margin-top: 30%;
     width: 130%;
-    height: 80%;
+    height: 87%;
     margin-left: 20%;
     grid-row: 2/7;
     align-content: center;
@@ -320,14 +372,14 @@ p {
 .mui-textfield>textarea {
     width: 75%;
     margin-left: 12.5%;
-    background-color:gray;
+    background-color: gray;
 
 }
 
 .mui-select>select {
     width: 75%;
     margin-left: 12.5%;
-    background-color:gray;
+    background-color: gray;
 }
 
 .mui-select>label {
@@ -341,7 +393,7 @@ p {
 #formSignup {
     color: white;
     margin-top: -16%;
-    
+
 }
 
 
@@ -358,18 +410,17 @@ p {
 }
 
 
-#sponsors {
+#partners {
     grid-column: 1/-1;
-    grid-row: 6;
-    border-right: 1px solid black;
-    border-top: 1px solid black;
-    border-left: 1px solid black;
+    grid-row: 3;
+    border: 1px solid #293A4B;
     text-align: center;
+    
 }
 
-#sponsorImage
-{
-    width: 10%;
+#partnerImage {
+    
+    width: 13%;
 }
 
 #staffTemplate {
@@ -640,8 +691,8 @@ a.active {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     padding: 2%;
 }
-.ItemSoftSkill
-{
+
+.ItemSoftSkill {
     z-index: 9999;
 }
 
@@ -655,7 +706,7 @@ a.active {
 .selectedList {
     border: 1px solid rgba(41, 58, 75, 0.5);
     background-color: #ffffff;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     min-height: 50vh;
     z-index: 0;
 }
@@ -679,17 +730,15 @@ a.active {
 
 /******************** Search Results ***********************/
 
-#SearchResultTemplate
-{
+#SearchResultTemplate {
     grid-column: 1/-1;
 }
 
-.persIconImg
-{
+.persIconImg {
     grid-column: 1/-1;
-   width: 20%;
-   margin-top: 10%;
-   margin-left: 10%;
+    width: 20%;
+    margin-top: 10%;
+    margin-left: 10%;
 }
 
 
@@ -738,17 +787,18 @@ a.active {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    grid-column: 1/-1;
-    background-color:#e6e6e6;
+    grid-column: 1/4;
+    background-color: #e6e6e6;
 }
 
 #companyForm form {
-    grid-column: 2/6;
+    grid-column: 1/4;
     grid-row: 1/-1;
     background-color: #293A4B;
     text-align: center;
-    margin-top: 15%;
-    
+    margin-top: 17%;
+    margin-left: 10%;
+
 }
 
 #colorDkGrey {
@@ -759,17 +809,27 @@ a.active {
     color: rgba(0, 0, 0, .54);
 }
 
+#subscriptionReg1 {
+    grid-column: 5/6;
+    grid-row: 2;
+    text-align: center;
+    border: 3px solid ;
+    background-color:white;
+    height:80%;
+    width: 150%; 
+    
+}
+
+#subscriptionReg2 {
+    grid-row: 3;
+    grid-column: 5/6;
+    text-align: center;
+    border: 3px solid ;
+    background-color:white;
+    height:80%;
+    width: 150%; 
+    margin-top: 10%;
+}
+
 
 /******************** Skill selecting ***********************/
-
-
-
-
-
-
-
-
-
-
-
-
