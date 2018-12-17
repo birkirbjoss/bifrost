@@ -362,7 +362,7 @@ p {
 #signup {
 
     grid-column: 1/2;
-    margin-top: 30%;
+    
     width: 130%;
     height: 87%;
     margin-left: 20%;
@@ -435,6 +435,14 @@ p {
     display: inline;
 }
 
+
+#partnersTitle
+{
+    grid-column: 1/-1;
+    width: 100%;
+    text-align: center;
+    margin-top: 10%;
+}
 
 #partners {
     grid-column: 1/-1;
