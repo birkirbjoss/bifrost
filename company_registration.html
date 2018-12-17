@@ -26,7 +26,7 @@
 </header>
     <main>
         <section id="companyForm">
-            <form class="mui-form" enctype="multipart/form-data">
+            <form class="mui-form" action="http://tabithabjorkman.com/bifrost_t/php_inserts/company_profile.php" method="POST">
                     <legend>Company Information</legend>
                     <div class="mui-textfield">
                         <input type="text" name="comp_name" value="">
@@ -52,12 +52,8 @@
                         <input type="text" name="industry_type" value="">
                         <label>Industry:</label>
                     </div>
-                    <div class="mui-textfield">
-                        <input type="number" name="number_of_employees" value="">
-                        <label>Number of employees:</label>
-                    </div>
                     <div class="mui-select">
-                        <select name="number_of_employees">
+                        <select name="number_of_employees[]">
                             <option value="">Less than 10</option>
                             <option value="">10 - 30</option>
                             <option value="">30 - 50</option>
@@ -69,10 +65,6 @@
                     <div class="mui-textfield">
                         <input type="number" name="cvr_number" value="">
                         <label>CVR Number:</label>
-                    </div>
-                    <div class="mui-textfield">
-                        <input type="url" name="company_url" value="">
-                        <label>Link to Company Website</label>
                     </div>
                     <div class="mui-textfield">
                         <input type="text" name="address" value="">
@@ -91,7 +83,7 @@
                             <label>Country:</label>
                     </div>
                     <div class="mui-select color_dk_grey">
-                        <select name="subscrip_type">
+                        <select name="subscrip_type[]">
                             <option value="basic">Basic</option>
                             <option value="premium">Premium</option>
                             <option value="platinum">Platinum</option>

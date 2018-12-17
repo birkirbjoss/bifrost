@@ -44,17 +44,17 @@
             <!-- Modal content -->
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <form class="mui-form" action="">
+                <form class="mui-form" action="" name="loginForm">
                     <div class="mui-textfield mui-textfield--float-label">
-                        <input type="text">
+                        <input type="text" id="userName" name="userN" value="">
                         <label for="email">E-mail</label>
                     </div>
                     <div class="mui-textfield mui-textfield--float-label">
-                        <input type="text">
+                        <input type="text" id="password" name="PassW" value="">
                         <label for="password">Password</label>
                     </div>
       
-                    <button type="submit" class="signUpButton mui-btn mui-btn--small">Log in</button>
+                    <button type="submit" class="signUpButton mui-btn mui-btn--small" onclick="login()">Log in</button>
                 </form>
             </div>
 
@@ -73,7 +73,6 @@
             <form class="mui-form" action="http://tabithabjorkman.com/bifrost_t/php_inserts/sign_up.php" role="form" method="POST">
                 
                 <div class="mui-textfield mui-textfield--float-label">
-                    
                     <input class="fullname" type="text" name="name" value="">
                     <label class="fullname">Full Name</label>
                 </div>
