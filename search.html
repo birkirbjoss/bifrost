@@ -33,7 +33,7 @@
                         <a id="defaultOpen" class="tablinks" onclick="openTab(event, 'SoftSkills')" href="#">Soft Skills</a>
                         <a class="tablinks" onclick="openTab(event, 'TechSkills')" href="#">Technical Skills</a>
                         <a class="tablinks" onclick="openTab(event, 'CTSkills')" href="#">Critical Thinking Skills</a>
-                    </div><!-- ondrop="drop(event)" ondragover="allowDrop(event)" -->
+                    </div>
                     <div id="SoftSkills" class="tabcontent skillsContainers droptarget" >
 
                         <template id="SSTemplate">
@@ -53,13 +53,18 @@
                         </template>
                     </div>
             </div>
-            <div id="selectedSkills"><!-- ondrop="drop(event)" ondragover="allowDrop(event)" -->
+            <div class="search-bar" id="selectedSkills">
+                    <input class="selectedList droptarget type="text" name="search" value="" autocomplete="off" id="selectedList" onkeyup="searchFunction()">
+                    <p id="demo"></p>
+                    <a href="search_results.html"><button class="mui-btn mui-btn--small">SEARCH</button></a> 
+                </div><!--myInput = selectedList-->
+            <!-- <div id="selectedSkills">
                 <h3>Selected skills</h4>
                 <div class="selectedList droptarget" id="selectedList" >
                 </div>
                 <p id="demo"></p>
                 <a href="search_results.html"><button class="mui-btn mui-btn--small">SEARCH</button></a> 
-            </div>
+            </div> -->
         </section>
 
     </main>
