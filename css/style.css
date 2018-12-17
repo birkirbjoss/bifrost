@@ -185,9 +185,9 @@ nav {
     color: white;
 }
 
-#MobileloginButton {
+/* #MobileloginButton {
     display: none;
-}
+} */
 
 
 
@@ -342,6 +342,19 @@ p {
     color: white;
     margin-top: -16%;
     
+}
+
+/*********************** Contact page ******************************/
+#contact_form_section
+{
+    grid-column: 1/-1;
+    grid-row: 1;
+    text-align: center;
+}
+#contact_form
+{
+    grid-row: 1/5;
+    padding: 15%;
 }
 
 

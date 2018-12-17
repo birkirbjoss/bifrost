@@ -1,9 +1,9 @@
 
 /******************** Fetching *********************/
 
-  "use strict"
+  
 
- function getData(){
+   function getDataResults(){
      fetch("http://tabithabjorkman.com/bifrost_t/json/students.php")
      .then(res => res.json())
      //.then(showCategories);
@@ -11,7 +11,7 @@
    
  }
 
-  let searchResult = document.querySelector("#searchResults");
+ let searchResult = document.querySelector("#searchResults");
   let SearchResultTemplate = document.querySelector("#SearchResultTemplate").content;
 
   function showPersonsIcons(persData){
@@ -27,11 +27,11 @@
     });
 }
 
-getData(); 
+getDataResults();
 
 /******************** Fetching Skills & Cloning it to tabs *********************/
- "use strict"
 
+"use strict"
 function getDataSoft(){
     //fetch("http://tabithabjorkman.com/bifrost_t/json/categories.php")
     fetch("http://tabithabjorkman.com/bifrost_t/json/skills.php")
@@ -241,18 +241,42 @@ $(document).ready(function(){
 let modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-let btn = document.getElementById("loginButton");
+let loginBtn = document.getElementById('loginButton').addEventListener("click", function(){modal.style.display = "block";});
 
 // Get the <span> element that closes the modal
-let span = document.getElementsByClassName("close")[0];
+let spanClose = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
+/* btn.onclick = function() {
   modal.style.display = "block";
+} */
+
+
+function login()
+{
+  let UserName = document.forms["loginForm"]["userN"].value;
+  let Pword = document.forms["loginForm"]["PassW"].value;
+
+  if (UserName == 'CompanyLogin')
+  {
+      if(Pword == "1234")
+      {
+        //alert("login successful!");
+        window.location.replace("bifrost/company_profile.html");
+      }
+      else
+      {
+        alert("Incorrect Username or Password");
+      }
+  }
+  else
+  {
+    alert("Incorrect Username or Password");
+  }
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+/* // When the user clicks on <spanClose> (x), close the modal
+spanClose.onclick = function() {
   modal.style.display = "none";
 }
 
@@ -261,5 +285,5 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+} */
 
