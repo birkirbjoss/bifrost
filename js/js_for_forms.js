@@ -1,4 +1,4 @@
-/* "use strict"
+ "use strict"
 function getDataRoles() //CONNECTS THE DATABASE TO THE SITE
 {   
     
@@ -7,29 +7,30 @@ function getDataRoles() //CONNECTS THE DATABASE TO THE SITE
     .then(PopulateDropDownList);
 }
 
-//let selectList = document.getElementById("selectList");
+let selectList = document.getElementById("selectList");
 
 
 function PopulateDropDownList(roles) {
      //Add the Options to the DropDownList.
      roles.forEach(function(user_role)
      {
-         //console.log("fun, fun, fun");
+         console.log("fun, fun, fun");
+
+         
+         
         for (let i = 0; i < user_role.length; i++) {
-            
-                let option = document.createElement("OPTION");
-                option.setAttribute("value", "user_role.user_role_id");
-                var textOptions = document.createTextNode("user_role_name");
-                option.appendChild(textOptions);
-                document.getElementById("selectList").appendChild(option);
-            
-     }
+            let userRole = user_role.user_role_name;
+            console.log(userRole);
+            let option = document.createElement("OPTION");
+                //option.setAttribute("value", "user_role.user_role_id");
+                //var textOptions = document.createTextNode("user_role_name");
+                //option.appendChild(textOptions);
+                //document.getElementById("selectList").appendChild(option);
+        }    
      })
+    }
 
-     
- }
-
-getDataRoles(); */
+getDataRoles();
 
 /*const myHeaders = {
     'Content-Type': 'application/json; charset=utf-8',

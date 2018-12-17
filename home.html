@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <div id="nonVisibleHeader">
         <header>
                 <nav>
                         <a href="#section1"> Home <span>&#124;</span></a>
@@ -28,6 +29,8 @@
                 <img id="logo" src="images/Logo.png" alt="" srcset="">
                 <h1 id="name">Kassia</h1>
         </header>
+    </div>
+        
 
     <div class="main" id="section1">
 
@@ -90,10 +93,10 @@
                 </div>
                 <div class="mui-select mui-select--float-label">
                 <!--Look up old files on getting pages to communicate with the server without php on page. -->
-                    <select  name="role">
-                        <option value=""></option>
+                    <select  name="role[]">
+                        <!-- <option value=""></option>
                         <option value="Company">Company</option>
-                        <option value="Student">Student</option>
+                        <option value="Student">Student</option> -->
                     </select>
                     <label for="role">Choose</label>
                 </div>
