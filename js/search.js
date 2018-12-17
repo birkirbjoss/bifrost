@@ -176,11 +176,12 @@ document.addEventListener("drop", function(event) {
 
 
 function searchFunction() {
-    var input, filter, ul, li, a, i;
+    let input, filter, ul, li, a, h6, i;
     input = document.getElementById('myinput');
     filter = input.value.toUpperCase();
     ul = document.getElementById('wrapper');
     li = ul.getElementsByTagName('li');
+    h6 = h6.getElementsByClassName('skill');
 
     for(i=0 ; i< li.length; i++){
         a = li[i].getElementsByTagName('a')[0];

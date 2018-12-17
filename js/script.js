@@ -90,6 +90,59 @@ function login()
   }
 }
 
+
+  /******************** Modal *********************/
+// Get the modal
+let modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+let loginBtn = document.getElementById('loginButton').addEventListener("click", function(){modal.style.display = "block";});
+
+// Get the <span> element that closes the modal
+let spanClose = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+/* btn.onclick = function() {
+  modal.style.display = "block";
+} */
+let UserName = document.forms["loginForm"]["userN"].value;
+let Pword = document.forms["loginForm"]["PassW"].value;
+
+function getUsers(){
+    fetch("http://tabithabjorkman.com/bifrost_t/json/login_list.php")
+    .then(res => res.json())
+    .then(fetchUser);
+  } 
+
+function fetchUser(loginData){
+  //console.log(loginData);
+  loginData.forEach(function (userlogin) {
+      //console.log(userlogin);
+
+//let loginMe = document.querySelector('#login').addEventListener("click", function(login){});
+
+      
+        if (UserName == userlogin.user_name)
+        {
+            if(Pword == userlogin.password)
+            {
+              alert("login successful!");
+              loginMe = window.location.href = "http://www.w3schools.com"; //just a test url
+            }
+            else
+            {
+              alert("Incorrect Username or Password");
+            }
+        }
+        else
+        {
+          alert("Incorrect Username or Password");
+        }
+      
+  });
+}
+getUsers(); 
+
 // When the user clicks on <spanClose> (x), close the modal
 spanClose.onclick = function() {
   modal.style.display = "none";
@@ -101,4 +154,5 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
 
