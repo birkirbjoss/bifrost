@@ -655,11 +655,12 @@ p {
 
 #skillTabs {
     grid-column: 1/4;
-    margin: 12% 0 5% 5%;
+    margin: 10% 0 5% 5%;
     padding: 5% 5% 5% 8%;
     height: 90vh;
     overflow: hidden;
     overflow: scroll;
+    width: max-content;
 }
 
 #tab-navigation {
@@ -724,12 +725,13 @@ a.active {
 
 #selectedSkills {
     grid-column: 4/-1;
-    margin-top: 21%;
+    margin-top: 31%;
     padding: 5% 5% 5% 8%;
     text-align: center;
 }
 
-.selectedList {
+input.selectedList {
+    width:100%;
     border: 1px solid rgba(41, 58, 75, 0.5);
     background-color: #ffffff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);

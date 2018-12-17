@@ -115,7 +115,7 @@ if(document.getElementById("defaultOpen")){
   document.getElementById("defaultOpen").click();
 }
 
-/************************* Clicking to get skill list items to search window *************************/
+/************************* Draging to get skill list items to search window *************************/
 document.addEventListener("q", function(event) {
   // The dataTransfer.setData() method sets the data type and the value of the dragged data
   event.dataTransfer.setData("Text", event.target.id);
@@ -173,3 +173,24 @@ document.addEventListener("drop", function(event) {
       event.target.appendChild(document.getElementById(data));
   }
 });
+
+
+function searchFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('myinput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById('wrapper');
+    li = ul.getElementsByTagName('li');
+
+    for(i=0 ; i< li.length; i++){
+        a = li[i].getElementsByTagName('a')[0];
+        if(a.innerHTML.toUpperCase().indexOf(filter) > -1){
+            li[i].style.display = "";
+        }
+
+        else{
+            li[i].style.display = 'none';
+        }
+    }
+}
+
