@@ -24,12 +24,15 @@ let aLink = document.querySelector(".iconLink");
         clone.querySelector(".iconLink").aLink = thePers.student_id;
         clone.querySelector(".persIconImg").textContent = thePers.student_id;
         
-        searchResult.appendChild(clone);
 
-        if(aLink == 'selected') // SHOWS THAT ITEM HAS BEEN SELECTED
+        /* let iconLink = document.querySelector('.iconLink');
+        let personLink = iconLink + thePers.student_id;
+        
+        personLink.addEventListener('click', function ()
         {
-            iconImg.classList.add('active');
-        }
+            personLink.classList.add('active'); 
+        }); */
+        searchResult.appendChild(clone);
        
    });
 }

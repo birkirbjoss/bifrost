@@ -1,19 +1,10 @@
-// this is for company profile page
-function getDataCompanies(){
-  fetch("http://tabithabjorkman.com/bifrost_t/json/company_profile.php")
-  .then(result => result.json())
-  .then(showCompany)
-}
-
-
-
 "use strict"
+
 //this is for student profile page
 
 function getDataStudents(){
   fetch("http://tabithabjorkman.com/bifrost_t/json/students.php")
   .then(res => res.json())
-  //.then(showCategories);
   .then(showStudent);
 }
 
@@ -25,7 +16,7 @@ const imagePathBase = "images/student_images/";
 function showStudent(studData){
   console.log(studData);
   studData.forEach(function (theStud) {  
-      console.log('this is working');
+      //console.log('this is working');
       const clone = profileTemplate.cloneNode(true);
       //console.log('hi clone');
       clone.querySelector(".profileImg").src = imagePathBase + theStud.image_file_name;
@@ -43,7 +34,7 @@ function showStudent(studData){
 }
 
 getDataStudents();
-/* setTimeout(getDataSoMeURL(), 3000) ; */
+
 /******************** Scrolling to About page *********************/
 $(document).ready(function(){
   // Add smooth scrolling to all links
@@ -105,6 +96,7 @@ let spanClose = document.getElementsByClassName("close")[0];
 /* btn.onclick = function() {
   modal.style.display = "block";
 } */
+
 let UserName = document.forms["loginForm"]["userN"].value;
 let Pword = document.forms["loginForm"]["PassW"].value;
 
