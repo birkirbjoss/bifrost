@@ -1,5 +1,12 @@
+// this is for company profile page
+function getDataCompanies(){
+  fetch("http://tabithabjorkman.com/bifrost_t/json/company_profile.php")
+  .then(result => result.json())
+  .then(showCompany)
+}
 
-/******************** Scrolling to About page *********************/
+
+
 "use strict"
 //this is for student profile page
 
@@ -9,29 +16,11 @@ function getDataStudents(){
   //.then(showCategories);
   .then(showStudent);
 }
-function getDataSoMeURL(){
-  fetch("http://tabithabjorkman.com/bifrost_t/json/so_me_url.php")
-  .then(res => res.json())
-  //.then(showCategories);
-  .then(showURL);
-}
 
-const testThisItem = document.querySelector("#testThis").content;
-const soMeLinks = document.querySelector("#soMeLink");
 const profileDetail = document.querySelector("#profileInfo");
 const profileTemplate = document.querySelector("#profileTemplate").content;
 const imagePathBase = "images/student_images/";
 
-function showURL(urlItem){
-  //console.log(urlItem);
-    urlItem.forEach(function(item){
-      //console.log(item);
-      const clone = soMeLinks.cloneNode(true);
-      clone.querySelector(".so_me_links").href = item.so_me_url;
-      console.log('round, round, round');
-      testThisItem.appendChild(clone);
-    }) 
-}
 
 function showStudent(studData){
   console.log(studData);
@@ -43,6 +32,7 @@ function showStudent(studData){
       clone.querySelector(".education ").textContent = theStud.education + ' ' + theStud.semester;
       clone.querySelector(".name ").textContent = theStud.name;     
       clone.querySelector(".phone ").textContent = theStud.phone;     
+      clone.querySelector(".soMeLinks").href = theStud.linked_in_url; 
       clone.querySelector(".portfolio").href = theStud.portfolio_link; 
       clone.querySelector(".school").textContent = theStud.school;       
 
@@ -51,10 +41,10 @@ function showStudent(studData){
      
  }); 
 }
-getDataSoMeURL();
+
 getDataStudents();
-
-
+/* setTimeout(getDataSoMeURL(), 3000) ; */
+/******************** Scrolling to About page *********************/
 $(document).ready(function(){
   // Add smooth scrolling to all links
   $("a").on('click', function(event) {

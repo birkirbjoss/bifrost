@@ -527,12 +527,12 @@ p {
 #profileText {
     grid-column: 2;
     color: #ffffff;
-    text-align: left;
+    text-align: right;
 }
 
 #profileText h5 {
     width: 100%;
-    padding: 2%;
+    padding: 2.5%;
     font-weight: 500;
 }
 
@@ -777,6 +777,10 @@ input.selectedList {
     width: 20%;
     margin-top: 10%;
     margin-left: 10%;
+}
+.active
+{
+    border:green solid 3px;
 }
 
 

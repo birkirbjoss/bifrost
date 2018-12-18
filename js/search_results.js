@@ -1,4 +1,4 @@
-/* "use strict";
+"use strict";
 
 
 function getDataResults(){
@@ -18,26 +18,20 @@ let aLink = document.querySelector(".iconLink");
     persData.forEach(function (thePers) {  
         //console.log(thePers.student_id.length);
         const clone = SearchResultTemplate.cloneNode(true);
+        let iconImg = document.querySelector(".persIconImg");
+
         //console.log('hi clone');
         clone.querySelector(".iconLink").aLink = thePers.student_id;
         clone.querySelector(".persIconImg").textContent = thePers.student_id;
-        //console.log('this is a loop');
-       /* aLink.addEventListener('click', function ()
-        {
-            console.log(thePers.student_id);
-             menuItem.classList.remove('hidden');
-            let itemLink = productLink + menu.id;
-            //console.log(itemLink);
-            fetch(itemLink).then(function (response)
-            {
-                return response.json();
-            }).then(function (json) {
-                return showDetails(json); 
-            });*/
         
-       /*  searchResult.appendChild(clone);
+        searchResult.appendChild(clone);
+
+        if(aLink == 'selected') // SHOWS THAT ITEM HAS BEEN SELECTED
+        {
+            iconImg.classList.add('active');
+        }
        
    });
 }
 
-getDataResults(); */ 
+getDataResults();
