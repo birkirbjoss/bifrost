@@ -14,7 +14,7 @@ const imagePathBase = "images/student_images/";
 
 
 function showStudent(studData){
-  console.log(studData);
+  //console.log(studData);
   studData.forEach(function (theStud) {  
       //console.log('this is working');
       const clone = profileTemplate.cloneNode(true);
@@ -34,6 +34,41 @@ function showStudent(studData){
 }
 
 getDataStudents();
+
+/************************** TIMELINE ****************************/
+/* 	projects_id 	projects_name 	projects_url 	projects_verify 	projects_grade 	projects_start_date 	projects_end_date 	projects_date_created  
+*/
+
+function getProjectsData(){
+  fetch("http://tabithabjorkman.com/bifrost_t/json/projects.php")
+  .then(res => res.json())
+  .then(showProject);
+}
+
+const timelineRow = document.querySelector("#timelineRow");
+const timelineTemplateHex = document.querySelector("#timelineTemplateHex").content;
+
+function showProject(projectData){
+  console.log(projectData);
+  /* studData.forEach(function (theStud) {  
+      //console.log('this is working');
+      const clone = profileTemplate.cloneNode(true);
+      //console.log('hi clone');
+      clone.querySelector(".profileImg").src = imagePathBase + theStud.image_file_name;
+      clone.querySelector(".education ").textContent = theStud.education + ' ' + theStud.semester;
+      clone.querySelector(".name ").textContent = theStud.name;     
+      clone.querySelector(".phone ").textContent = theStud.phone;     
+      clone.querySelector(".soMeLinks").href = theStud.linked_in_url; 
+      clone.querySelector(".portfolio").href = theStud.portfolio_link; 
+      clone.querySelector(".school").textContent = theStud.school;       
+
+      //console.log('this is a loop');
+      profileDetail.appendChild(clone);
+     
+ });  */
+}
+
+getProjectsData();
 
 /******************** Scrolling to About page *********************/
 $(document).ready(function(){

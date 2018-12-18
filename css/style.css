@@ -575,7 +575,6 @@ p {
 }
 
 .hex_pair
-
 /** hex_pair was made, because the only way for this to work was to have "display:inline-block" **/
     {
     display: inline-block;
@@ -619,7 +618,21 @@ p {
 .hex.even {
     margin-top: 53px;
 }
+.hex-text
+{
+    width: 100%;
+    height: auto;
+    padding-top: 25%;
+}
 
+.timeline_text 
+{
+    font-size: 1.2em;
+}
+.date_finished
+{
+    font-size: 0.8em;
+}
 
 /* hexagon template , for each template 1 project info , alternate classes, using odd and even in the js spaced on a css grid, margin top -50% height and - 25% left - limit text content for name of project make classes with 9 gradients */
 

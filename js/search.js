@@ -89,7 +89,7 @@ getDataSoft();
 /********************** Tabs on search page ********************/
 
 
-//THIS IS FOR THE TABS ON THE PAGES WITH LOTS OF TEXT
+//THIS IS TO DIVIDE UP THE SKILLS INTO THEIR CATEGORIES
 
 function openTab(evt, tabInfo) {
   // Declare all variables
