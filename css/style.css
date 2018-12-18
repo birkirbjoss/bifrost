@@ -52,10 +52,6 @@ h6 {
     font-weight: 300;
     color: #293a4b;
 }
-
-
-
-
 p {
     font-size: 1em;
     font-weight: 400;
@@ -81,6 +77,12 @@ a {
 
 .Zindex {
     z-index: 999;
+}
+.text_style_fix
+{
+    font-size: 1em;
+    font-weight: 300;
+    text-decoration: underline;
 }
 
 /************ Home ****************/
@@ -284,7 +286,7 @@ nav :hover{
     /* Hidden by default */
     position: fixed;
     /* Stay in place */
-    z-index: 1;
+    z-index: 999;
     /* Sit on top */
     padding-top: 8.2%;
     /* Location of the box */

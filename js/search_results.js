@@ -1,4 +1,4 @@
-"use strict";
+/* "use strict";
 
 
 function getDataResults(){
@@ -11,6 +11,7 @@ function getDataResults(){
 
 let searchResult = document.querySelector("#searchResults");
 let SearchResultTemplate = document.querySelector("#SearchResultTemplate").content;
+let aLink = document.querySelector(".iconLink");
 
  function showPersonsIcons(persData){
     //console.log(persData);
@@ -18,11 +19,25 @@ let SearchResultTemplate = document.querySelector("#SearchResultTemplate").conte
         //console.log(thePers.student_id.length);
         const clone = SearchResultTemplate.cloneNode(true);
         //console.log('hi clone');
+        clone.querySelector(".iconLink").aLink = thePers.student_id;
         clone.querySelector(".persIconImg").textContent = thePers.student_id;
         //console.log('this is a loop');
-        searchResult.appendChild(clone);
+       /* aLink.addEventListener('click', function ()
+        {
+            console.log(thePers.student_id);
+             menuItem.classList.remove('hidden');
+            let itemLink = productLink + menu.id;
+            //console.log(itemLink);
+            fetch(itemLink).then(function (response)
+            {
+                return response.json();
+            }).then(function (json) {
+                return showDetails(json); 
+            });*/
+        
+       /*  searchResult.appendChild(clone);
        
    });
 }
 
-getDataResults();
+getDataResults(); */ 
