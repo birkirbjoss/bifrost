@@ -615,7 +615,7 @@ p {
     clear: left;
 }
 
-.hex.even {
+.even {
     margin-top: 53px;
 }
 .hex-text
@@ -623,15 +623,16 @@ p {
     width: 100%;
     height: auto;
     padding-top: 25%;
+    text-align: center;
 }
 
 .timeline_text 
 {
-    font-size: 1.2em;
+    font-size: 0.4em;
 }
 .date_finished
 {
-    font-size: 0.8em;
+    font-size: 0.4em;
 }
 
 /* hexagon template , for each template 1 project info , alternate classes, using odd and even in the js spaced on a css grid, margin top -50% height and - 25% left - limit text content for name of project make classes with 9 gradients */

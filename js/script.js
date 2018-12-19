@@ -37,6 +37,17 @@ getDataStudents();
 
 /************************** TIMELINE ****************************/
 /* 	projects_id 	projects_name 	projects_url 	projects_verify 	projects_grade 	projects_start_date 	projects_end_date 	projects_date_created  
+hex_pair">
+                                <a class="projectLink" href="">
+                                    <div class="hex"><!-- ADD EVEN TO THE HEX CLASS -->
+                                        <div class="left"></div>
+                                        <div class="middle">
+                                            <div class="hex-text">
+                                                <h6 class="timeline_text">testing1</h6>
+                                                <h6 class="date_finished">20-12-2018</h6>
+                                            </div>
+                                        </div>
+                                        <div class="right
 */
 
 function getProjectsData(){
@@ -50,22 +61,22 @@ const timelineTemplateHex = document.querySelector("#timelineTemplateHex").conte
 
 function showProject(projectData){
   console.log(projectData);
-  /* studData.forEach(function (theStud) {  
+   projectData.forEach(function (theProject) {  
       //console.log('this is working');
-      const clone = profileTemplate.cloneNode(true);
+      const clone = timelineTemplateHex.cloneNode(true);
+      //const pair = document.querySelector(".hex_pair");
       //console.log('hi clone');
-      clone.querySelector(".profileImg").src = imagePathBase + theStud.image_file_name;
-      clone.querySelector(".education ").textContent = theStud.education + ' ' + theStud.semester;
-      clone.querySelector(".name ").textContent = theStud.name;     
-      clone.querySelector(".phone ").textContent = theStud.phone;     
-      clone.querySelector(".soMeLinks").href = theStud.linked_in_url; 
-      clone.querySelector(".portfolio").href = theStud.portfolio_link; 
-      clone.querySelector(".school").textContent = theStud.school;       
-
+      clone.querySelector(".projectLink").href = theProject.projects_url;
+      clone.querySelector(".hex");
+      clone.querySelector(".left ");     
+      clone.querySelector(".middle ");     
+      clone.querySelector(".timeline_text").textContent = theProject.projects_name; 
+      clone.querySelector(".date_finished").textContent = theProject.projects_end_date; 
+      clone.querySelector(".right");       
+      
       //console.log('this is a loop');
-      profileDetail.appendChild(clone);
-     
- });  */
+      profileDetail.appendChild(clone); 
+ });  
 }
 
 getProjectsData();
