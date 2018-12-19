@@ -56,7 +56,7 @@ function getProjectsData(){
   .then(showProject);
 }
 
-const timelineRow = document.querySelector("#timelineRow");
+const timelineRow = document.querySelector("#hex-text");
 const timelineTemplateHex = document.querySelector("#timelineTemplateHex").content;
 
 function showProject(projectData){
@@ -67,15 +67,15 @@ function showProject(projectData){
       //const pair = document.querySelector(".hex_pair");
       //console.log('hi clone');
       clone.querySelector(".projectLink").href = theProject.projects_url;
-      clone.querySelector(".hex");
-      clone.querySelector(".left ");     
-      clone.querySelector(".middle ");     
+      //clone.querySelector(".hex");
+      //clone.querySelector(".left ");     
+      //clone.querySelector(".middle ");     
       clone.querySelector(".timeline_text").textContent = theProject.projects_name; 
       clone.querySelector(".date_finished").textContent = theProject.projects_end_date; 
-      clone.querySelector(".right");       
+      //clone.querySelector(".right");       
       
       //console.log('this is a loop');
-      profileDetail.appendChild(clone); 
+      timelineRow.appendChild(clone); 
  });  
 }
 

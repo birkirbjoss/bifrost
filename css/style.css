@@ -625,6 +625,11 @@ p {
     padding-top: 25%;
     text-align: center;
 }
+#hexLinkText
+{
+    display: inline-block;
+    z-index: 9999;
+}
 
 .timeline_text 
 {
