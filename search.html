@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    
+<div id="nonVisibleHeader">   
         <header>
                 <nav>
                         <a href="home.html">Home <span>&#124;</span></a>
@@ -26,6 +26,7 @@
                 <h1 id="name">Kassia</h1>
         </header>
     </header>
+</div>
     <main>
         <section id="searchSkills">
             <div id="skillTabs">
@@ -34,37 +35,37 @@
                         <a class="tablinks" onclick="openTab(event, 'TechSkills')" href="#">Technical Skills</a>
                         <a class="tablinks" onclick="openTab(event, 'CTSkills')" href="#">Critical Thinking Skills</a>
                     </div>
-                    <div id="SoftSkills" class="tabcontent skillsContainers droptarget" >
+                    <div id="SoftSkills" class="tabcontent skillsContainers" >
 
                         <template id="SSTemplate">
-                            <h6 class="skill ItemSoftSkill Zindex" draggable="true"></h6>
+                            <input type="checkbox" class="checkBoxes"><h6 class="skill ItemSoftSkill"></h6>
                         </template>
                     </div>
-                    <div id="TechSkills" class="tabcontent skillsContainers droptarget">
+                    <div id="TechSkills" class="tabcontent skillsContainers">
 
                         <template id="TSTemplate">
-                            <h6 class="skill ItemTechSkill Zindex" draggable="true"></h6>
+                            <input type="checkbox" class="checkBoxes"><h6 class="skill ItemTechSkill"></h6>
                         </template>
                     </div>
-                    <div id="CTSkills" class="tabcontent skillsContainers droptarget">
+                    <div id="CTSkills" class="tabcontent skillsContainers">
 
                         <template id="CTTemplate">
-                            <h6 class="skill ItemCTSkill Zindex" draggable="true"></h6>
+                            <input type="checkbox" class="checkBoxes"><h6 class="skill ItemCTSkill"></h6>
                         </template>
                     </div>
             </div>
-            <div class="search-bar" id="selectedSkills">
+            <!--<div class="search-bar" id="selectedSkills">
                     <input class="selectedList droptarget type="text" name="search" value="" autocomplete="off" id="selectedList" onkeyup="searchFunction()">
                     <p id="demo"></p>
                     <a href="search_results.html"><button class="mui-btn mui-btn--small">SEARCH</button></a> 
-                </div><!--myInput = selectedList-->
-            <!-- <div id="selectedSkills">
+                </div> myInput = selectedList-->
+            <div id="selectedSkills">
                 <h3>Selected skills</h4>
                 <div class="selectedList droptarget" id="selectedList" >
                 </div>
-                <p id="demo"></p>
+                <!-- <p id="demo"></p> -->
                 <a href="search_results.html"><button class="mui-btn mui-btn--small">SEARCH</button></a> 
-            </div> -->
+            </div> 
         </section>
 
     </main>
