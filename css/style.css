@@ -587,6 +587,7 @@ p {
     float: left;
     margin-right: -26px;
     margin-bottom: -50px;
+    z-index: 1;
 }
 
 .hex .left {
@@ -625,15 +626,21 @@ p {
     height: auto;
     padding-top: 25%;
     text-align: center;
+    z-index: 9999;
 }
-
-.timeline_text 
+#hexLinkText
+{
+    display: inline-block;
+}
+.timeline_text
 {
     font-size: 0.4em;
+    z-index: 9999;
 }
 .date_finished
 {
     font-size: 0.4em;
+    z-index: 9999;
 }
 
 /* hexagon template , for each template 1 project info , alternate classes, using odd and even in the js spaced on a css grid, margin top -50% height and - 25% left - limit text content for name of project make classes with 9 gradients */

@@ -9,9 +9,9 @@ function getDataStudents(){
 }
 
 const profileDetail = document.querySelector("#profileInfo");
-const profileTemplate = document.querySelector("#profileTemplate").content;
+//const profileTemplate = document.querySelector("#profileTemplate").content; 
 const imagePathBase = "images/student_images/";
-
+//console.log('profileTemplate');
 
 function showStudent(studData){
   //console.log(studData);
@@ -33,22 +33,10 @@ function showStudent(studData){
  }); 
 }
 
-getDataStudents();
+//getDataStudents();
 
 /************************** TIMELINE ****************************/
-/* 	projects_id 	projects_name 	projects_url 	projects_verify 	projects_grade 	projects_start_date 	projects_end_date 	projects_date_created  
-hex_pair">
-                                <a class="projectLink" href="">
-                                    <div class="hex"><!-- ADD EVEN TO THE HEX CLASS -->
-                                        <div class="left"></div>
-                                        <div class="middle">
-                                            <div class="hex-text">
-                                                <h6 class="timeline_text">testing1</h6>
-                                                <h6 class="date_finished">20-12-2018</h6>
-                                            </div>
-                                        </div>
-                                        <div class="right
-*/
+/* 	projects_id 	projects_name 	projects_url 	projects_verify 	projects_grade 	projects_start_date 	projects_end_date 	projects_date_created */
 
 function getProjectsData(){
   fetch("http://tabithabjorkman.com/bifrost_t/json/projects.php")
@@ -56,30 +44,31 @@ function getProjectsData(){
   .then(showProject);
 }
 
-const timelineRow = document.querySelector("#timelineRow");
-const timelineTemplateHex = document.querySelector("#timelineTemplateHex").content;
+const timelineRow = document.querySelector("#hex-text");
+//const timelineTemplateHex = document.querySelector("#timelineTemplateHex").content;
 
 function showProject(projectData){
   console.log(projectData);
    projectData.forEach(function (theProject) {  
       //console.log('this is working');
       const clone = timelineTemplateHex.cloneNode(true);
-      //const pair = document.querySelector(".hex_pair");
+      let stud_id = theProject.student_id;
+      //console.log(stud_id);
       //console.log('hi clone');
-      clone.querySelector(".projectLink").href = theProject.projects_url;
-      clone.querySelector(".hex");
-      clone.querySelector(".left ");     
-      clone.querySelector(".middle ");     
+      clone.querySelector(".projectLink").href = theProject.projects_url;   
       clone.querySelector(".timeline_text").textContent = theProject.projects_name; 
-      clone.querySelector(".date_finished").textContent = theProject.projects_end_date; 
-      clone.querySelector(".right");       
-      
+      clone.querySelector(".date_finished").textContent = theProject.projects_end_date;       
+      if(stud_id == 2)
+        {
+          console.log(stud_id);
+          timelineRow.appendChild(clone); 
+        }
       //console.log('this is a loop');
-      profileDetail.appendChild(clone); 
+      
  });  
 }
 
-getProjectsData();
+//getProjectsData();
 
 /******************** Scrolling to About page *********************/
 $(document).ready(function(){
@@ -133,15 +122,15 @@ $(document).ready(function(){
 let modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-let loginBtn = document.getElementById('loginButton').addEventListener("click", function(){modal.style.display = "block";});
+let loginBtn = document.getElementById('loginButton');
 
 // Get the <span> element that closes the modal
 let spanClose = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-/* btn.onclick = function() {
+loginBtn.onclick = function() {
   modal.style.display = "block";
-} */
+} 
 
 let UserName = document.forms["loginForm"]["userN"].value;
 let Pword = document.forms["loginForm"]["PassW"].value;
@@ -152,31 +141,23 @@ function getUsers(){
     .then(fetchUser);
   } 
 
+
 function fetchUser(loginData){
-  console.log(loginData);
+  //console.log(loginData);
   loginData.forEach(function (userlogin) {
       //console.log(userlogin);
       
-        if (UserName == userlogin.user_email)
+        if (userlogin == UserName && userlogin == Pword)
         {
-            if(Pword == userlogin.password)
-            {
-              //alert("login successful!");
+          console.log('you are logged in');
+              alert("login successful!");
               loginMe = window.location.href = "http://www.w3schools.com"; //just a test url
-            }
-            else
-            {
-              //alert("Incorrect Username or Password");
-            }
         }
-        else
-        {
-          //alert("Incorrect Username or Password");
-        }
-      
   });
 }
 getUsers(); 
+
+
 
 // When the user clicks on <spanClose> (x), close the modal
 spanClose.onclick = function() {
