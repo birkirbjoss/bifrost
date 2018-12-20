@@ -779,11 +779,11 @@ input
 {
     vertical-align:middle;
 }
-label 
+li 
 {
     display:block;
 }
-label h6
+li h6
 {
     display: inline-block;
     vertical-align: middle;

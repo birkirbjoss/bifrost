@@ -209,19 +209,18 @@ button.addEventListener('click', addItem);
 
 
 function addItem(){
-	let newSkill = document.createElement('li');
-	newSkill.innerHTML=input.value;
+	let newSkill = document.createElement("li");
+	newSkill.document.querySelector();
 	newSkill.addEventListener('click', removeItem);
 	list.appendChild(newSkill);
-	
 }
 
-/* function removeItem(){
+function removeItem(){
 	console.log("Begone!", this);
 	list.removeChild(this);
-} */
+}
 
-/* /************************* Draging to get skill list items to search window *************************/
+/* /************************* Dragging to get skill list items to search window *************************/
 /* document.addEventListener("q", function(event) {
   // The dataTransfer.setData() method sets the data type and the value of the dragged data
   event.dataTransfer.setData("Text", event.target.id);
