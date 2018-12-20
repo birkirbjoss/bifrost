@@ -203,6 +203,9 @@ if(document.getElementById("defaultOpen")){
 let checkBoxes = document.querySelector("label, input[type='checkbox'], h6");
 let button = document.querySelector('#add');
 let list = document.querySelector('#selectedList');
+let selectedSkillsArray = [];
+let checkedItems = document.querySelector("input[type='checkbox']").checked;
+let listItems = document.querySelector("li").innerText;
 
 /* let lis = document.querySelectorAll('li')
 lis.forEach(function(el){
@@ -218,7 +221,6 @@ button.addEventListener('click', function(e){
 //when I click add to search, use array and foreach skill create a list item with text content in the selectedSkills div
 //I want the code to select the items from check list and put them on the div    //and be used in a search
 //checksArray = Array.from(checks);
-//let selectedSkillsArray = [];
 
 function addItem(){
 	let newSkill = document.createElement("li");
