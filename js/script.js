@@ -9,7 +9,7 @@ function getDataStudents(){
 }
 
 const profileDetail = document.querySelector("#profileInfo");
-const profileTemplate = document.querySelector("#profileTemplate").content; 
+//const profileTemplate = document.querySelector("#profileTemplate").content; 
 const imagePathBase = "images/student_images/";
 let urlParams = new URLSearchParams(window.location.search);
 let user_id = urlParams.get("student_id");
@@ -36,7 +36,7 @@ function showStudent(studData){
  }); 
 }
 
-getDataStudents();
+//getDataStudents();
 
 /************************** TIMELINE ****************************/
 /* 	projects_id 	projects_name 	projects_url 	projects_verify 	projects_grade 	projects_start_date 	projects_end_date 	projects_date_created */
@@ -48,7 +48,7 @@ function getProjectsData(){
 }
 
 const timelineRow = document.querySelector("#hex-text");
-const timelineTemplateHex = document.querySelector("#timelineTemplateHex").content;
+//const timelineTemplateHex = document.querySelector("#timelineTemplateHex").content;
 
 function showProject(projectData){
   console.log(projectData);
@@ -71,7 +71,7 @@ function showProject(projectData){
  });  
 }
 
-getProjectsData();
+//getProjectsData();
 
 /**************************** fetch id for links ***********************/
 
@@ -155,6 +155,7 @@ loginBtn.onclick = function() {
 
 let UserName = document.forms["loginForm"]["userN"].value;
 let Pword = document.forms["loginForm"]["PassW"].value;
+let user_id = userlogin.login_id;
 
 function getUsers(){
     fetch("http://tabithabjorkman.com/bifrost_t/json/login_list.php")
@@ -166,9 +167,10 @@ function getUsers(){
 function fetchUser(loginData){
   console.log(loginData);
   loginData.forEach(function (userlogin) {
-      //console.log(userlogin);
+      console.log(userlogin);
       let studentProfilePage = "http://127.0.0.1:5500/bifrost/student_profile.html";
       let CompanyProfilePage = "http://127.0.0.1:5500/bifrost/company_profile.html";
+      
       //let Submit = document.getElementsByName('submit');
       let CompanyUser = userlogin.user_role_id;
       let StudentUser = userlogin.user_role_id;
@@ -176,12 +178,12 @@ function fetchUser(loginData){
       
       if(CompanyUser)
       {
-        window.location.href = CompanyProfilePage;
+        //window.location.href = CompanyProfilePage ;
         console.log('logged in');
       }
       else if(StudentUser)
       {
-        window.location.href = studentProfilePage;
+        //window.location.href = studentProfilePage;
         console.log('bugs');
       }
   });

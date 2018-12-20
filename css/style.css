@@ -775,9 +775,19 @@ a.active {
     min-height: 58vh;
     z-index: 0;
 }
-input[type='checkbox']
+input 
+{
+    vertical-align:middle;
+}
+label 
+{
+    display:block;
+}
+label h6
 {
     display: inline-block;
+    vertical-align: middle;
+    margin: 1.5%;
 }
 
 .tabs-animate-bottom {

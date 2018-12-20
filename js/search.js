@@ -1,4 +1,4 @@
-
+/* LOOK UP PHP SEARCH CODE I CAN USE FROM PREVIOUS SITES */
 /******************** Fetching Skills & Cloning it to tabs *********************/
 
 "use strict"
@@ -193,6 +193,33 @@ function openTab(evt, tabInfo) {
 if(document.getElementById("defaultOpen")){
   document.getElementById("defaultOpen").click();
 }
+
+/*************************** get selected check boxes to other div *******************************/
+let checkBoxes = document.querySelector("label, input[type='checkbox'], h6");
+let button = document.querySelector('#add');
+let list = document.querySelector('#selectedList');
+
+/* let lis = document.querySelectorAll('li')
+lis.forEach(function(el){
+	el.addEventListener('click', removeItem);
+}) */
+
+button.addEventListener('click', addItem);
+
+
+
+function addItem(){
+	let newSkill = document.createElement('li');
+	newSkill.innerHTML=input.value;
+	newSkill.addEventListener('click', removeItem);
+	list.appendChild(newSkill);
+	
+}
+
+/* function removeItem(){
+	console.log("Begone!", this);
+	list.removeChild(this);
+} */
 
 /* /************************* Draging to get skill list items to search window *************************/
 /* document.addEventListener("q", function(event) {
