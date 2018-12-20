@@ -47,17 +47,17 @@
             <!-- Modal content -->
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <form class="mui-form" action="" name="loginForm" id="LoginForm">
+                <form class="mui-form" action="" name="loginForm">
                     <div class="mui-textfield mui-textfield--float-label">
                         <input type="text" id="userName" name="userN" value="">
                         <label for="email">E-mail</label>
                     </div>
                     <div class="mui-textfield mui-textfield--float-label">
-                        <input type="password" id="password" name="PassW" value="">
+                        <input type="text" id="password" name="PassW" value="">
                         <label for="password">Password</label>
                     </div>
       
-                    <button type="submit" class="signUpButton mui-btn mui-btn--small" name="submit">Log in</button>
+                    <button type="submit" class="signUpButton mui-btn mui-btn--small" name="submit" onclick="fetchUser(loginMe)">Log in</button>
                 </form>
             </div>
 
