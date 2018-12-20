@@ -1,78 +1,5 @@
 "use strict"
 
-//this is for student profile page
-
-function getDataStudents(){
-  fetch("http://tabithabjorkman.com/bifrost_t/json/students.php")
-  .then(res => res.json())
-  .then(showStudent);
-}
-
-const profileDetail = document.querySelector("#profileInfo");
-//const profileTemplate = document.querySelector("#profileTemplate").content; 
-const imagePathBase = "images/student_images/";
-let urlParams = new URLSearchParams(window.location.search);
-let user_id = urlParams.get("student_id");
-//console.log('profileTemplate');
-
-function showStudent(studData){
-  //console.log(studData);
-  studData.forEach(function (theStud) {  
-      //console.log('this is working');
-      const clone = profileTemplate.cloneNode(true);
-      
-      //console.log('hi clone');
-      clone.querySelector(".profileImg").src = imagePathBase + theStud.image_file_name;
-      clone.querySelector(".education ").textContent = theStud.education + ' ' + theStud.semester;
-      clone.querySelector(".name ").textContent = theStud.name;     
-      clone.querySelector(".phone ").textContent = theStud.phone;     
-      clone.querySelector(".soMeLinks").href = theStud.linked_in_url; 
-      clone.querySelector(".portfolio").href = theStud.portfolio_link; 
-      clone.querySelector(".school").textContent = theStud.school;       
-
-      //console.log('this is a loop');
-      profileDetail.appendChild(clone);
-     
- }); 
-}
-
-//getDataStudents();
-
-/************************** TIMELINE ****************************/
-/* 	projects_id 	projects_name 	projects_url 	projects_verify 	projects_grade 	projects_start_date 	projects_end_date 	projects_date_created */
-
-function getProjectsData(){
-  fetch("http://tabithabjorkman.com/bifrost_t/json/projects.php")
-  .then(res => res.json())
-  .then(showProject);
-}
-
-const timelineRow = document.querySelector("#hex-text");
-//const timelineTemplateHex = document.querySelector("#timelineTemplateHex").content;
-
-function showProject(projectData){
-  console.log(projectData);
-   projectData.forEach(function (theProject) {  
-      //console.log('this is working');
-      const clone = timelineTemplateHex.cloneNode(true);
-      let stud_id = theProject.student_id;
-      //console.log(stud_id);
-      //console.log('hi clone');
-      clone.querySelector(".projectLink").href = theProject.projects_url;   
-      clone.querySelector(".timeline_text").textContent = theProject.projects_name; 
-      clone.querySelector(".date_finished").textContent = theProject.projects_end_date;       
-      if(stud_id == 2)
-        {
-          console.log(stud_id);
-          timelineRow.appendChild(clone); 
-        }
-      //console.log('this is a loop');
-      
- });  
-}
-
-//getProjectsData();
-
 /**************************** fetch id for links ***********************/
 
 /* fetch("something").then(res=>res.json()).then(data=>data.forEach(displayStudent))
@@ -149,46 +76,90 @@ let spanClose = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
 loginBtn.onclick = function() {
-  modal.style.display = "block";
-  loginBtn.getUsers();
+  modal.style.display = "block"; 
 } 
+//preventing page from refreshing
+document.querySelector('#LoginForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  getUsers();
+});
+//targeting the info from the input fields
+document.querySelector('#userName').addEventListener('input', function(e){
+  
+  UserName = e.target.value;
+  //console.log(e.target.value)
+});
+//targeting the info from the input fields
+document.querySelector('#password').addEventListener('input', function(e){
+  
+  Pword = e.target.value;
+  //console.log(e.target.value)
+});
 
-let UserName = document.forms["loginForm"]["userN"].value;
-let Pword = document.forms["loginForm"]["PassW"].value;
-let user_id = userlogin.login_id;
+let UserName = '';
+let Pword = '';
 
+//fetching data from login table
 function getUsers(){
     fetch("http://tabithabjorkman.com/bifrost_t/json/login_list.php")
     .then(res => res.json())
     .then(fetchUser);
   } 
 
-
+//fetching array
 function fetchUser(loginData){
   console.log(loginData);
+let checkInfo;
+//rotating through the array with forEach
   loginData.forEach(function (userlogin) {
-      console.log(userlogin);
+      
       let studentProfilePage = "http://127.0.0.1:5500/bifrost/student_profile.html";
       let CompanyProfilePage = "http://127.0.0.1:5500/bifrost/company_profile.html";
-      
+      UserName = document.querySelector('#userName').value;  
+      Pword = document.querySelector('#password').value; 
+      let user_id = userlogin.login_id;
       //let Submit = document.getElementsByName('submit');
-      let CompanyUser = userlogin.user_role_id;
-      let StudentUser = userlogin.user_role_id;
+      //let CompanyUser = userlogin.fk_user_role_id = 1;
+      //let StudentUser = userlogin.fk_user_role_id = 2;
       //console.log(CompanyUser, StudentUser);
-      
-      if(CompanyUser)
+      //console.log(UserName, Pword);
+
+      //if UN and PW don't match go home
+      if(UserName != userlogin.user_email && Pword != userlogin.password)
       {
-        //window.location.href = CompanyProfilePage ;
-        console.log('logged in');
+        //console.log('home');
+        checkInfo = 0;
+        //window.location.href = 'http://127.0.0.1:5500/bifrost/home.html';
       }
-      else if(StudentUser)
+      //if UN and PW match go to respective pages
+      else if(UserName == userlogin.user_email && Pword == userlogin.password)
       {
-        //window.location.href = studentProfilePage;
-        console.log('bugs');
-      }
+        //console.log('next page');
+        
+          // if (user_id = Company_user = Username = Pword)
+        if(userlogin.user_role_id == 1)
+        {
+          //console.log('company :logged in');
+          checkInfo = 1;
+          window.location.href = CompanyProfilePage;
+        }
+        else if(userlogin.user_role_id == 2)
+        {
+          //console.log('student log in');
+          checkInfo = 2;
+          window.location.href = studentProfilePage;
+        }
+      } 
   });
+  if(checkInfo = 0)
+  {
+    window.location.href = 'http://127.0.0.1:5500/bifrost/home.html';
+  }
 }
-document.getElementsByName("submit").addEventListener("click", getUsers()); 
+// calls the submit button and makes it call the getUsers() function
+let submit = document.getElementsByName('submit');
+
+submit.addEventListener("click", getUsers()); 
 
 
 
@@ -202,33 +173,4 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
-
-
-
-var email_action = "https://ox.hosteurope.de/ajax/login?action=formlogin&authId=";
-var email_onsubmit = "this.action += uuid();";
-var email_user = "login";
-var email_password = "password";
-
-function elearning() {
-  document.getElementById("sidebar_login").action = elearning_action;
-  document.getElementById("user").name = elearning_user;
-  document.getElementById("password").name = elearning_password;
-  document.getElementById("sidebar_login").setAttribute('onsubmit', '');
-  document.forms['sidebar_login'].submit();
-}
-function sus() {
-  document.getElementById("sidebar_login").action =sus_action;
-  document.getElementById("user").name = sus_user;
-  document.getElementById("password").name = sus_password;
-  document.getElementById("sidebar_login").setAttribute('onsubmit', '');
-  document.forms['sidebar_login'].submit();
-}
-function email() {
-  document.getElementById("sidebar_login").action = email_action;
-  document.getElementById("sidebar_login").setAttribute('onsubmit', email_onsubmit);
-  document.getElementById("user").name = email_user;
-  document.getElementById("password").name = email_password;
-  document.forms['sidebar_login'].submit();
 }

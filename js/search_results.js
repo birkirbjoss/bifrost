@@ -14,7 +14,7 @@ let SearchResultTemplate = document.querySelector("#SearchResultTemplate").conte
 let aLink = document.querySelector(".iconLink");
 
  function showPersonsIcons(persData){
-    //console.log(persData);
+    console.log(persData);
     persData.forEach(function (thePers) {  
         //console.log(thePers.student_id.length);
         const clone = SearchResultTemplate.cloneNode(true);

@@ -45,9 +45,12 @@ function showSkillsSoft(data){
         if(cat_id_skill == 1)
         {
           clone.querySelector("input[type='checkbox']");
+          //console.log(clone.querySelector("input[type='checkbox']"));
           clone.querySelector(".ItemSoftSkill").textContent = theSkill.skills;
+
+          SSList.appendChild(clone);
         }
-        SSList.appendChild(clone);
+        
     });
 }
 function showSkillsTech(dataTech){
@@ -64,8 +67,9 @@ function showSkillsTech(dataTech){
         {
           clone.querySelector("input[type='checkbox']");
           clone.querySelector(".ItemTechSkill").textContent = theSkillT.skills;
+          TSList.appendChild(clone);
         }
-        TSList.appendChild(clone);
+        
   });
 }
 function showSkillsCT(dataCT){
@@ -82,8 +86,9 @@ function showSkillsCT(dataCT){
         {
           clone.querySelector("input[type='checkbox']");
           clone.querySelector(".ItemCTSkill").textContent = theSkillCT.skills;
+          CTSList.appendChild(clone);
         }
-        CTSList.appendChild(clone);
+       
   });
 }
 getDataCT();
@@ -204,9 +209,16 @@ lis.forEach(function(el){
 	el.addEventListener('click', removeItem);
 }) */
 
-button.addEventListener('click', addItem);
+button.addEventListener('click', function(e){
+  e.preventDefault();
+  addItem();
+});
 
-
+//go to different lists and 'check' elements, push them to an array all the items and when you event listener for checked skill , skill goes to array
+//when I click add to search, use array and foreach skill create a list item with text content in the selectedSkills div
+//I want the code to select the items from check list and put them on the div    //and be used in a search
+//checksArray = Array.from(checks);
+//let selectedSkillsArray = [];
 
 function addItem(){
 	let newSkill = document.createElement("li");
