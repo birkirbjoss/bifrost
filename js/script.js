@@ -1,26 +1,32 @@
 "use strict"
 
-/**************************** fetch id for links ***********************/
+/**************** approve terms and conditions ***********************/
+//let checkedTandC = document.querySelector('#sign_up').checked;
 
-/* fetch("something").then(res=>res.json()).then(data=>data.forEach(displayStudent))
+document.addEventListener('click', function(){
+    document.querySelector('#CheckTandC').checked;
+    console.log('approved');
+})
 
-function displayStudent(student){
-  const clone .....
-  const.querySe...textContent=student.name
-  clone.querySelector(".readmore").addEventListener("click",e=>{
-    window.location="subpage.html?student_id="+student.student_id
-  })
-  somethin.appendChild(clone)
+// get password field and check it against the confirm field
+
+let password = document.getElementById("sign_up_password"), confirm_password = document.getElementById("sign_up_confirm");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords don't match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
 }
 
-//on the subpage
-let urlParams = new URLSearchParams(window.location.search);
-let userid = urlParams.get("student_id");
- */
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+
 /******************** Scrolling to About page *********************/
 $(document).ready(function(){
   // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+  $(".open").on('click', function(event) {
 
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "#section2") {
@@ -78,6 +84,21 @@ let spanClose = document.getElementsByClassName("close")[0];
 loginBtn.onclick = function() {
   modal.style.display = "block"; 
 } 
+
+// When the user clicks on <spanClose> (x), close the modal
+/* spanClose.onclick = function() {
+  modal.style.display = "none";
+} */
+spanClose.addEventListener('click', function () {
+  modal.style.display = "none";
+  });
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 //preventing page from refreshing
 document.querySelector('#LoginForm').addEventListener('submit', function(e){
   e.preventDefault();
@@ -118,12 +139,6 @@ let checkInfo;
       UserName = document.querySelector('#userName').value;  
       Pword = document.querySelector('#password').value; 
       let user_id = userlogin.login_id;
-      //let Submit = document.getElementsByName('submit');
-      //let CompanyUser = userlogin.fk_user_role_id = 1;
-      //let StudentUser = userlogin.fk_user_role_id = 2;
-      //console.log(CompanyUser, StudentUser);
-      //console.log(UserName, Pword);
-
       //if UN and PW don't match go home
       if(UserName != userlogin.user_email && Pword != userlogin.password)
       {
@@ -156,21 +171,9 @@ let checkInfo;
     window.location.href = 'http://127.0.0.1:5500/bifrost/home.html';
   }
 }
-// calls the submit button and makes it call the getUsers() function
-let submit = document.getElementsByName('submit');
-
+// calls the submit button and makes the login work()
+let submit = document.getElementsByName('Login');
 submit.addEventListener("click", getUsers()); 
 
 
 
-// When the user clicks on <spanClose> (x), close the modal
-spanClose.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
