@@ -212,10 +212,10 @@ lis.forEach(function(el){
 	el.addEventListener('click', removeItem);
 }) */
 
-button.addEventListener('click', function(e){
+/* button.addEventListener('click', function(e){
   e.preventDefault();
   addItem();
-});
+}); */
 
 //go to different lists and 'check' elements, push them to an array all the items and when you event listener for checked skill , skill goes to array
 //when I click add to search, use array and foreach skill create a list item with text content in the selectedSkills div

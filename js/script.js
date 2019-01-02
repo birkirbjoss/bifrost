@@ -1,22 +1,13 @@
 "use strict"
 
-/**************************** fetch id for links ***********************/
+/**************** approve terms and conditions ***********************/
+//let checkedTandC = document.querySelector('#sign_up').checked;
 
-/* fetch("something").then(res=>res.json()).then(data=>data.forEach(displayStudent))
+document.addEventListener('click', function(){
+    document.querySelector('#CheckTandC').checked;
+    console.log('approved');
+})
 
-function displayStudent(student){
-  const clone .....
-  const.querySe...textContent=student.name
-  clone.querySelector(".readmore").addEventListener("click",e=>{
-    window.location="subpage.html?student_id="+student.student_id
-  })
-  somethin.appendChild(clone)
-}
-
-//on the subpage
-let urlParams = new URLSearchParams(window.location.search);
-let userid = urlParams.get("student_id");
- */
 /******************** Scrolling to About page *********************/
 $(document).ready(function(){
   // Add smooth scrolling to all links
@@ -118,12 +109,6 @@ let checkInfo;
       UserName = document.querySelector('#userName').value;  
       Pword = document.querySelector('#password').value; 
       let user_id = userlogin.login_id;
-      //let Submit = document.getElementsByName('submit');
-      //let CompanyUser = userlogin.fk_user_role_id = 1;
-      //let StudentUser = userlogin.fk_user_role_id = 2;
-      //console.log(CompanyUser, StudentUser);
-      //console.log(UserName, Pword);
-
       //if UN and PW don't match go home
       if(UserName != userlogin.user_email && Pword != userlogin.password)
       {
@@ -141,13 +126,13 @@ let checkInfo;
         {
           //console.log('company :logged in');
           checkInfo = 1;
-          window.location.href = CompanyProfilePage;
+          window.location.href = CompanyProfilePage + user_id;
         }
         else if(userlogin.user_role_id == 2)
         {
           //console.log('student log in');
           checkInfo = 2;
-          window.location.href = studentProfilePage;
+          window.location.href = studentProfilePage + user_id;
         }
       } 
   });
@@ -156,10 +141,8 @@ let checkInfo;
     window.location.href = 'http://127.0.0.1:5500/bifrost/home.html';
   }
 }
-// calls the submit button and makes it call the getUsers() function
-let submit = document.getElementsByName('submit');
-
-submit.addEventListener("click", getUsers()); 
+// calls the submit button and makes the login work()
+document.getElementsByName('submit').addEventListener("click", getUsers()); 
 
 
 
