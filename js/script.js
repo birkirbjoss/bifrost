@@ -156,13 +156,13 @@ let checkInfo;
         {
           //console.log('company :logged in');
           checkInfo = 1;
-          window.location.href = CompanyProfilePage;
+          window.location.href = CompanyProfilePage + user_id;
         }
         else if(userlogin.user_role_id == 2)
         {
           //console.log('student log in');
           checkInfo = 2;
-          window.location.href = studentProfilePage;
+          window.location.href = studentProfilePage + user_id;
         }
       } 
   });
@@ -172,8 +172,12 @@ let checkInfo;
   }
 }
 // calls the submit button and makes the login work()
+<<<<<<< HEAD
 let submit = document.getElementsByName('Login');
 submit.addEventListener("click", getUsers()); 
+=======
+document.getElementsByName('submit').addEventListener("click", getUsers()); 
+>>>>>>> 14fedaf588ac089960916e5eef3aeeda8db19f5e
 
 
 
