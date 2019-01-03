@@ -6,21 +6,18 @@ function getDataSoft(){
     //fetch("http://tabithabjorkman.com/bifrost_t/json/categories.php")
     fetch("http://tabithabjorkman.com/bifrost_t/json/skills.php")
     .then(res => res.json())
-    //.then(showCategories);
     .then(showSkillsSoft);
 }
 function getDataTech(){
     //fetch("http://tabithabjorkman.com/bifrost_t/json/categories.php")
     fetch("http://tabithabjorkman.com/bifrost_t/json/skills.php")
     .then(res => res.json())
-    //.then(showCategories);
     .then(showSkillsTech);
 }
 function getDataCT(){
     //fetch("http://tabithabjorkman.com/bifrost_t/json/categories.php")
     fetch("http://tabithabjorkman.com/bifrost_t/json/skills.php")
     .then(res => res.json())
-    //.then(showCategories);
     .then(showSkillsCT);
 }
 

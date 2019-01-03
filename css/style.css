@@ -312,12 +312,14 @@ nav :hover{
 }
 
 /* The Close Button */
+
 .close {
     color: #aaaaaa;
-    float: right;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
+    margin-left: 9em;
 }
+
 
 .close:hover,
 .close:focus {

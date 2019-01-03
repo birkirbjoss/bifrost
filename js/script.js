@@ -20,8 +20,8 @@ function validatePassword(){
   }
 }
 
-password.onchange = validatePassword;
-confirm_password.onkeyup = validatePassword;
+//password.onchange = validatePassword;
+//confirm_password.onkeyup = validatePassword;
 
 /******************** Scrolling to About page *********************/
 $(document).ready(function(){
@@ -156,13 +156,13 @@ let checkInfo;
         {
           //console.log('company :logged in');
           checkInfo = 1;
-          window.location.href = CompanyProfilePage + user_id;
+          window.location.href = CompanyProfilePage;
         }
         else if(userlogin.user_role_id == 2)
         {
           //console.log('student log in');
           checkInfo = 2;
-          window.location.href = studentProfilePage + user_id;
+          window.location.href = studentProfilePage;
         }
       } 
   });

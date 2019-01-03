@@ -8,14 +8,12 @@ function getDataCompanies(){
 
 const companyDetail = document.querySelector("#companyProfile");
 const companyTemplate = document.querySelector("#CompanyTemplate").content;
-let urlParams = new URLSearchParams(window.location.search);
-let user_id = urlParams.get("company_id");
+//let urlParams = new URLSearchParams(window.location.search);
+//let user_id = urlParams.get("company_id");
 
 function showCompany(compData){
   console.log(compData);
-  compData.forEach(function (theCompany) {  
-    if(theCompany.company_id == user_id)
-    {
+  compData.forEach(function (theCompany) { 
       console.log('this is working');
       const clone = companyTemplate.cloneNode(true);
       //console.log('hi clone');
@@ -35,7 +33,6 @@ function showCompany(compData){
     
       companyDetail.appendChild(clone);
       //console.log('this is a loop');
-    }
       
  }); 
 }
