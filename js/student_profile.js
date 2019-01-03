@@ -40,8 +40,6 @@ function showStudent(studData){
         profileDetail.querySelector(".soMeLinks").href = theStud.linked_in_url; 
         profileDetail.querySelector(".portfolio").href = theStud.portfolio_link; 
         profileDetail.querySelector(".school").textContent = theStud.school; 
-        
-        
 
         //check if skills belong to certain categories, then clone
         if(cat_id_skill == 1)

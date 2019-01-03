@@ -32,11 +32,11 @@
         <form class="mui-form" action="http://tabithabjorkman.com/bifrost_t/php_inserts/projects.php" method="POST">
                 <legend>Add a Project</legend>
                 <div class="mui-textfield">
-                    <input type="text" name="projects_name" value="" placeholder="Max 10 characters">
+                    <input type="text" name="projects_name" value="" placeholder="Max 10 characters" required>
                     <label>Projects Name</label>
                 </div>
                 <div class="mui-textfield">
-                    <input type="url" name="projects_url" value="" placeholder="http://www.project.com">
+                    <input type="url" name="projects_url" value="" placeholder="http://www.project.com" required>
                     <label>Projects URL</label>
                 </div>
                 <div class="mui-textfield">
@@ -44,11 +44,11 @@
                     <label>Grade</label>
                 </div>
                 <div class="mui-textfield">
-                    <input type="date" name="projects_start_date" value="">
+                    <input type="date" name="projects_start_date" value="" required>
                     <label>Start Date</label>
                 </div>
                 <div class="mui-textfield">
-                    <input type="date" name="projects_end_date" value="">
+                    <input type="date" name="projects_end_date" value="" required>
                     <label>End Date</label>
                 </div>
                <button type="submit" class="signUpButton mui-btn mui-btn--small" name="submit">Submit</button>

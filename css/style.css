@@ -206,6 +206,19 @@ nav :hover{
     color: white;
 }
 
+#logoutButton
+{
+    width: 4em;
+    height: 2em;
+    border-radius: .5em;
+    border-color: #ceac41;
+    border-width: .1em;
+    background-color: #293a4b;
+    font-size: 1em;
+    margin-left: 1em;
+    color: white;
+}
+
 /* #MobileloginButton {
     display: none;
 } */
@@ -531,7 +544,7 @@ p {
 #portfolioBox {
     margin-top: 3%;
     grid-column: 1/-1;
-    padding: 10%;
+    padding: 2% 10% 2% 10%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -539,7 +552,7 @@ p {
 #profileImg {
     grid-column: 1;
     grid-row: 1;
-    width: 55%;
+    width: 100%;
     border: 1px solid #ffffff;
 }
 .marginOdd
