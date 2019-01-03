@@ -172,12 +172,8 @@ let checkInfo;
   }
 }
 // calls the submit button and makes the login work()
-<<<<<<< HEAD
 let submit = document.getElementsByName('Login');
 submit.addEventListener("click", getUsers()); 
-=======
-document.getElementsByName('submit').addEventListener("click", getUsers()); 
->>>>>>> 14fedaf588ac089960916e5eef3aeeda8db19f5e
 
 
 
