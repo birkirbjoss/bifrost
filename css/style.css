@@ -616,8 +616,6 @@ p {
 .hex {
     float: left;
     margin-right: -26px;
-    margin-bottom: -50px;
-    z-index: 1;
 }
 .hex:nth-child(odd)
 {
