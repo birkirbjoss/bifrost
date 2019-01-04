@@ -617,7 +617,7 @@ p {
     float: left;
     margin-right: -26px;
 }
-.hex:nth-child(odd)
+.hex:nth-child(even)
 {
     margin-top: 53px;
 }
@@ -651,7 +651,7 @@ p {
 .hex-text
 {
     width: 100%;
-    height: auto;
+    height: 10em;
     padding-top: 25%;
     text-align: center;
     position: relative;
