@@ -135,7 +135,7 @@ let checkInfo;
   loginData.forEach(function (userlogin) {
       
       let studentProfilePage = "http://127.0.0.1:5500/bifrost/student_profile.html";
-      let CompanyProfilePage = "http://127.0.0.1:5500/bifrost/company_profile.html";
+      let CompanySearchPage = "http://127.0.0.1:5500/bifrost/search.html";
       UserName = document.querySelector('#userName').value;  
       Pword = document.querySelector('#password').value; 
       let user_id = userlogin.login_id;
@@ -156,7 +156,7 @@ let checkInfo;
         {
           //console.log('company :logged in');
           checkInfo = 1;
-          window.location.href = CompanyProfilePage;
+          window.location.href = CompanySearchPage;
         }
         else if(userlogin.user_role_id == 2)
         {

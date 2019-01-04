@@ -27,10 +27,8 @@ function showCompany(compData){
       clone.querySelector(".cvr_number").textContent = theCompany.cvr;       
       clone.querySelector(".st_address").textContent = theCompany.street_address;       
       clone.querySelector(".post_code").textContent = theCompany.post_code;       
-      clone.querySelector(".city").textContent = theCompany.city;     
-      clone.querySelector(".sub_type").textContent = theCompany.subscription_type;      
+      clone.querySelector(".city").textContent = theCompany.city;          
 
-    
       companyDetail.appendChild(clone);
       //console.log('this is a loop');
       

@@ -34,7 +34,8 @@ function showStudent(studData){
         //clone only on profile, cloned according to how many there are
           //console.log('hi clone');
         profileDetail.querySelector(".profileImg").src = imagePathBase + theStud.image_file_name;
-        profileDetail.querySelector(".education ").textContent = theStud.education + ' ' + theStud.semester;
+        profileDetail.querySelector(".education ").textContent = theStud.education;
+        profileDetail.querySelector(".grad_date ").textContent = theStud.semester;
         profileDetail.querySelector(".name ").textContent = theStud.name;     
         profileDetail.querySelector(".phone ").textContent = theStud.phone;     
         profileDetail.querySelector(".soMeLinks").href = theStud.linked_in_url; 
@@ -94,7 +95,7 @@ function showProject(projectData){
       if(index % 2 == 0)
         {
           console.log(stud_id);
-          document.querySelector('.hex').classList.remove('even');
+          //document.querySelector(".timeline_text").classList.remove('marginTop');
         }
       //console.log('this is a loop');
       timelineRow.appendChild(clone); 

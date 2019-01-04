@@ -19,6 +19,8 @@
     <header>
         <nav>
                 <a href="home.html">Home <span>&#124;</span></a>
+                <a href="search.html">Search profiles<span>&#124;</span></a>
+                <a href="home.html"><button id="logoutButton">Log out</button></a>
                 
             </nav>
 
@@ -28,7 +30,7 @@
 </div>
     <main>
         <section id="companyProfile">
-            <h1>Company Profile</h1>
+            <h1 class="title">My Account</h1>
 
             <template id="CompanyTemplate">
                     <div id="profileBox" class="profileBox">
@@ -44,7 +46,6 @@
                         <h5> <span>Street Address:</span> </h5>
                         <h5> <span>Post Code:</span> </h5>
                         <h5> <span>City:</span> </h5>
-                        <h5> <span>Subscription Type:</span> </h5>
                     </div>
                     <div id="CompanyText2" class="CompanyText2">
                         <h5 class="comp_name"> </h5>
@@ -58,12 +59,10 @@
                         <h5 class="st_address"></h5>
                         <h5 class="post_code"></h5>
                         <h5 class="city"></h5>
-                        <h5 class="sub_type"></h5>
                     </div>
                     </div>
                 </template>
-            <a href="company_registration.html"><button class="mui-btn mui-btn--small">Add</button></a> 
-            <a href="company_edit.html"><button class="mui-btn mui-btn--small">Edit</button></a>
+            <a href="company_edit.html"><button class="edit_comp_prof mui-btn mui-btn--small">Edit</button></a>
         </section>
     </main>
     <footer>

@@ -84,6 +84,10 @@ a {
     font-weight: 300;
     text-decoration: underline;
 }
+.marginRight
+{
+    margin-right: 30%;
+}
 
 
 /************ Home ****************/
@@ -588,12 +592,12 @@ p {
 
 #profileText2 h5 {
     width: 100%;
-    padding: 2%;
+    padding: 2.2%;
 }
-
-
-
-
+#profileText2 h5 span{
+    margin: 0;
+    font-size: 0.8em;
+}
 /************** TIMELINE on profile page****************/
 #timeline {
     max-height: 12.5em;
@@ -651,36 +655,38 @@ p {
 .hex-text
 {
     width: 100%;
-    height: 10em;
-    padding-top: 25%;
+    height: auto;
     text-align: center;
     position: relative;
-    z-index: 9999;
-}
-.hex-text a:nth-child(odd)
-{
-    background-color: aqua;
-    padding-top:0; 
+    padding: 2%;
 }
 #hexLinkText
 {
+    height: 5em;
     display: inline-block;
     margin: 5% 56.5% 5% 0;
 }
-/* #hexLinkText
+.show_icon
 {
-    /*margin: 5% 45% 5% 0;
-    color: red;
-} */
+    margin-top: 20%;
+}
+.marginTopIcon
+{
+    margin-top: 100%;
+}
+.projectLink
+{
+    width: 100%;
+    height: 3em;
+    padding-top: 75%;
+}
 .timeline_text
 {
     font-size: 0.4em;
-    z-index: 9999;
 }
 .date_finished
 {
     font-size: 0.4em;
-    z-index: 9999;
 }
 
 /* hexagon template , for each template 1 project info , alternate classes, using odd and even in the js spaced on a css grid, margin top -50% height and - 25% left - limit text content for name of project make classes with 9 gradients */
@@ -963,9 +969,19 @@ li h6
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-column: 1/-1;
-    height: 70vh;
     background-color: #e6e6e6;
     border-bottom: #293a4b solid 1px;
+}
+.title
+{
+    width: 100%;
+    grid-column: 1/-1;
+    grid-row: 1;
+}
+ .edit_comp_prof
+{
+    align-self: flex-start; 
+    margin: 1%;
 }
 
 #profileBox {

@@ -20,7 +20,7 @@ let aLink = document.querySelector(".iconLink");
         const clone = SearchResultTemplate.cloneNode(true);
         //let iconImg = document.querySelector(".persIconImg");
         clone.querySelector(".iconLink").addEventListener("click",e=>{
-            window.location="student_profile.html?student_id=" + thePers.student_id
+            window.location="student_profile_company.html?student_id=" + thePers.student_id
           }) 
         console.log('hi clone');
         clone.querySelector(".iconLink").aLink = thePers.student_id;
