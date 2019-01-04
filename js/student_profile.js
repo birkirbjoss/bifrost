@@ -85,8 +85,7 @@ function showProject(projectData){
    projectData.forEach(function (theProject, index) {  
       //console.log(index);
       const clone = timelineTemplateHex.cloneNode(true);
-      //let stud_id = theProject.student_id;
-      //console.log(stud_id);
+      let stud_id = theProject.student_id;
       //console.log('hi clone');
       clone.querySelector(".projectLink").href = theProject.projects_url;   
       clone.querySelector(".timeline_text").textContent = theProject.projects_name; 
@@ -94,9 +93,8 @@ function showProject(projectData){
 
       if(index % 2 == 0)
         {
-          //console.log(stud_id);
-          //document.querySelector('#hexagon' + index)
-
+          console.log(stud_id);
+          document.querySelector('.hex').classList.remove('even');
         }
       //console.log('this is a loop');
       timelineRow.appendChild(clone); 

@@ -619,6 +619,10 @@ p {
     margin-bottom: -50px;
     z-index: 1;
 }
+.hex:nth-child(odd)
+{
+    margin-top: 53px;
+}
 
 .hex .left {
     float: left;
@@ -646,22 +650,30 @@ p {
 .hex-row {
     clear: left;
 }
-
-.even {
-    margin-top: 53px;
-}
 .hex-text
 {
     width: 100%;
     height: auto;
     padding-top: 25%;
     text-align: center;
+    position: relative;
     z-index: 9999;
+}
+.hex-text a:nth-child(odd)
+{
+    background-color: aqua;
+    padding-top:0; 
 }
 #hexLinkText
 {
     display: inline-block;
+    margin: 5% 56.5% 5% 0;
 }
+/* #hexLinkText
+{
+    /*margin: 5% 45% 5% 0;
+    color: red;
+} */
 .timeline_text
 {
     font-size: 0.4em;
