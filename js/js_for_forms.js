@@ -1,6 +1,6 @@
  "use strict"
-function getDataRoles() //CONNECTS THE DATABASE TO THE SITE
-{   
+/*function getDataRoles() //CONNECTS THE DATABASE TO THE SITE
+ {   
     
     fetch("http://tabithabjorkman.com/bifrost_t/json/user_role.php")
     .then(res => res.json())
@@ -8,7 +8,7 @@ function getDataRoles() //CONNECTS THE DATABASE TO THE SITE
 }
 
 let selectList = document.getElementById("selectList");
-
+let RoleOpt = document.createElement("OPTION");
 
 function PopulateDropDownList(roles) {
      //Add the Options to the DropDownList.
@@ -16,21 +16,24 @@ function PopulateDropDownList(roles) {
      {
          console.log("fun, fun, fun");
 
-         
-         
         for (let i = 0; i < user_role.length; i++) {
             let userRole = user_role.user_role_name;
-            console.log(userRole);
-            let option = document.createElement("OPTION");
-                //option.setAttribute("value", "user_role.user_role_id");
-                //var textOptions = document.createTextNode("user_role_name");
-                //option.appendChild(textOptions);
-                //document.getElementById("selectList").appendChild(option);
+            //console.log(userRole.length);
+            //let option = document.createElement("OPTION");
+            RoleOpt.setAttribute("value", "user_role.length");
+            RoleOpt.innerHTML = "user_role.user_role_name";
+            //RoleOpt.appendChild(textOptions);
+            selectList = appendChild(RoleOpt);
+            
         }    
      })
     }
 
-getDataRoles();
+getDataRoles(); */
+
+
+
+
 
 /*const myHeaders = {
     'Content-Type': 'application/json; charset=utf-8',
