@@ -89,7 +89,6 @@ a {
     margin-right: 30%;
 }
 
-
 /************ Home ****************/
 #MobileloginButton, #MobileSignup
 {
@@ -222,10 +221,6 @@ nav :hover{
     margin-left: 1em;
     color: white;
 }
-#logoutButton a
-{
-    text-decoration: none;
-}
 
 /* #MobileloginButton {
     display: none;
@@ -235,9 +230,6 @@ nav :hover{
     margin: 2%;
     font-size: 1em;
 }
-
-
-
 
 #section2 {
     display: grid;
