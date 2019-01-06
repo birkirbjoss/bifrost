@@ -13,16 +13,16 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" media="screen and (min-device-width : 769px) and (max-device-width : 1080px)" href="css/tablet.css" type="text/css">
     <link rel="stylesheet" media="screen and (min-device-width : 320px) and (max-device-width : 768px)" href="css/mobile.css" type="text/css">
-    <title>Home</title>
+    <title>Kassia - Home</title>
 </head>
 
 <body>
     <div id="nonVisibleHeader">
         <header>
                 <nav>
-                        <a href="#section1"> Home <span>&#124;</span></a>
-                        <a href="#section2"> About <span>&#124;</span></a>
-                        <a href="#section3"> Solutions </a>
+                        <a class="open" href="#section1"> Home <span>&#124;</span></a>
+                        <a class="open" href="#section2"> About <span>&#124;</span></a>
+                        <a class="open" href="#section3"> Solutions </a>
                         <button id="loginButton">Login</button>
                     </nav>
 
@@ -46,18 +46,18 @@
         <div id="myModal" class="modal">    
             <!-- Modal content -->
             <div class="modal-content">
-                <span class="close">&times;</span>
-                <form class="mui-form" action="" name="loginForm">
+                <span id="close" class="close">&times;</span>
+                <form class="mui-form" action="" name="loginForm" id="LoginForm">
                     <div class="mui-textfield mui-textfield--float-label">
                         <input type="text" id="userName" name="userN" value="">
                         <label for="email">E-mail</label>
                     </div>
                     <div class="mui-textfield mui-textfield--float-label">
-                        <input type="text" id="password" name="PassW" value="">
+                        <input type="password" id="password" name="PassW" value="">
                         <label for="password">Password</label>
                     </div>
       
-                    <button type="submit" class="signUpButton mui-btn mui-btn--small" onclick="login()">Log in</button>
+                    <button type="submit" class="signUpButton mui-btn mui-btn--small" name="Login">Log in</button>
                 </form>
             </div>
 
@@ -76,30 +76,37 @@
             <form class="mui-form" action="http://tabithabjorkman.com/bifrost_t/php_inserts/sign_up.php" role="form" method="POST">
                 
                 <div class="mui-textfield mui-textfield--float-label">
-                    <input class="fullname" type="text" name="name" value="">
+                    <input class="fullname" type="text" name="name" value="" required>
                     <label class="fullname">Full Name</label>
                 </div>
                 <div class="mui-textfield mui-textfield--float-label">
-                    <input type="email" name="email" value="" placeholder="">
+                    <input type="email" name="email" value="" placeholder="" required>
                     <label>E-mail</label>
                 </div> 
                 <div class="mui-textfield mui-textfield--float-label">
-                    <input type="password" name="password" value="">
+                    <input id="sign_up_password" type="password" name="password" value=""  required>
                     <label>Password</label>
                 </div>
                 <div class="mui-textfield mui-textfield--float-label">
-                    <input type="password" name="confirm" value="">
+                    <input id="sign_up_confirm" type="password" name="confirm" value=""  required>
                     <label>Password Confirm</label>
                 </div>
+                <span id="message"></span>
                 <div class="mui-select mui-select--float-label">
-                    <select id="SelectRole"  name="role">
-                        <option value="0">Choose One</option>
+                    <select id="SelectRole"  name="role" required>
+                        <option></option>
                         <option value="1">Company</option>
                         <option value="2">Student</option>
                     </select>
-                    <label for="role">Choose</label>
+                    <label for="role">Choose one</label>
                 </div>
-                <button type="submit" class="mui-btn mui-btn--small" name="submit">Sign Up</button>
+                <div id="TandC" class="mui-checkbox">
+                        <label class="white">
+                          <input id="CheckTandC" name="tandc" type="checkbox" value="1" required>
+                          I agree <a class="white" href="https://termsfeed.com/privacy-policy/1da3ea9ea35a9903250489416f56d38d">Terms & Conditions</a>
+                        </label>
+                      </div>
+                <button id="sign_up" type="submit" class="mui-btn mui-btn--small" name="submit">Sign Up</button>
             </form>
         </div>
     </div>
@@ -136,7 +143,7 @@
           <h3 id="partnersTitle">Our premium partners</h3>
 
                 <div id="partners">
-                        <img id="partnerImage" src="images/sponsors/1_school.png" alt="" srcset="">
+                        <img id="partnerImage" src="images/sponsors/1_sgit chool.png" alt="" srcset="">
                         <img id="partnerImage" src="images/sponsors/1_school_new.png" alt="" srcset="">
                         <img id="partnerImage" src="images/sponsors/3_company.png" alt="" srcset="">
                         <img id="partnerImage" src="images/sponsors/4_company.png" alt="" srcset="">
@@ -147,22 +154,14 @@
 
                 
 
-                    <div id="subscription1">
-
-                           <h6>Basic Account</h6>
-                           <h6>Get to know us</h6>
-                           
-                           <a href="company_registration.html"> <button id="requestButton">Send request</button></a>  
+                   
+                    <div id="steps">
+                        <img id="studentStep" src="images/students_step.png" alt="" srcset=""> 
+                        <img id="companiesStep" src="images/companies_step.png" alt="" srcset="">   
                     </div>
+                  
 
-                    <div id="subscription2">
-
-                            <h6>Premium Account</h6>
-                            <h6>Your perfect start with Kassia</h6>
-                            
-                      <a href="company_registration.html"> <button id="requestButton">Send request</button> </a>  
-                     </div>
- 
+                   
 
                  
                

@@ -1,10 +1,32 @@
+"use strict"
+
+/**************** approve terms and conditions ***********************/
+//let checkedTandC = document.querySelector('#sign_up').checked;
+
+document.addEventListener('click', function(){
+    document.querySelector('#CheckTandC').checked;
+    console.log('approved');
+})
+
+// get password field and check it against the confirm field
+
+let password = document.getElementById("sign_up_password"), confirm_password = document.getElementById("sign_up_confirm");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords don't match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+//password.onchange = validatePassword;
+//confirm_password.onkeyup = validatePassword;
 
 /******************** Scrolling to About page *********************/
-
-
 $(document).ready(function(){
   // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+  $(".open").on('click', function(event) {
 
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "#section2") {
@@ -48,52 +70,28 @@ $(document).ready(function(){
 });
 
 
-
-/******************** Modal *********************/
-
-
+  /******************** Modal *********************/
 // Get the modal
 let modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-let loginBtn = document.getElementById('loginButton').addEventListener("click", function(){modal.style.display = "block";});
+let loginBtn = document.getElementById('loginButton');
 
 // Get the <span> element that closes the modal
 let spanClose = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-/* btn.onclick = function() {
-  modal.style.display = "block";
-} */
-
-
-function login()
-{
-  let UserName = document.forms["loginForm"]["userN"].value;
-  let Pword = document.forms["loginForm"]["PassW"].value;
-
-  if (UserName == 'CompanyLogin')
-  {
-      if(Pword == "1234")
-      {
-        //alert("login successful!");
-        window.location.replace("bifrost/company_profile.html");
-      }
-      else
-      {
-        alert("Incorrect Username or Password");
-      }
-  }
-  else
-  {
-    alert("Incorrect Username or Password");
-  }
-}
+loginBtn.onclick = function() {
+  modal.style.display = "block"; 
+} 
 
 // When the user clicks on <spanClose> (x), close the modal
-spanClose.onclick = function() {
+/* spanClose.onclick = function() {
   modal.style.display = "none";
-}
+} */
+spanClose.addEventListener('click', function () {
+  modal.style.display = "none";
+  });
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
@@ -101,4 +99,81 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+//preventing page from refreshing
+document.querySelector('#LoginForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  getUsers();
+});
+//targeting the info from the input fields
+document.querySelector('#userName').addEventListener('input', function(e){
+  
+  UserName = e.target.value;
+  //console.log(e.target.value)
+});
+//targeting the info from the input fields
+document.querySelector('#password').addEventListener('input', function(e){
+  
+  Pword = e.target.value;
+  //console.log(e.target.value)
+});
+
+let UserName = '';
+let Pword = '';
+
+//fetching data from login table
+function getUsers(){
+    fetch("http://tabithabjorkman.com/bifrost_t/json/login_list.php")
+    .then(res => res.json())
+    .then(fetchUser);
+  } 
+
+//fetching array
+function fetchUser(loginData){
+  console.log(loginData);
+let checkInfo;
+//rotating through the array with forEach
+  loginData.forEach(function (userlogin) {
+      
+      let studentProfilePage = "http://127.0.0.1:5500/bifrost/student_profile.html";
+      let CompanySearchPage = "http://127.0.0.1:5500/bifrost/search.html";
+      UserName = document.querySelector('#userName').value;  
+      Pword = document.querySelector('#password').value; 
+      let user_id = userlogin.login_id;
+      //if UN and PW don't match go home
+      if(UserName != userlogin.user_email && Pword != userlogin.password)
+      {
+        //console.log('home');
+        checkInfo = 0;
+        //window.location.href = 'http://127.0.0.1:5500/bifrost/home.html';
+      }
+      //if UN and PW match go to respective pages
+      else if(UserName == userlogin.user_email && Pword == userlogin.password)
+      {
+        //console.log('next page');
+        
+          // if (user_id = Company_user = Username = Pword)
+        if(userlogin.user_role_id == 1)
+        {
+          //console.log('company :logged in');
+          checkInfo = 1;
+          window.location.href = CompanySearchPage;
+        }
+        else if(userlogin.user_role_id == 2)
+        {
+          //console.log('student log in');
+          checkInfo = 2;
+          window.location.href = studentProfilePage;
+        }
+      } 
+  });
+  if(checkInfo = 0)
+  {
+    window.location.href = 'http://127.0.0.1:5500/bifrost/home.html';
+  }
+}
+// calls the submit button and makes the login work()
+let submit = document.getElementsByName('Login');
+submit.addEventListener("click", getUsers()); 
+
+
 

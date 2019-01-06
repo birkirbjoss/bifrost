@@ -13,10 +13,11 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" media="screen and (min-device-width : 769px) and (max-device-width : 1080px)" href="css/tablet.css" type="text/css">
     <link rel="stylesheet" media="screen and (min-device-width : 320px) and (max-device-width : 768px)" href="css/mobile.css" type="text/css">
-    <title>Home</title>
+    <title>Kassia - Contact</title>
 </head>
 
 <body>
+      <div id="nonVisibleHeader">
         <header>
                 <nav>
                         <a href="#section1">Home <span>&#124;</span></a>
@@ -28,29 +29,30 @@
                 <img id="logo" src="images/Logo.png" alt="" srcset="">
                 <h1 id="name">Kassia</h1>
         </header>
+      </div>
 <!-- accept-charset="ISO-8859-1"
                     onsubmit="let originalCharset = document.charset; document.charset = 'ISO-8859-1'; window.onbeforeunload = function () {document.charset=originalCharset;};" -->
         <main>
+              <h1></h1>
 
             <section id="contact_form_section">
 
-                    <form method="post" action="http://tabithabjorkman.com/bifrost_t/php_inserts/contact.php"  class="mui-form" id="contact_form">
+                  <form method="post" action="http://www.tabithabjorkman.com/cgi-bin/FormMail.pl" accept-charset="ISO-8859-1" onsubmit="var originalCharset = document.charset; document.charset = 'ISO-8859-1'; window.onbeforeunload = function () {document.charset=originalCharset;};">
 
                     <div class="mui-textfield mui-textfield--float-label"> 
-                          <input type="text" id="fullName" name="fullName" value="" placeholder="Full Name" required="required"
+                          <input type="text" id="realname" name="realname" value="" placeholder="Full Name" required="required"
                                  tabindex="1" autofocus="autofocus"/>
-                          <label for="fullName"></label>
-                    </div>
-                    <div class="mui-textfield mui-textfield--float-label">
-                          <input type="number" id="phone" name="phone" value="" placeholder="Your phone number" tabindex="2"/>
-                          <label for="phone" required="required"></label>
+                          <label for="realname"></label>
                     </div>
                     <div class="mui-textfield mui-textfield--float-label">
                           <input type="email" id="email" name="email" value="" placeholder="Din Email" tabindex="2"
                                  required="required" />
                           <label for="email"></label>
-                    </div class="mui-textfield mui-textfield--float-label">
-                    
+                    </div>
+                    <div class="mui-textfield mui-textfield--float-label">
+                        <input type="number" id="phone_number" name="phone_number" value="" placeholder="Your phone number" tabindex="2"/>
+                        <label for="phone_number" required="required"></label>
+                    </div>
                     <div class="mui-textfield mui-textfield--float-label">
                           <input type="text" id="messageSubject" name="messageSubject" value="" placeholder="Subject"
                                  tabindex="2" required />
@@ -62,17 +64,16 @@
                           <label for="message"></label>
                     </div>
                     <div>
-                      <input name="submit" type="submit" id="submit" value="Send" >
-                      <input type="hidden" name="recipient" value="tabithabjorkman@tabithabjorkman.com" />
-                      <input type="hidden" name="subject" value="Contact from Kassia" />
-                      <input type="hidden" name="redirect" value="http://tabithabjorkman.com/bifrost_t/php_inserts/thanks.html" />
-                      <input type="hidden" name="missing_fields_redirect" value="http://tabithabjorkman.com/bifrost_t/php_inserts/error.html" />
-                      <input type="hidden" name="required" value="full_name,phone,email,messageSubject, message" />
+                        <input type="submit" value="Send" />
+                        <input type="hidden" name="recipient" value="tabitha@tabithabjorkman.com" />
+                        <input type="hidden" name="subject" value="Requests from Kassia" />
+                        <input type="hidden" name="redirect" value="http://tabithabjorkman.com/bifrost_t/php_inserts/thanks.html" />
+                        <input type="hidden" name="missing_fields_redirect" value="http://tabithabjorkman.com/bifrost_t/php_inserts/error.html" />
+                        <input type="hidden" name="required" value="realname,email,phone_number,messageSubject,message" />
                     </div>
                     </form>
 
             </section>
-
         </main>
 
         <footer>
@@ -86,3 +87,21 @@
 </body>
 
 </html>
+<!-- <form method="post" action="http://www.tabithabjorkman.com/cgi-bin/FormMail.pl" accept-charset="ISO-8859-1" onsubmit="var originalCharset = document.charset; document.charset = 'ISO-8859-1'; window.onbeforeunload = function () {document.charset=originalCharset;};">
+      Name<br />
+      <input name="realname" /><br />
+      E-mail<br />
+      <input name="email" /><br />
+      Phone number<br />
+      <input name="phone_number"><br />
+      Subject<br />
+      <input name="subject"><br />
+      Message<br />
+      <textarea cols="40" rows="10" name="message"></textarea><br />
+      <input type="submit" value="Send" />
+      <input type="hidden" name="recipient" value="tabitha@tabithabjorkman.com" />
+      <input type="hidden" name="subject" value="Requests from Kassia" />
+      <input type="hidden" name="redirect" value="http://tabithabjorkman.com/bifrost_t/php_inserts/thanks.html" />
+      <input type="hidden" name="missing_fields_redirect" value="http://tabithabjorkman.com/bifrost_t/php_inserts/error.html" />
+      <input type="hidden" name="required" value="realname,email,phone_number,subject,message" />
+      </form> -->

@@ -11,16 +11,16 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" media="screen and (min-device-width : 769px) and (max-device-width : 1080px)" href="css/tablet.css" type="text/css">
     <link rel="stylesheet" media="screen and (min-device-width : 320px) and (max-device-width : 768px)" href="css/mobile.css" type="text/css">
-    <title>Student Registration</title>
+    <title>Kassia - Edit company account</title>
 </head>
 
 <body>
 <div id="nonVisibleHeader">
     <header>
         <nav>
-                <a href="home.html">Home <span>&#124;</span></a>
-                
-            </nav>
+                <a href="home.html">Home <span>&#124;</span></a> 
+                <a href="home.html"><button id="logoutButton">Log out</button></a> 
+        </nav>
 
         <img id="logo" src="images/Logo.png" alt="" srcset="">
         <h1 id="name">Kassia</h1>
@@ -28,12 +28,8 @@
 </div>
     <main>
         <section id="companyForm">
-            <form class="mui-form" action="http://tabithabjorkman.com/bifrost_t/php_inserts/company_profile.php" method="POST">
-                    <legend>Company Information</legend>
-                    <div class="mui-textfield">
-                        <input type="text" name="comp_name" value="">
-                        <label>Company Name:</label>
-                    </div>
+            <form class="mui-form" action="http://http://tabithabjorkman.com/bifrost_t/php_inserts/company_profile_update.php" method="POST">
+                    <legend>Update Company Account</legend>
                     <div class="mui-textfield">
                         <input type="text" name="con_prs_name" value="">
                         <label>Contact Person's Name:</label>
@@ -50,10 +46,6 @@
                         <input type="number" name="con_phone_num" value="">
                         <label>Contact Phone:</label>
                     </div>
-                    <div class="mui-textfield">
-                        <input type="text" name="industry_type" value="">
-                        <label>Industry:</label>
-                    </div>
                     <div class="mui-select">
                         <select name="number_of_employees">
                             <option value="">Less than 10</option>
@@ -63,10 +55,6 @@
                             <option value="">More than 100</option>
                         </select>
                         <label id="colorDkGrey">Number of Employees</label>
-                    </div>
-                    <div class="mui-textfield">
-                        <input type="number" name="cvr_number" value="">
-                        <label>CVR Number:</label>
                     </div>
                     <div class="mui-textfield">
                         <input type="text" name="address" value="">
@@ -84,16 +72,11 @@
                             <input type="text" name="country" value="">
                             <label>Country:</label>
                     </div>
-                    <div class="mui-select color_dk_grey">
-                        <select name="subscrip_type">
-                            <option value="basic">Basic</option>
-                            <option value="premium">Premium</option>
-                            <option value="platinum">Platinum</option>
-                        </select>
-                        <label id="colorGrey">Type of Subscription</label>
-                    </div>
-                   <button type="submit" class="signUpButton mui-btn mui-btn--small" name="submit">Submit</button>
+                    <a href="company_profile.html" class="signUpButton mui-btn mui-btn--small marginRight">Back</a>
+                   <a href="company_profile.html" class="signUpButton mui-btn mui-btn--small">Submit</a>
+                   
             </form>
+
         </section>
     </main>
     <footer>

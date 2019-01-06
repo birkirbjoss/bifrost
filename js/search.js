@@ -1,4 +1,4 @@
-
+/* LOOK UP PHP SEARCH CODE I CAN USE FROM PREVIOUS SITES */
 /******************** Fetching Skills & Cloning it to tabs *********************/
 
 "use strict"
@@ -6,21 +6,18 @@ function getDataSoft(){
     //fetch("http://tabithabjorkman.com/bifrost_t/json/categories.php")
     fetch("http://tabithabjorkman.com/bifrost_t/json/skills.php")
     .then(res => res.json())
-    //.then(showCategories);
     .then(showSkillsSoft);
 }
 function getDataTech(){
     //fetch("http://tabithabjorkman.com/bifrost_t/json/categories.php")
     fetch("http://tabithabjorkman.com/bifrost_t/json/skills.php")
     .then(res => res.json())
-    //.then(showCategories);
     .then(showSkillsTech);
 }
 function getDataCT(){
     //fetch("http://tabithabjorkman.com/bifrost_t/json/categories.php")
     fetch("http://tabithabjorkman.com/bifrost_t/json/skills.php")
     .then(res => res.json())
-    //.then(showCategories);
     .then(showSkillsCT);
 }
 
@@ -44,9 +41,13 @@ function showSkillsSoft(data){
 
         if(cat_id_skill == 1)
         {
+          clone.querySelector("input[type='checkbox']");
+          //console.log(clone.querySelector("input[type='checkbox']"));
           clone.querySelector(".ItemSoftSkill").textContent = theSkill.skills;
+
+          SSList.appendChild(clone);
         }
-        SSList.appendChild(clone);
+        
     });
 }
 function showSkillsTech(dataTech){
@@ -61,9 +62,11 @@ function showSkillsTech(dataTech){
 
         if(cat_id_skill == 2)
         {
+          clone.querySelector("input[type='checkbox']");
           clone.querySelector(".ItemTechSkill").textContent = theSkillT.skills;
+          TSList.appendChild(clone);
         }
-        TSList.appendChild(clone);
+        
   });
 }
 function showSkillsCT(dataCT){
@@ -78,18 +81,96 @@ function showSkillsCT(dataCT){
 
         if(cat_id_skill == 3)
         {
+          clone.querySelector("input[type='checkbox']");
           clone.querySelector(".ItemCTSkill").textContent = theSkillCT.skills;
+          CTSList.appendChild(clone);
         }
-        CTSList.appendChild(clone);
+       
   });
 }
 getDataCT();
 getDataTech();
 getDataSoft(); 
+
+/* // caching the repeatedly accessed elements for
+// efficiency:
+var results = document.getElementById('myDiv'),
+  checks = document.querySelectorAll('#ctl00_ContentPlaceHolder1_divServices input[type=checkbox]'),
+
+// using Array.from() to turn the array-like NodeList 
+// returned by document.querySelectorAll into an array:
+  checksArray = Array.from(checks);
+
+// iterating over that array of check-boxes:
+checksArray.forEach(function(check) {
+  // the first, and here only, argument ('check')
+  // is the current array-element of the array
+  // over which we're iterating.
+
+  // here we add an event-listener for the 'change'
+  // event, which will trigger the anonymous function:
+  check.addEventListener('change', function() {
+
+    // filtering the checksArray array of check-boxes,
+    // retaining only those that are checked; here we
+    // use an Arrow function which uses the named
+    // function parameter ('el'), which is the first
+    // parameter of the Array.prototype.filter() method
+    // (as above the first parameter is the array-element
+    // of the array over which we're iterating). Here if
+    // the return value of 'el.checked' is true the element
+    // is retained, otherwise it's discarded:
+    var checked = checksArray.filter(el => el.checked),
+
+    // an empty array-literal for use subsequently:
+      clones = [],
+
+    // a document fragment to allow all elements to be
+    // appended in one call, rather than appending multiple
+    // times causing the document to be drawn and re-drawn:
+      frag = document.createDocumentFragment();
+
+    // iterating over the array of checked check-boxes:
+    checked.forEach(function(el) {
+
+      // pushing the cloned checkbox, and its next sibling
+      // the <label>, into the initialised array:
+      clones.push(el.cloneNode(), el.nextElementSibling.cloneNode(true));
+    });
+
+    // using Array.prototype.map() to return a new array
+    // of elements, after removing the 'id' from the
+    // elements with an id and a type and that type is
+    // exactly equal to 'checkbox'
+    // (Array.prototype.forEach() could be used instead,
+    // but it's slightly easier using map()):
+    clones.map(function(el) {
+      if (el.id && el.type && el.type === 'checkbox') {
+        el.removeAttribute('id');
+      }
+      return el;
+
+    // iterating over the array returned by map()
+    // and appending the elements ('el') to the
+    // created document.fragment:
+    }).forEach(el => frag.appendChild(el));
+
+    // emptying the results element, using a while
+    // loop; while the element has a firstChild we
+    // remove that firstChild:
+    while (results.firstChild) {
+      results.removeChild(results.firstChild);
+    }
+
+    // appending the document fragment to the
+    // results element:
+    results.appendChild(frag);
+  });
+}); */
 /********************** Tabs on search page ********************/
 
 
-//THIS IS FOR THE TABS ON THE PAGES WITH LOTS OF TEXT
+//THIS IS TO DIVIDE UP THE SKILLS INTO THEIR CATEGORIES
 
 function openTab(evt, tabInfo) {
   // Declare all variables
@@ -115,8 +196,43 @@ if(document.getElementById("defaultOpen")){
   document.getElementById("defaultOpen").click();
 }
 
-/************************* Draging to get skill list items to search window *************************/
-document.addEventListener("q", function(event) {
+/*************************** get selected check boxes to other div *******************************/
+let checkBoxes = document.querySelector("label, input[type='checkbox'], h6");
+let button = document.querySelector('#add');
+let list = document.querySelector('#selectedList');
+let selectedSkillsArray = [];
+let checkedItems = document.querySelector("input[type='checkbox']").checked;
+let listItems = document.querySelector("li").innerText;
+
+/* let lis = document.querySelectorAll('li')
+lis.forEach(function(el){
+	el.addEventListener('click', removeItem);
+}) */
+
+/* button.addEventListener('click', function(e){
+  e.preventDefault();
+  addItem();
+}); */
+
+//go to different lists and 'check' elements, push them to an array all the items and when you event listener for checked skill , skill goes to array
+//when I click add to search, use array and foreach skill create a list item with text content in the selectedSkills div
+//I want the code to select the items from check list and put them on the div    //and be used in a search
+//checksArray = Array.from(checks);
+
+function addItem(){
+	let newSkill = document.createElement("li");
+	newSkill.document.querySelector();
+	newSkill.addEventListener('click', removeItem);
+	list.appendChild(newSkill);
+}
+
+function removeItem(){
+	console.log("Begone!", this);
+	list.removeChild(this);
+}
+
+/* /************************* Dragging to get skill list items to search window *************************/
+/* document.addEventListener("q", function(event) {
   // The dataTransfer.setData() method sets the data type and the value of the dragged data
   event.dataTransfer.setData("Text", event.target.id);
   
@@ -125,21 +241,21 @@ document.addEventListener("q", function(event) {
   
   // Change the opacity of the draggable element
   event.target.style.opacity = "0.5";
-});
+}); */
 
 // While dragging the p element, change the color of the output text
-document.addEventListener("drag", function(event) {
+/* document.addEventListener("drag", function(event) {
   document.getElementById("demo").style.color = "#f83d08";
-});
+}); */
 
 // Output some text when finished dragging the p element and reset the opacity
-document.addEventListener("dragend", function(event) {
+/* document.addEventListener("dragend", function(event) {
   document.getElementById("demo").innerHTML = "When you have selected your skills click -";
   event.target.style.opacity = "1";
-});
+}); */
 /* Events fired on the drop target */
 
-// When the draggable p element enters the droptarget, change the DIVS's border style
+/* // When the draggable p element enters the droptarget, change the DIVS's border style
 document.addEventListener("dragenter", function(event) {
   if ( event.target.className == "droptarget" ) {
       event.target.style.border = "3px dotted red";
@@ -156,31 +272,32 @@ document.addEventListener("dragleave", function(event) {
   if ( event.target.className == "droptarget" ) {
       event.target.style.border = "";
   }
-});
+}); */
 
 /* On drop - Prevent the browser default handling of the data (default is open as link on drop)
  Reset the color of the output text and DIV's border color
  Get the dragged data with the dataTransfer.getData() method
  The dragged data is the id of the dragged element ("drag1")
  Append the dragged element into the drop element
-*/
+
 document.addEventListener("drop", function(event) {
   event.preventDefault();
   if ( event.target.className == "droptarget" ) {
       document.getElementById("demo").style.color = "";
       event.target.style.border = "";
-      var data = event.dataTransfer.getData("Text");
+      var data = event.dataTransfer.getData("text");
       event.target.appendChild(document.getElementById(data));
   }
-});
+}); */
 
 
 function searchFunction() {
-    var input, filter, ul, li, a, i;
+    let input, filter, ul, li, a, h6, i;
     input = document.getElementById('myinput');
-    filter = input.value.toUpperCase();
+    filter = input.value;
     ul = document.getElementById('wrapper');
     li = ul.getElementsByTagName('li');
+    h6 = h6.getElementsByClassName('skill');
 
     for(i=0 ; i< li.length; i++){
         a = li[i].getElementsByTagName('a')[0];

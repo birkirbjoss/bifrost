@@ -11,14 +11,16 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" media="screen and (min-device-width : 769px) and (max-device-width : 1080px)" href="css/tablet.css" type="text/css">
     <link rel="stylesheet" media="screen and (min-device-width : 320px) and (max-device-width : 768px)" href="css/mobile.css" type="text/css">
-    <title>Search</title>
+    <title>Kassia - Search</title>
 </head>
 
 <body>
-    
+<div id="nonVisibleHeader">   
         <header>
                 <nav>
                         <a href="home.html">Home <span>&#124;</span></a>
+                        <a href="company_profile.html">My Account <span>&#124;</span></a>
+                        <a href="home.html"><button id="logoutButton">Log out</button></a>
                        
                     </nav>
 
@@ -26,6 +28,7 @@
                 <h1 id="name">Kassia</h1>
         </header>
     </header>
+</div>
     <main>
         <section id="searchSkills">
             <div id="skillTabs">
@@ -34,37 +37,38 @@
                         <a class="tablinks" onclick="openTab(event, 'TechSkills')" href="#">Technical Skills</a>
                         <a class="tablinks" onclick="openTab(event, 'CTSkills')" href="#">Critical Thinking Skills</a>
                     </div>
-                    <div id="SoftSkills" class="tabcontent skillsContainers droptarget" >
+                    <div id="SoftSkills" class="tabcontent skillsContainers" >
 
                         <template id="SSTemplate">
-                            <h6 class="ItemSoftSkill Zindex" draggable="true"></h6>
+                           <li><input type="checkbox" class="checkBoxes"><h6 class="skill ItemSoftSkill"></h6></li> 
                         </template>
                     </div>
-                    <div id="TechSkills" class="tabcontent skillsContainers droptarget">
+                    <div id="TechSkills" class="tabcontent skillsContainers">
 
                         <template id="TSTemplate">
-                            <h6 class="ItemTechSkill Zindex" draggable="true"></h6>
+                           <li><input type="checkbox" class="checkBoxes"><h6 class="skill ItemTechSkill"></h6></li> 
                         </template>
                     </div>
-                    <div id="CTSkills" class="tabcontent skillsContainers droptarget">
+                    <div id="CTSkills" class="tabcontent skillsContainers">
 
                         <template id="CTTemplate">
-                            <h6 class="ItemCTSkill Zindex" draggable="true"></h6>
+                          <li><input type="checkbox" class="checkBoxes"><h6 class="skill ItemCTSkill"></h6></li>      
                         </template>
                     </div>
+                    <button class="mui-btn mui-btn--small" id="add" value="Add to search">Add to Search</button>
             </div>
-            <div class="search-bar" id="selectedSkills">
+            <!--<div class="search-bar" id="selectedSkills">
                     <input class="selectedList droptarget type="text" name="search" value="" autocomplete="off" id="selectedList" onkeyup="searchFunction()">
                     <p id="demo"></p>
                     <a href="search_results.html"><button class="mui-btn mui-btn--small">SEARCH</button></a> 
-                </div><!--myInput = selectedList-->
-            <!-- <div id="selectedSkills">
+                </div> myInput = selectedList-->
+            <div id="selectedSkills">
                 <h3>Selected skills</h4>
-                <div class="selectedList droptarget" id="selectedList" >
+                <div class="selectedList" id="selectedList" >
                 </div>
-                <p id="demo"></p>
+                <!-- <p id="demo"></p> -->
                 <a href="search_results.html"><button class="mui-btn mui-btn--small">SEARCH</button></a> 
-            </div> -->
+            </div> 
         </section>
 
     </main>
