@@ -195,6 +195,16 @@ header {
 
 }
 
+#ThankYouText{
+    line-height: 1.4;
+    font-weight: bold;
+    font-size: 2em;
+    margin-left: 1em;
+    margin-top: 1em;
+    text-align: center;
+
+}
+
 #MobileLogin {
     display: none;
 }

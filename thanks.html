@@ -20,9 +20,7 @@
     <div id="nonVisibleHeader">
         <header>
                 <nav>
-                        <a href="#section1"> Home <span>&#124;</span></a>
-                        <a href="#section2"> About <span>&#124;</span></a>
-                        <a href="#section3"> Solutions </a>
+                        <a href="home.html"> Home <span>&#124;</span></a>
                         <button id="loginButton" onclick="">Login</button>
                     </nav>
 
@@ -35,35 +33,34 @@
     <div class="main" id="section1">
 
             <button id="MobileloginButton">LOGIN</button>
-         
-            <a id="MobileSignup"href="sign_up.html"> <button >Sign up</button> </a>
 
-        <img id="backgroundImage" src="images/background_image.png" alt="imagenotfound" srcset="">
+
+
         
-     <div id="slogan"> <h5 id="sloganText">A DIGITAL NETWORK <br>CONNECTING COMPANIES, <br>SCHOOLS AND TALENT</h5> </div> 
+     <div id="slogan"> <h5 id="ThankYouText">THANK YOU FOR SIGNING UP FOR KASSIA <br> <br> You will receive your login details once your portfolio has been verified by your school.</h5> </div> 
     
         <!-- The Modal -->
         <div id="myModal" class="modal">    
-            <!-- Modal content -->
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <form class="mui-form" action="" name="loginForm">
-                    <div class="mui-textfield mui-textfield--float-label">
-                        <input type="text" id="userName" name="userN" value="">
-                        <label for="email">E-mail</label>
-                    </div>
-                    <div class="mui-textfield mui-textfield--float-label">
-                        <input type="text" id="password" name="PassW" value="">
-                        <label for="password">Password</label>
-                    </div>
-      
-                    <button type="submit" class="signUpButton mui-btn mui-btn--small" name="submit">Log in</button>
-                </form>
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span id="close" class="close">&times;</span>
+                    <form class="mui-form" action="" name="loginForm" id="LoginForm">
+                        <div class="mui-textfield mui-textfield--float-label">
+                            <input type="text" id="userName" name="userN" value="">
+                            <label for="email">E-mail</label>
+                        </div>
+                        <div class="mui-textfield mui-textfield--float-label">
+                            <input type="password" id="password" name="PassW" value="">
+                            <label for="password">Password</label>
+                        </div>
+          
+                        <button type="submit" class="signUpButton mui-btn mui-btn--small" name="Login">Log in</button>
+                    </form>
+                </div>
+    
             </div>
-            <main>
-                <h1>Thank you</h1>
-                <h4>You will receive an email from us shortly with your approval link</h4>
-            </main>
+    
+         
 
         </div>
                  <footer>
