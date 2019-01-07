@@ -16,6 +16,7 @@ const T_Skills = document.querySelector("#TechSkills");
 const T_SkillsTemp = document.querySelector("#TSTemplate").content;
 const CT_Skills = document.querySelector("#CTSkills");
 const CT_Skills_Temp = document.querySelector("#CTTemplate").content;
+const LangSkills = document.querySelector("#language");
 //links to url params 
 //let urlParams = new URLSearchParams(window.location.search);
 //let user_id = urlParams.get("student_id");
@@ -40,7 +41,8 @@ function showStudent(studData){
         profileDetail.querySelector(".phone ").textContent = theStud.phone;     
         profileDetail.querySelector(".soMeLinks").href = theStud.linked_in_url; 
         profileDetail.querySelector(".portfolio").href = theStud.portfolio_link; 
-        profileDetail.querySelector(".school").textContent = theStud.school; 
+        profileDetail.querySelector(".school").textContent = theStud.school;
+        LangSkills.querySelector(".languages").textContent = 'Language(s): ' + theStud.languages;
 
         //check if skills belong to certain categories, then clone
         if(cat_id_skill == 1)
@@ -56,12 +58,11 @@ function showStudent(studData){
           cloneCTSkills.querySelector(".ItemCTSkill").textContent = theStud.skills;
         }
         
-        //console.log('this is a loop');
+        console.log('this is a loop');
         //multiple clones in one function!
         S_Skills.appendChild(cloneSSkills);
         T_Skills.appendChild(cloneTSkills);
-        CT_Skills.appendChild(cloneCTSkills)
-        //profileDetail.appendChild(clone);
+        CT_Skills.appendChild(cloneCTSkills);
        
  }); 
 }

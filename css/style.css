@@ -715,13 +715,28 @@ footer {
     margin: 0;
     font-size: 0.8em;
 }
+#language
+{
+    grid-column: 2/-2;
+    width: 100%;
+    height: 5vh;
+    border: 1px solid #000;
+    margin: 5% 0 0 0.6%;
+    text-align: center;
+    background-color: #ffffff;
+}
+.languages
+{
+    font-size: 1.5em;
+    padding: 0.5%;
+}
 /************** TIMELINE on profile page****************/
 #timeline {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-column: 1/-1;
-    max-height: 12.5em;
+    max-height: 13em;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
