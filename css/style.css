@@ -276,7 +276,7 @@ nav :hover{
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(7, 1fr);
     grid-column: 1/-1;
-    height: 90vh;
+    height: 100vh;
     width: auto;
     background-color:white;
 }
@@ -820,7 +820,6 @@ footer {
     grid-column: 1/-1;
     height: 70vh;
     background-color: #e6e6e6;
-    border-bottom: #293a4b solid 1px;
     padding-top: 2%
 }
 
