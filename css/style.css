@@ -153,6 +153,14 @@ header {
     z-index: 999;
 }
 
+#logoLink h1
+{
+    font-size: 2.1em;
+}
+#logoLink:hover
+{
+    text-decoration: none;
+}
 
 #logo {
     margin-left: 5%;
@@ -162,7 +170,7 @@ header {
 }
 
 #name {
-    margin-top: -4.7%;
+    margin-top: -5%;
     margin-left: 12%;
 
 }
