@@ -20,7 +20,7 @@
         <nav>
                 <a href="home.html">Home <span>&#124;</span></a>
                 <a href="search.html">Search profiles<span>&#124;</span></a>
-                <button id="logoutButton"><a href="home.html">Log out</a></button>
+                <a href="home.html"><button id="logoutButton">Log out</button></a>
                 
             </nav>
 
@@ -30,7 +30,7 @@
 </div>
     <main>
         <section id="companyProfile">
-            <h1 class="title">My Account</h1>
+            <h2 class="title">My Account</h2>
 
             <template id="CompanyTemplate">
                     <div id="profileBox" class="profileBox">
@@ -39,7 +39,7 @@
                         <h5> <span>Company Contact person:</span> </h5>
                         <h5> <span>Contact person Job title:</span> </h5>
                         <h5> <span>Contact person E-mail:</span> </h5>
-                        <h5> <span>Contact person Phone number:</span> </h5>
+                        <h5> <span>Phone number:</span> </h5>
                         <h5> <span>Industry:</span> </h5>
                         <h5> <span>Number of Employees:</span> </h5>
                         <h5> <span>CVR Number:</span> </h5>
@@ -62,7 +62,7 @@
                     </div>
                     </div>
                 </template>
-            <a href="company_edit.html"><button class="edit_comp_prof mui-btn mui-btn--small">Edit</button></a>
+            <a id="edit_comp_prof" href="company_edit.html"><button class="mui-btn mui-btn--small">Edit</button></a>
         </section>
     </main>
     <footer>
