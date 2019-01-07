@@ -201,8 +201,8 @@ let checkBoxes = document.querySelector("label, input[type='checkbox'], h6");
 let button = document.querySelector('#add');
 let list = document.querySelector('#selectedList');
 let selectedSkillsArray = [];
-let checkedItems = document.querySelector("input[type='checkbox']").checked;
-let listItems = document.querySelector("li").innerText;
+// let checkedItems = document.querySelector("input[type='checkbox']").checked;
+// let listItems = document.querySelector("li").innerText;
 
 /* let lis = document.querySelectorAll('li')
 lis.forEach(function(el){

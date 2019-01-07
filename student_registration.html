@@ -27,43 +27,100 @@
     <main>
         <section id="studentForm">
             <form class="mui-form" enctype="multipart/form-data">
-                    <legend>Portfolio Information</legend>
+                    <legend>My profile</legend> <br>
+
                     <div class="mui-textfield">
-                        <input type="text" name="full_name" value="">
+                        <input type="text" name="full_name" value="" required>
                         <label>Full Name:</label>
                     </div>
                     <div class="mui-textfield">
-                        <input type="file" name="img_file_name" accept="image/*">
+                        <input type="file" name="img_file_name" accept="image/*" required>
                         <label>Image File Name:</label>
                     </div>
                     <div class="mui-textfield">
-                        <input type="email" name="email_address" value="">
-                        <label>E-mail</label>
+                        <input type="email" name="email_address" value="" required>
+                        <label>E-mail: </label>
+                        <p class="white remember">Recommended: use your personal email. Remember you do not have access to your school email after graduating</p>
                     </div>
                     <div class="mui-textfield">
-                        <input type="number" name="phone_number" value="">
-                        <label>Phone</label>
+                        <input type="number" name="phone_number" value="" required>
+                        <label>Phone number</label>
                     </div>
                     <div class="mui-textfield">
-                        <input type="url" name="portfolio_link" value="">
+                        <input type="url" name="portfolio_link" value="" required>
                         <label>Link to Portfolio</label>
                     </div>
+
+                    <div  class="padding10">
+                        <label class="white">Insert email of the teacher verifying your school portfolio</label>
+                            <input class="grey" type="text" required>
+              
+                                    <select required>
+                                     <option>select one</option>
+                                      <option>@kea.dk</option>
+                                      <option>@cphbusiness.dk</option>
+                                      <option>@easj.dk</option>
+                            
+                                    </select> 
+                                 
+        
+                        </div>
+                        <br>
                     <div class="mui-textfield">
-                        <input type="text" name="languages_spoken" value="">
+                        <input type="text" name="languages_spoken" value="" required>
                         <label>Languages:</label>
                     </div>
                     <div class="mui-textfield">
-                        <input type="date" name="grad_date" value="">
+                        <input type="date" name="grad_date" value="" required>
                         <label>Expected Date of Graduation</label>
                     </div>
-                   <a href="student_profile.html"> <button type="submit" class="signUpButton mui-btn mui-btn--small">Submit</button> </a>
+
+                    <!-- student adds skills -->
+                    <div class="mui-textfield" >
+                                <h4  class="topskills">  Select your top skills from the list bellow: </h4>
+
+
+                            <div id="skillTabs2">
+                                    <div id="tab-navigation2">
+                                        <a id="defaultOpen" class="tablinks" onclick="openTab(event, 'SoftSkills')" href="#a">Soft Skills</a>
+                                        <a class="tablinks" onclick="openTab(event, 'TechSkills')" href="#a">Technical Skills</a>
+                                        <a class="tablinks" onclick="openTab(event, 'CTSkills')" href="#a">Critical Thinking Skills</a>
+                                       
+                                    </div>
+                                   
+                                
+
+                                    <div id="SoftSkills" class="tabcontent skillsContainers" >
+                
+                                        <template id="SSTemplate">
+                                           <li class="leftAlign"><input type="checkbox" class="checkBoxes"><h6 class="skill ItemSoftSkill"></h6></li> 
+                                        </template>
+                                    </div>
+                                    <div id="TechSkills" class="tabcontent skillsContainers">
+                
+                                        <template id="TSTemplate">
+                                           <li class="leftAlign"><input type="checkbox" class="checkBoxes"><h6 class="skill ItemTechSkill"></h6></li> 
+                                        </template>
+                                    </div>
+                                    <div id="CTSkills" class="tabcontent skillsContainers">
+                
+                                        <template id="CTTemplate">
+                                          <li class="leftAlign"><input type="checkbox" class="checkBoxes"><h6 class="skill ItemCTSkill"></h6></li>      
+                                        </template>
+                                    </div>
+                            <br>
+                             <a class="signUpButton mui-btn mui-btn--small" href="thanks.html">Submit</a>
+                        </div>
+
+
+                   
             </form>
 
         </section>
     </main>
    
 
-    <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/search.js" type="text/javascript"></script>
 </body>
 
 </html>
