@@ -209,7 +209,9 @@ header {
     display: none;
 }
 
-
+.there{
+    width: auto;
+}
 
 /******************** nav *********************/
 nav {
