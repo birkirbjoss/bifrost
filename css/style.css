@@ -266,9 +266,9 @@ nav :hover{
 } */
 .back_link
 {
-    margin: 1%;
-    margin-top: 1%;
-    font-size: 0.8em;
+    margin: 2%;
+    margin-top: 5%;
+    font-size: 1em;
 }
 
 #section2 {
@@ -534,11 +534,13 @@ footer {
     grid-column: 1/-1;
     grid-row: 1;
     text-align: center;
+    
 }
 #contact_form
 {
     grid-row: 1/5;
     padding: 15%;
+    
 }
 
 
@@ -625,6 +627,7 @@ footer {
     background-color: #293A4B;
     text-align: center;
     padding-bottom: 3%;
+    margin-left: 25%;
 
 
 }
@@ -646,26 +649,24 @@ footer {
    padding-top: 5%;
 }
 
-#section4{
-    margin-left: 34%;
 
-}
 
 
 /******************* Profile Page **************************/
 #profileInfo {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     grid-column: 1/-1;
-    height: 65%;
+    height: 70vh;
     background-color: #e6e6e6;
     border-bottom: #293a4b solid 1px;
 }
 
 #portfolioBox {
-    margin-top: 1%;
+    margin-top: 3%;
     grid-column: 1/-1;
-    padding: 1% 10% 2% 10%;
+    padding: 2% 10% 2% 10%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -673,7 +674,7 @@ footer {
 #profileImg {
     grid-column: 1;
     grid-row: 1;
-    width: 80%;
+    width: 100%;
     border: 1px solid #ffffff;
 }
 .marginOdd
@@ -692,7 +693,7 @@ footer {
 
 #profileText h5 {
     width: 100%;
-    padding: 2%;
+    padding: 2.5%;
     font-weight: 500;
 }
 
@@ -709,10 +710,7 @@ footer {
 
 #profileText2 h5 {
     width: 100%;
-    padding: 2%;
-}
-#profileText2 h5 a {
-    font-size: 1.5;
+    padding: 2.2%;
 }
 #profileText2 h5 span{
     margin: 0;
@@ -1243,7 +1241,7 @@ h2.title{
     background-color: #293A4B;
     text-align: center;
     margin-top: 5%;
-    margin-left: 5%;
+    margin-left: 10%;
 
 }
 .backButton

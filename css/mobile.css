@@ -15,6 +15,13 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(6, 1fr);
+        height: 110vh;
+    }
+
+    #section4 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 1fr);
         height: 100vh;
     }
 
@@ -126,7 +133,7 @@
     /******************** About page *********************/
 
 
-    #steps
+    /* #steps
     {
         grid-column: 1/-1;
         grid-row: 1;
@@ -149,9 +156,63 @@
         grid-column: 4/6;
         grid-row: 5;
         width: 30%;
-    }
+    } */
+
+    #stepS
+{
+    grid-column: 1/-1;
+    margin-top: 5%;
+    text-align: center;
+}
+#stepC
+{
+    grid-column: 1/-1;
+    margin-top: 5%;
+    text-align: center;
+}
+#stepS img
+{
+    width: 50%;
+    height: auto;
+    margin-bottom: 3%;
+}
+#stepC img
+{
+    width: 50%;
+    height: auto;
+}
 
 
+.stepStudent{
+    width: 50%;
+    height: 3em;
+    border-radius: .5em;
+    border-color: #ceac41;
+    border-width: .1em;
+    background-color: #293a4b;
+    font-size: 0.3em;
+    color: white;
+    padding: 2%;
+    
+}
+.stepCompany{
+    width: 55%;
+    height: 3em;
+    border-radius: .5em;
+    border-color: #ceac41;
+    border-width: .1em;
+    background-color: #293a4b;
+    font-size: 0.3em;
+    color: white;
+    padding: 1%;
+}
+
+#contactForm{
+    grid-column: 1/-1;
+    width: 100%;
+    margin-left: 0;
+   
+}
 
     #aboutTitle {
         grid-column: 1/-1;
@@ -166,8 +227,7 @@
     grid-column: 1/-1;
     width: 100%;
     text-align: center;
-    margin-top: 10%;
-    font-size: 1em;
+    font-size: .9em;
 }
 
     #partners {
@@ -211,8 +271,7 @@
 
     #partnerImage {
         grid-column: 1/-1;
-
-        width: 30%;
+        width: 19%;
     }
 
     #subscription1
