@@ -692,7 +692,7 @@ footer {
 
 #profileText h5 {
     width: 100%;
-    padding: 2.5%;
+    padding: 2%;
     font-weight: 500;
 }
 
@@ -709,7 +709,10 @@ footer {
 
 #profileText2 h5 {
     width: 100%;
-    padding: 2.2%;
+    padding: 2%;
+}
+#profileText2 h5 a {
+    font-size: 1.5;
 }
 #profileText2 h5 span{
     margin: 0;
