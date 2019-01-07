@@ -266,9 +266,9 @@ nav :hover{
 } */
 .back_link
 {
-    margin: 2%;
-    margin-top: 5%;
-    font-size: 1em;
+    margin: 1%;
+    margin-top: 1%;
+    font-size: 0.8em;
 }
 
 #section2 {
@@ -656,17 +656,16 @@ footer {
 #profileInfo {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
     grid-column: 1/-1;
-    height: 70vh;
+    height: 65%;
     background-color: #e6e6e6;
     border-bottom: #293a4b solid 1px;
 }
 
 #portfolioBox {
-    margin-top: 3%;
+    margin-top: 1%;
     grid-column: 1/-1;
-    padding: 2% 10% 2% 10%;
+    padding: 1% 10% 2% 10%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -674,7 +673,7 @@ footer {
 #profileImg {
     grid-column: 1;
     grid-row: 1;
-    width: 100%;
+    width: 80%;
     border: 1px solid #ffffff;
 }
 .marginOdd
