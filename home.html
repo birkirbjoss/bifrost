@@ -113,9 +113,17 @@
     <div class="main" id="section2">
 
 
-            <h3 id="partnersTitle">Our premium partners</h3>
+             <div id="stepS">
+                    <img id="studentStep" src="images/students_step.png" alt="" srcset=""> 
+                    <a href="student_registration.html"> <button class="stepStudent" >Sign up Kassia for Students</button></a>
+                </div>
+                <div id="stepC">
+                    <img id="companiesStep" src="images/companies_step.png" alt="" srcset="">
+                   <a href="company_registration.html"><button class="stepCompany">Sign up Kassia for Companies</button> </a>
+                </div> 
 
             <div id="partners">
+                    <h3 id="partnersTitle">Our premium partners</h3>
                     <img id="partnerImage" src="images/sponsors/1_sgit chool.png" alt="" srcset="">
                     <img id="partnerImage" src="images/sponsors/1_school_new.png" alt="" srcset="">
                     <img id="partnerImage" src="images/sponsors/3_company.png" alt="" srcset="">
@@ -128,10 +136,8 @@
             
 
                
-                <div id="steps">
-                    <img id="studentStep" src="images/students_step.png" alt="" srcset=""> 
-                    <img id="companiesStep" src="images/companies_step.png" alt="" srcset="">   
-                </div>
+                 
+                
             
         </div>
         <div class="main" id="section3">
@@ -151,22 +157,72 @@
                 </div>
         
                 <div id="staffTitles">  
-                    <p id="staff1">Rosa Pires
+                    <p id="staff1">Rosa Pires 
                     </p>
                     <p id="staff2">Birkir Björnsson </p>
                     <p id="staff3">Tabitha Bjorkman <br></p>
                
                 </div>
                    
+        
+            </div>
 
-                 
+            <div class="main" id="section4">
+
+          
+                  
+    
+                    <section id="contactForm">
+                            <h3 id="contactTitle">Contact us</h3>
+
+                            <form method="post" action="http://www.tabithabjorkman.com/cgi-bin/FormMail.pl" accept-charset="ISO-8859-1" onsubmit="var originalCharset = document.charset; document.charset = 'ISO-8859-1'; window.onbeforeunload = function () {document.charset=originalCharset;};">
+          
+                              <div class="mui-textfield mui-textfield--float-label"> 
+                                    <input type="text" id="realname" name="realname" value="" placeholder="Full Name" required="required"
+                                           tabindex="1" autofocus="autofocus"/>
+                                    <label for="realname"></label>
+                              </div>
+                              <div class="mui-textfield mui-textfield--float-label">
+                                    <input type="email" id="email" name="email" value="" placeholder="Your Email" tabindex="2"
+                                           required="required" />
+                                    <label for="email"></label>
+                              </div>
+                              <div class="mui-textfield mui-textfield--float-label">
+                                  <input type="number" id="phone_number" name="phone_number" value="" placeholder="Your phone number" tabindex="2"/>
+                                  <label for="phone_number" required="required"></label>
+                              </div>
+                              <div class="mui-textfield mui-textfield--float-label">
+                                    <input type="text" id="messageSubject" name="messageSubject" value="" placeholder="Subject"
+                                           tabindex="2" required />
+                                    <label for="messageSubject"></label>
+                              </div>
+                              <div class="mui-textfield mui-textfield--float-label">
+                                    <textarea id="message" name="message" placeholder="Write your message here." tabindex="5"
+                                              required="required"></textarea>
+                                    <label for="message"></label>
+                              </div>
+                              <div>
+                                  <input type="submit" value="Send" class="signUpButton"/>
+                                  <input type="hidden" name="recipient" value="tabitha@tabithabjorkman.com" />
+                                  <input type="hidden" name="subject" value="Requests from Kassia" />
+                                  <input type="hidden" name="redirect" value="http://tabithabjorkman.com/bifrost_t/php_inserts/thanks.html" />
+                                  <input type="hidden" name="missing_fields_redirect" value="http://tabithabjorkman.com/bifrost_t/php_inserts/error.html" />
+                                  <input type="hidden" name="required" value="realname,email,phone_number,messageSubject,message" />
+                              </div>
+                              </form>
+          
+                      </section>
+        
+     
+            
+                </div>       
                
 
                 <footer>
-                        <p>Webmasters Birkir, Rosa and Tabitha - </p>
-                        <p>Contact - E-mail: kassia@kassia.dk</p>
+                        <p>© 2019 | KASSIA by the Puffins</p>
+                      
                     </footer>
-        </div>
+       
 
         <script src="js/script.js" type="text/javascript"></script>
         <script src="js/js_for_forms.js" type="text/javascript"></script>

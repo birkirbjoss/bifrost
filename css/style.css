@@ -240,7 +240,10 @@ nav :hover{
     font-size: 1.5em;
     margin-left: 1em;
     color: white;
+
 }
+
+
 
 #logoutButton
 {
@@ -270,7 +273,7 @@ nav :hover{
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(7, 1fr);
     grid-column: 1/-1;
-    height: 100vh;
+    height: 90vh;
     width: auto;
     background-color:white;
 }
@@ -287,16 +290,32 @@ nav :hover{
 }
 
 
-#steps
+#stepS
 {
-    grid-column: 1/-1;
-    grid-row: 1;
+    grid-column: 2/4;
     margin-top: 5%;
     text-align: center;
 }
+#stepC
+{
+    grid-column: 4/-2;
+    margin-top: 5%;
+    text-align: center;
+}
+#stepS img
+{
+    width: 70%;
+    height: auto;
+    margin-bottom: 3%;
+}
+#stepC img
+{
+    width: 75%;
+    height: auto;
+}
 
 
-#studentStep{
+/* #studentStep{
    grid-column: 1/3;
     width: 22%;
     margin-bottom: 1.4%;
@@ -308,9 +327,31 @@ nav :hover{
 {
     grid-column: 4/6;
     width: 24%;
+} */
+
+.stepStudent{
+    width: 50%;
+    height: 3em;
+    border-radius: .5em;
+    border-color: #ceac41;
+    border-width: .1em;
+    background-color: #293a4b;
+    font-size: 0.6em;
+    color: white;
+    padding: 2%;
+    
 }
-
-
+.stepCompany{
+    width: 55%;
+    height: 3em;
+    border-radius: .5em;
+    border-color: #ceac41;
+    border-width: .1em;
+    background-color: #293a4b;
+    font-size: 0.6em;
+    color: white;
+    padding: 1%;
+}
 
 #requestButton
 {
@@ -384,16 +425,17 @@ nav :hover{
 
 /******************** footer *********************/
 footer {
+    display: grid;
     grid-column: 1/-1;
     grid-row: 7;
     text-align: center;
-    border: solid 1px black
+    border: solid 1px black;
+    margin-top: 5%;
+    padding: 0.5%;
 }
 
-footer,
-p {
-    display: inline;
-}
+
+
 
 /******************** sign up form *********************/
 #signupTitle {
@@ -515,6 +557,7 @@ p {
     font-size: 2em;
     width: 100%;
     text-align: center;
+    text-decoration: underline;
   
 }
 
@@ -556,6 +599,10 @@ p {
 
 }
 
+#staffTitles p{
+    display: inline;
+}
+
 #staff1 {
     margin-left: -1%;
     margin-right: 5%;
@@ -565,6 +612,38 @@ p {
 #staff2 {
     margin-left: 2%;
     margin-right: 5%;
+
+}
+
+#contactForm {
+    height: 60%;
+    width: 50%;
+    background-color: #293A4B;
+    text-align: center;
+    padding-bottom: 3%;
+
+
+}
+
+#contactForm form {
+    grid-column: 3/5;
+    margin: 5% 0 0 0;
+    width: 100%;
+    background-color: #293A4B;
+
+}
+
+#contactTitle{
+   
+    grid-column: 1/-1;
+    grid-row: 1;
+    text-align: center;
+   color:white;
+   padding-top: 5%;
+}
+
+#section4{
+    margin-left: 34%;
 
 }
 
