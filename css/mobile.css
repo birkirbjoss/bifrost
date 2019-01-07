@@ -624,3 +624,15 @@ a.active {
    
     text-align: center;
 }
+
+/******************** Thank you page***********************/
+
+#ThankYouText{
+    line-height: 1.4;
+    grid-column: 1/-1;
+    text-align: center;
+    margin-right: 30%;
+    /* margin-bottom: 0%; */
+    padding-bottom: 30%;
+
+}
