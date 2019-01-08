@@ -8,20 +8,22 @@
     <link href="//cdn.muicss.com/mui-0.9.41/css/mui.min.css" rel="stylesheet" type="text/css" />
     <script src="//cdn.muicss.com/mui-0.9.41/js/mui.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.6.1/js/all.js" integrity="sha384-R5JkiUweZpJjELPWqttAYmYM1P3SNEJRM6ecTQF05pFFtxmCO+Y1CiUhvuDzgSVZ" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" media="screen and (min-device-width : 769px) and (max-device-width : 1080px)" href="css/tablet.css" type="text/css">
     <link rel="stylesheet" media="screen and (min-device-width : 320px) and (max-device-width : 768px)" href="css/mobile.css" type="text/css">
-    <title>Kassia - Search</title>
+    <title>KASSIA - Search Results</title>
 </head>
 
 <body>
-<div id="nonVisibleHeader">   
+<div id="nonVisibleHeader">    
         <header>
                 <nav>
                         <a href="home.html">Home <span>&#124;</span></a>
+                        <a href="search.html">Search profiles <span>&#124;</span></a>
                         <a href="company_profile.html">My Account <span>&#124;</span></a>
-                        <a href="home.html"><button id="logoutButton">Log out</button></a>
-                       
+
+<a class="textDecoNone" href="home.html" ><button id="logoutButton">Log out</button></a>
                     </nav>
 
                     <a id="logoLink" href="home.html">
@@ -32,54 +34,23 @@
     </header>
 </div>
     <main>
-        <section id="searchSkills">
-            <div id="skillTabs">
-                    <div id="tab-navigation">
-                        <a id="defaultOpen" class="tablinks" onclick="openTab(event, 'SoftSkills')" href="#">Soft Skills</a>
-                        <a class="tablinks" onclick="openTab(event, 'TechSkills')" href="#">Technical Skills</a>
-                        <a class="tablinks" onclick="openTab(event, 'CTSkills')" href="#">Critical Thinking Skills</a>
-                    </div>
-                    <div id="SoftSkills" class="tabcontent skillsContainers" >
+        <div class="back_link"><a href="search.html"><span class="fas fa-arrow-left fa-1x"></span> Return to search</a> </div>
+        <section id="searchResults">
 
-                        <template id="SSTemplate">
-                           <li><input type="checkbox" class="checkBoxes"><h6 class="skill ItemSoftSkill"></h6></li> 
-                        </template>
-                    </div>
-                    <div id="TechSkills" class="tabcontent skillsContainers">
-
-                        <template id="TSTemplate">
-                           <li><input type="checkbox" class="checkBoxes"><h6 class="skill ItemTechSkill"></h6></li> 
-                        </template>
-                    </div>
-                    <div id="CTSkills" class="tabcontent skillsContainers">
-
-                        <template id="CTTemplate">
-                          <li><input type="checkbox" class="checkBoxes"><h6 class="skill ItemCTSkill"></h6></li>      
-                        </template>
-                    </div>
-                    <button class="mui-btn mui-btn--small" id="add" value="Add to search">Add to Search</button>
-            </div>
-            <!--<div class="search-bar" id="selectedSkills">
-                    <input class="selectedList droptarget type="text" name="search" value="" autocomplete="off" id="selectedList" onkeyup="searchFunction()">
-                    <p id="demo"></p>
-                    <a href="search_results.html"><button class="mui-btn mui-btn--small">SEARCH</button></a> 
-                </div> myInput = selectedList-->
-            <div id="selectedSkills">
-                <h3>Selected skills</h4>
-                <div class="selectedList" id="selectedList" >
-                </div>
-                <!-- <p id="demo"></p> -->
-                <a href="search_results.html"><button class="mui-btn mui-btn--small">SEARCH</button></a> 
-            </div> 
         </section>
-
+        <template id="SearchResultTemplate">
+            
+                <a href="#" class="iconLink"><img class="persIconImg" src="images/portfolio_icon_img.png" alt="person icon"></a> 
+          
+        </template>
+        
     </main>
     <footer>
             <p>© 2019 | KASSIA by the Puffins</p>
           
         </footer>
 
-    <script src="js/search.js" type="text/javascript"></script>
+    <script src="js/search_results.js" type="text/javascript"></script>
 </body>
 
 </html>
