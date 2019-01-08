@@ -426,6 +426,11 @@ nav :hover{
 
 
 }
+#forgotPW p
+{
+    font-size: 0.5em;
+    color: #ffffff;
+}
 
 /* The Close Button */
 
@@ -951,11 +956,10 @@ height: auto;
     grid-gap: 5%;
     height: 100vh;
     background-color: #e6e6e6;
-    border-bottom: #293a4b solid 1px;
 }
 
 #skillTabs {
-    grid-column: 1/4;
+    grid-column: 2/-2;
     margin: 12% 0 5% 5%;
     padding: 0 5% 5% 8%;
     height: 90vh;
@@ -970,6 +974,10 @@ height: auto;
     height: 90vh;
 
     width: max-content;
+}
+.searchButton
+{
+    margin-left:70%;
 }
 
 #tab-navigation {
@@ -1018,12 +1026,12 @@ a.active {
 }
 
 .skillsContainers {
-    width: 100%;
+    width: 70%;
     max-height: 70%;
     background-color: #ffffff;
     overflow: hidden;
     overflow: scroll;
-    margin: 0 0 0 2.5%;
+    margin: 0 ;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     padding: 2%;
 }
@@ -1069,12 +1077,12 @@ a.active {
 }
 
 .skillsContainers {
-    width: 100%;
+    width: 80%;
     max-height: 70%;
     background-color: #ffffff;
     overflow: hidden;
     overflow: scroll;
-    margin: 0 0 0 2.5%;
+    margin: 0 0 0 1%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     padding: 2%;
 }
@@ -1138,9 +1146,13 @@ li h6
     margin-top: 10%;
     margin-left: 10%;
 }
-.active
+.persIconImg:hover
 {
-    border:green solid 3px;
+    border:#ceac41 solid 3px;
+}
+.persIconImg:active
+{
+    border:#ceac41 solid 3px;
 }
 
 
