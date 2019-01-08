@@ -118,7 +118,14 @@ a {
     font-size: 1.2em;
     color: white;
 }
-
+.goldColor
+{
+    color: #ceac41;
+}
+.floatRight
+{
+    float: right;
+}
 /************ Home ****************/
 #MobileloginButton, #MobileSignup
 {
@@ -274,8 +281,7 @@ nav :hover{
 } */
 .back_link
 {
-    margin: 2%;
-    margin-top: 5%;
+    margin: 5% 3% 0 3%;
     font-size: 1em;
 }
 
@@ -749,7 +755,7 @@ height: auto;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-column: 1/-1;
-    height: 70vh;
+    height: 65vh;
     background-color: #e6e6e6;
     border-bottom: #293a4b solid 1px;
 }
@@ -801,7 +807,7 @@ height: auto;
 
 #profileText2 h5 {
     width: 100%;
-    padding: 2.2%;
+    padding: 2.35%;
 }
 #profileText2 h5 span{
     margin: 0;

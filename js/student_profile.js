@@ -68,6 +68,7 @@ function showStudent(studData){
 }
 
 getDataStudents();
+
 /************************** TIMELINE ****************************/
 /* 	projects_id 	projects_name 	projects_url 	projects_verify 	projects_grade 	projects_start_date 	projects_end_date 	projects_date_created */
 
@@ -104,3 +105,19 @@ function showProject(projectData){
 }
 
 getProjectsData();
+
+
+/**************************** gold star **************************/
+
+let addFav = document.querySelector('#addToFavorites');
+let star = document.querySelector('#star');
+
+addFav.addEventListener('click', function () {
+  goldStar();
+});
+
+function goldStar()
+{
+  console.log('gold star');
+    star.classList.add('.goldColor');
+}
