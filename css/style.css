@@ -557,7 +557,6 @@ footer {
 #aboutTitle {
 
     margin-top: 12%;
-    
     grid-column: 1/-1;
     grid-row: 1;
     text-align: center;
@@ -588,46 +587,130 @@ footer {
 }
 
 #staffTemplate {
-    grid-template-columns: repeat(6, 1fr);
-    grid-row: 4;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-row: 2/6;
     grid-column: 1/-1;
     text-align: center;
-
-
+    padding: 3% 0 0 0;
+}
+#staffBio1
+{
+    grid-column: 4/6;
+}
+#staffBio2
+{
+    grid-column: 6/8;
+}
+#staffBio3
+{
+    grid-column: 8/10;
 }
 
-#staffImage {
-
-    width: 15%;
-
-
+.staffImage {
+    width:100%;
 }
 
-#staffTitles {
+
+/* #staffTitles {
     grid-column: 1/-1;
     text-align: center;
     margin-top: 2%;
     grid-row: 5;
     font-size: 1.5em;
+} */
 
-
-}
-
-#staffTitles p{
+/* #staffTitles p{
     display: inline;
-}
+} */
 
 #staff1 {
     margin-left: -1%;
     margin-right: 5%;
-
 }
 
 #staff2 {
     margin-left: 2%;
     margin-right: 5%;
-
 }
+  
+.image {
+width: 100%;
+height: auto;
+}
+.hover-animation 
+{
+    width: 95%;
+    height: 80%;
+    position: relative;
+    display: inline-block;
+    background-size:cover;
+    background-position: center;
+    overflow: hidden; 
+}
+.hover-animation::before,
+.hover-animation::after
+{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    position: absolute;
+    background: inherit;
+    transition: .3s;
+}
+.hover-animation::after
+{
+    padding: 95% 0 0 15%;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.5em;
+    background: rgba(41, 58, 75, 0.6);
+    transform: translateY(100%);
+    content: attr(data-text);
+}
+.hover-animation:hover:before
+{
+    transform: translateY(-50%);
+}
+.hover-animation:hover::after
+{
+    transform: translateY(0);
+}
+  /* .overlay {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 40%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  } */
+  
+  /* .container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  } */
+ /******************* Contact form *********************/ 
 
 #contactForm {
     height: 60%;
