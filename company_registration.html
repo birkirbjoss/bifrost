@@ -32,57 +32,58 @@
             <form class="mui-form" action="http://tabithabjorkman.com/bifrost_t/php_inserts/company_profile.php" method="POST">
                     <legend>Company Information</legend>
                     <div class="mui-textfield">
-                        <input type="text" name="comp_name" value="">
+                        <input type="text" name="comp_name" value="" required>
                         <label>Company Name:</label>
                     </div>
                     <div class="mui-textfield">
-                        <input type="text" name="con_prs_name" value="">
+                        <input type="text" name="con_prs_name" value="" required>
                         <label>Contact Person's Name:</label>
                     </div>
                     <div class="mui-textfield">
-                        <input type="text" name="con_prs_job_title" value="">
+                        <input type="text" name="con_prs_job_title" value="" required>
                         <label>Contact Person's Job Title:</label>
                     </div>
                     <div class="mui-textfield">
-                        <input type="email" name="email_con_prs" value="">
+                        <input type="email" name="email_con_prs" value="" required>
                         <label>Contact E-mail:</label>
                     </div>
                     <div class="mui-textfield">
-                        <input type="number" name="con_phone_num" value="">
+                        <input type="number" name="con_phone_num" value="" required>
                         <label>Contact Phone:</label>
                     </div>
                     <div class="mui-textfield">
-                        <input type="text" name="industry_type" value="">
+                        <input type="text" name="industry_type" value="" required> 
                         <label>Industry:</label>
                     </div>
-                    <div class="mui-select">
-                        <select name="number_of_employees">
+                    <div class="mui-select remember">
+                        <select name="number_of_employees" required>
+                            <option value="">Select one</option>
                             <option value="">Less than 10</option>
                             <option value="">10 - 30</option>
                             <option value="">30 - 50</option>
                             <option value="">50 - 100</option>
                             <option value="">More than 100</option>
                         </select>
-                        <label id="colorDkGrey">Number of Employees</label>
+                        <label id="employees">Number of Employees</label>
                     </div>
                     <div class="mui-textfield">
-                        <input type="number" name="cvr_number" value="">
+                        <input type="number" name="cvr_number" value="" required>
                         <label>CVR Number:</label>
                     </div>
                     <div class="mui-textfield">
-                        <input type="text" name="address" value="">
+                        <input type="text" name="address" value="" required>
                         <label>Street Address:</label>
                     </div>
                     <div class="mui-textfield">
-                        <input type="number" name="post_code" value="">
+                        <input type="number" name="post_code" value="" required>
                         <label>Post Code</label>
                     </div>
                     <div class="mui-textfield">
-                        <input type="text" name="city" value="">
+                        <input type="text" name="city" value="" required>
                         <label>City:</label>
                     </div>
                     <div class="mui-textfield">
-                            <input type="text" name="country" value="">
+                            <input type="text" name="country" value="" required>
                             <label>Country:</label>
                     </div>
 
