@@ -194,9 +194,8 @@ header {
     grid-column: 3/-2;
     grid-row: 3;
     margin-top: 2%;
-    height: 100%;
+    height: auto;
     background-color: rgba(255, 255, 255, 0.8);
-    ;
     text-align: left;
 
 }
@@ -207,6 +206,7 @@ header {
     font-size: 2em;
     margin-left: 1em;
     margin-top: 1em;
+    margin-bottom: 1em;
 
 }
 
@@ -294,6 +294,7 @@ nav :hover{
     height: 100vh;
     width: auto;
     background-color:white;
+    padding-top: 10%;
 }
 
 
@@ -301,7 +302,7 @@ nav :hover{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    height: 100vh;
+    height: 85vh;
     width: auto;
     grid-column: 1/-1;
     background-color: #e6e6e6;
@@ -478,7 +479,7 @@ footer {
     grid-column: 1/2;
     
     width: 130%;
-    height: 92%;
+    height: 84%;
     margin-left: 20%;
     grid-row: 2/7;
     align-content: center;
@@ -595,7 +596,7 @@ footer {
 #staffTemplate {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-row: 2/6;
+    grid-row: 2/7;
     grid-column: 1/-1;
     text-align: center;
     padding: 3% 0 0 0;
@@ -647,7 +648,7 @@ height: auto;
 .hover-animation 
 {
     width: 95%;
-    height: 80%;
+    height: 70%;
     position: relative;
     display: inline-block;
     background-size:cover;
@@ -690,32 +691,7 @@ height: auto;
 {
     transform: translateY(0);
 }
-  /* .overlay {
-    position: absolute;
-    top: 0;
-    left: 30%;
-    bottom: 0;
-    right: 0;
-    height: 100%;
-    width: 40%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #008CBA;
-  } */
-  
-  /* .container:hover .overlay {
-    opacity: 1;
-  }
-  
-  .text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-  } */
+ 
  /******************* Contact form *********************/ 
 
 #contactForm {
@@ -746,7 +722,9 @@ height: auto;
    padding-top: 5%;
 }
 
-
+#employees{
+    font-size: 1.1em;
+}
 
 
 /******************* Profile Page **************************/
@@ -1192,6 +1170,10 @@ li h6
 
 
 
+}
+
+.mui-select>label {
+    color: white;
 }
 
 .mui-textfield>label {
