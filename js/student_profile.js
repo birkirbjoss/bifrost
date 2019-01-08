@@ -110,7 +110,6 @@ getProjectsData();
 /**************************** gold star **************************/
 
 let addFav = document.querySelector('#addToFavorites');
-let star = document.querySelector('#star');
 
 addFav.addEventListener('click', function () {
   goldStar();
@@ -118,6 +117,13 @@ addFav.addEventListener('click', function () {
 
 function goldStar()
 {
+  let star = document.getElementById('star');
   console.log('gold star');
-    star.classList.add('.goldColor');
+  star.classList.add('goldColor');
+}
+function goldStarRemove()
+{
+  let star = document.getElementById('star');
+  console.log('gold star remove');
+  star.classList.remove('goldColor');
 }
